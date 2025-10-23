@@ -1,0 +1,115 @@
+@import "tailwindcss";
+/* ExtraLight */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* ExtraLight Italic */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-ExtralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Regular */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* SemiBold Italic */
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@theme {
+  --font-pp-mori-semibold: "PP Mori", "cursive";
+  --font-pp-mori-regular: "PP Mori", "serif";
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-mob {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 15s linear infinite;
+  }
+
+  .animate-scroll-mob {
+    animation: scroll-mob 4s linear infinite;
+  }
+}
+
+.credex-text {
+  font-size: 125px; /* adjust as needed */
+  font-weight: 700;
+  background: linear-gradient(
+    180deg,
+    rgba(51, 51, 51, 0.4) -6.57%,
+    rgba(51, 51, 51, 0) 130.66%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Stroke */
+  -webkit-text-stroke: 0.439px #000;
+  text-align: center;
+}
