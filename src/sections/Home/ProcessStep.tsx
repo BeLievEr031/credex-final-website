@@ -9,6 +9,7 @@ function ProcessStep() {
     const scrollableRef = useRef<HTMLDivElement>(null);
     const sectionRef = useRef<HTMLElement>(null);
     const { setMyBoolean } = useBoolean();
+
     const steps = [
         {
             title: "Choose Provider & Amount",
@@ -36,58 +37,140 @@ function ProcessStep() {
         }
     ];
 
+    // Check if inner div is scrolled to bottom
+    const checkIfAtBottom = () => {
+        const scrollableDiv = scrollableRef.current;
+        if (!scrollableDiv) return false;
+
+        const scrollHeight = scrollableDiv.scrollHeight;
+        const clientHeight = scrollableDiv.clientHeight;
+        const scrollTop = scrollableDiv.scrollTop;
+
+        return Math.abs(scrollHeight - clientHeight - scrollTop) < 1;
+    };
+
+    // Check if section is in viewport
+    const isSectionInViewport = () => {
+        const section = sectionRef.current;
+        if (!section) return false;
+
+        const rect = section.getBoundingClientRect();
+        return rect.top <= 0 && rect.bottom >= window.innerHeight;
+    };
+
     useEffect(() => {
+        let scrollPrevented = false;
+
+        // Handle mouse wheel
         const handleWheel = (e: WheelEvent) => {
+            if (!isSectionInViewport() || isScrollable) return;
+
             const scrollableDiv = scrollableRef.current;
-            const section = sectionRef.current;
+            if (!scrollableDiv) return;
 
-            if (!scrollableDiv || !section) return;
+            e.preventDefault();
+            scrollableDiv.scrollTop += e.deltaY;
 
-            const rect = section.getBoundingClientRect();
-            const isInViewport = rect.top <= 0 && rect.bottom >= window.innerHeight;
+            if (checkIfAtBottom() && e.deltaY > 0) {
+                setIsScrollable(true);
+            }
+        };
 
-            if (isInViewport && !isScrollable) {
+        // Handle keyboard navigation (Arrow keys, Page Up/Down, Space, Home, End)
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (!isSectionInViewport() || isScrollable) return;
+
+            const scrollableDiv = scrollableRef.current;
+            if (!scrollableDiv) return;
+
+            const keys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Space', 'Home', 'End'];
+
+            if (keys.includes(e.key) || e.key === ' ') {
                 e.preventDefault();
+                scrollPrevented = true;
 
-                // const scrollTop = scrollableDiv.scrollTop;
-                const scrollHeight = scrollableDiv.scrollHeight;
-                const clientHeight = scrollableDiv.clientHeight;
+                let scrollAmount = 0;
 
-                // Scroll the inner div
-                scrollableDiv.scrollTop += e.deltaY;
+                switch (e.key) {
+                    case 'ArrowDown':
+                        scrollAmount = 40;
+                        break;
+                    case 'ArrowUp':
+                        scrollAmount = -40;
+                        break;
+                    case 'PageDown':
+                    case ' ':
+                    case 'Space':
+                        scrollAmount = scrollableDiv.clientHeight * 0.8;
+                        break;
+                    case 'PageUp':
+                        scrollAmount = -scrollableDiv.clientHeight * 0.8;
+                        break;
+                    case 'End':
+                        scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
+                        if (checkIfAtBottom()) {
+                            setIsScrollable(true);
+                        }
+                        return;
+                    case 'Home':
+                        scrollableDiv.scrollTop = 0;
+                        return;
+                }
 
-                // Check if we've reached the bottom
-                const newScrollTop = scrollableDiv.scrollTop;
-                const newIsAtBottom = Math.abs(scrollHeight - clientHeight - newScrollTop) < 1;
+                scrollableDiv.scrollTop += scrollAmount;
 
-                if (newIsAtBottom && e.deltaY > 0) {
+                if (checkIfAtBottom() && scrollAmount > 0) {
                     setIsScrollable(true);
                 }
             }
         };
 
-        const handleSectionScroll = () => {
-            const section = sectionRef.current;
-            if (!section) return;
+        // Handle scroll event (for scrollbar dragging)
+        const handleScroll = () => {
+            if (!isSectionInViewport() || isScrollable) return;
 
-            // const rect = section.getBoundingClientRect();
-            // const isOutOfView = rect.bottom < 0 || rect.top > window.innerHeight;
+            // Prevent page scroll only when section is in viewport and not unlocked
+            if (scrollPrevented) {
+                window.scrollTo({
+                    top: sectionRef.current?.offsetTop || 0,
+                    behavior: 'auto'
+                });
+            }
 
-            // Reset when section is out of view
-            // if (isOutOfView && isScrollable) {
-            //     setIsScrollable(false);
-            //     if (scrollableRef.current) {
-            //         scrollableRef.current.scrollTop = 0;
-            //     }
-            // }
+            const scrollableDiv = scrollableRef.current;
+            if (scrollableDiv && checkIfAtBottom()) {
+                setIsScrollable(true);
+            }
         };
 
+        // Monitor inner div scroll to check if bottom reached
+        const handleInnerScroll = () => {
+            if (isScrollable) return;
+
+            if (checkIfAtBottom()) {
+                setIsScrollable(true);
+                scrollPrevented = false;
+            }
+        };
+
+        // Attach listeners
         window.addEventListener('wheel', handleWheel, { passive: false });
-        window.addEventListener('scroll', handleSectionScroll);
+        window.addEventListener('keydown', handleKeyDown, { passive: false });
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        const scrollableDiv = scrollableRef.current;
+        if (scrollableDiv) {
+            scrollableDiv.addEventListener('scroll', handleInnerScroll, { passive: true });
+        }
 
         return () => {
             window.removeEventListener('wheel', handleWheel);
-            window.removeEventListener('scroll', handleSectionScroll);
+            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('scroll', handleScroll);
+
+            if (scrollableDiv) {
+                scrollableDiv.removeEventListener('scroll', handleInnerScroll);
+            }
         };
     }, [isScrollable]);
 
@@ -161,6 +244,7 @@ function ProcessStep() {
                     </span>
                 </motion.p>
 
+
                 <motion.div
                     className="relative overflow-x-hidden mt-6 hide-scrollbar"
                     variants={container}
@@ -183,9 +267,9 @@ function ProcessStep() {
                             </motion.div>
                         ))}
 
+
                     </motion.div>
                 </motion.div>
-
             </motion.div>
 
             {/* RIGHT SIDE — Image & CTA Card */}
@@ -195,7 +279,8 @@ function ProcessStep() {
                 </motion.div>
 
                 <motion.div className="pt-20" variants={cardVariant}>
-                    <button className="w-full md:w-[480px] px-[30px] md:px-[40px] py-[24px] md:py-[32px] flex justify-between items-center rounded-3xl md:rounded-2xl mx-auto bg-[#19363F] cursor-pointer"
+                    <button
+                        className="w-full md:w-[480px] px-[30px] md:px-[40px] py-[24px] md:py-[32px] flex justify-between items-center rounded-3xl md:rounded-2xl mx-auto bg-[#19363F] cursor-pointer"
                         onClick={() => setMyBoolean(true)}
                     >
                         <p className="text-[#FBD008] text-[18px] md:text-2xl font-semibold md:w-[65%] w-[75%] shrink-0 text-left">

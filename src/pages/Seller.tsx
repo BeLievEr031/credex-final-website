@@ -193,7 +193,9 @@ function Seller() {
             {/* <div className="md:mt-72">
                 <ProofSection />
             </div> */}
-            <Testimonial reviews={reviews} />
+            <div className="pt-[40px] md:pt-[100px]">
+                <Testimonial reviews={reviews} />
+            </div>
             <Faq faqs={faqs} />
             <Footer
                 title="Ready to recover sunk - costs?"

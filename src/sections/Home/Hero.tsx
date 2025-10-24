@@ -168,7 +168,7 @@ function Hero() {
                 animate="show"
             >
                 <motion.div
-                    className="border-[1px] border-[#D9D9D9] p-[4px] rounded-full flex items-center gap-x-2 w-[95%] md:w-[50%] mx-auto text-[14px] md:text-[16px]"
+                    className="border-[1px] border-[#D9D9D9] p-[4px] rounded-full flex items-center gap-x-2 w-[95%] md:w-fit md:pr-3 mx-auto text-[14px] md:text-[16px]"
                     variants={item}
                 >
                     <div className="p-2.5 bg-[#118B6126] rounded-full shrink-0">NO REGRETS</div>

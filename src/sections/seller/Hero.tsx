@@ -102,14 +102,14 @@ function Hero() {
 
                 {/* Hero badge */}
                 <motion.div
-                    className="border-[1px] border-[#D9D9D9] p-[4px] rounded-full flex items-center gap-x-2 md:pr-6 md:w-[466px] text-[12px]"
+                    className="border-[1px] border-[#D9D9D9] p-[4px] rounded-full flex items-center gap-x-2 md:pr-3 md:w-fit text-[12px]"
                     variants={fadeUp}
                     custom={0.2}
                 >
                     <div className="p-1.5 md:p-2.5 bg-[#118B6126] rounded-full shrink-0 text-[16px]">
                         NO REGRETS
                     </div>
-                    <p className="shrink-0 text-[14px] md:text-[16px] pr-[12px]">
+                    <p className="shrink-0 text-[14px] md:text-[16px]">
                         Safe transfer, Anonymous exchange
                     </p>
                 </motion.div>
