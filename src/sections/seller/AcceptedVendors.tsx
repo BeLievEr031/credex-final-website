@@ -111,7 +111,7 @@ export default function AcceptedVendors() {
                         transition={{ delay: 1, duration: 0.5 }}
                         viewport={{ once: true }}
                     >
-                        Recommended minimum validity: 90 days
+                        Recommended minimum validity: 180 days
                     </motion.p>
                 </motion.div>
             </motion.div>

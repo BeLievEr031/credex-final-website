@@ -76,7 +76,7 @@ export default function AgencySavings() {
                         className="text-[15px] font-semibold font-pp-mori-semibold md:text-xl text-white/80 md:w-[75%] pt-6"
                         variants={fadeUp}
                     >
-                        A fast-scaling Start-up running 20+ AI tools switched
+                        A fast scaling enterprise running 20+ AI tools switched
                         to surplus GPT-5 & Claude credits via Credex.
                     </motion.p>
                 </motion.div>

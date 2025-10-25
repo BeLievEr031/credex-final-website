@@ -1,6 +1,7 @@
 import FTLogo from "../../assets/ft-logo.png"
 import { Link } from "react-router-dom";
 import { useBoolean } from "../../context/FormContext";
+import { Mail } from "lucide-react";
 
 interface IProp {
     title?: string;
@@ -27,10 +28,9 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                     </h1>
                     <div className="pt-4 flex gap-x-2.5">
                         <button onClick={() => {
-                            console.log(45);
                             setMyBoolean(true)
                         }} className="py-[12px] px-[15px] md:py-[16px] text-[15px] md:px-[20px] bg-[#0FF395] rounded-md block font-semibold font-pp-mori-semibold md:text-xl cursor-pointer relative z-10">{actionBtn1Text}</button>
-                        <a href={actionBtnLink} className="py-[12px] px-[15px] md:py-[16px] text-[15px] md:px-[20px] bg-[#0FF39533] rounded-md text-white block font-semibold font-pp-mori-semibold md:text-xl">{actionBtn2Text}</a>
+                        <a href={actionBtnLink} target="_blank" className="py-[12px] px-[15px] md:py-[16px] text-[15px] md:px-[20px] bg-[#0FF39533] rounded-md text-white block font-semibold font-pp-mori-semibold md:text-xl">{actionBtn2Text}</a>
                     </div>
 
                     <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 -z-10">
@@ -47,40 +47,53 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                 </div>
             </div>
 
-            <div className="mt-24 md:mt-14 relative h-[305px] md:flex md:justify-end md:px-28">
-                <div className="w-full mx-auto md:flex md:justify-between items-end py-5 px-4 md:px-0">
-                    <div className="pt-8 md:pt-0">
+            <div className="mt-32 md:mt-14 relative h-[305px] md:flex md:justify-end md:px-28">
+                <div className="w-full mx-auto md:flex md:justify-between items-end px-4 md:px-0">
+                    <div className="pt-16 md:pt-0">
                         <p><svg width="176" height="45" viewBox="0 0 176 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M29.1273 13.9447C31.5201 15.5758 32.3367 18.4527 32.1936 21.2658C32.0483 24.1199 30.928 27.2817 28.9699 30.1543C27.0117 33.027 24.4777 35.226 21.8741 36.4045C19.3079 37.5658 16.3315 37.8572 13.9388 36.2262C11.5461 34.5952 10.7294 31.7182 10.8725 28.9051C11.0178 26.0509 12.1385 22.8885 14.0967 20.0158C16.055 17.1432 18.5885 14.9449 21.192 13.7665C23.7582 12.605 26.7345 12.3137 29.1273 13.9447Z" stroke="#086841" stroke-width="4" />
                             <path d="M27.0331 8.86983C33.5605 13.3194 33.8542 22.9905 28.9713 30.154C24.0882 37.3176 14.9783 40.5796 8.45079 36.13C1.92339 31.6804 1.63001 22.0085 6.51312 14.845C11.3963 7.68178 20.5057 4.42046 27.0331 8.86983Z" stroke="#086841" stroke-width="4" />
                             <path d="M56.6638 34.6448C49.2274 34.6448 44.8859 29.3146 44.8859 22.437C44.8859 14.9576 49.9152 10.5301 56.5349 10.5301C62.7677 10.5301 66.9803 14.3558 67.4101 20.0298H62.4238C61.951 16.8919 59.7158 14.8716 56.4919 14.8716C52.6232 14.8716 50.0441 17.7946 50.0441 22.437C50.0441 27.4233 52.8812 30.3033 56.6638 30.3033C59.7588 30.3033 61.908 28.326 62.4238 25.0591H67.4101C66.8083 30.9481 62.7247 34.6448 56.6638 34.6448ZM74.7129 34H69.6406V11.2179H73.7242L74.326 15.6884C75.7875 12.5934 78.4526 10.96 82.2353 10.96H83.095V15.9033H82.2353C77.5069 15.9033 74.7129 18.4394 74.7129 22.7379V34ZM94.614 34.6448C87.6504 34.6448 82.879 29.6585 82.879 22.6949C82.879 15.1725 87.8223 10.5301 94.1841 10.5301C100.632 10.5301 104.93 15.0436 105.059 22.437V23.6406H87.9513C88.2951 27.6382 90.7883 30.3463 94.6569 30.3463C97.279 30.3463 99.2563 29.0567 100.03 26.7785H104.973C103.813 31.6788 99.9871 34.6448 94.614 34.6448ZM88.1662 20.0728H99.8151C99.1704 16.806 97.1501 14.8287 94.1841 14.8287C91.1751 14.8287 88.9399 16.806 88.1662 20.0728ZM116.669 34.6448C110.522 34.6448 106.094 29.6585 106.094 22.48C106.094 15.4304 110.436 10.5301 116.497 10.5301C119.721 10.5301 122.386 11.8627 123.976 14.0119V1.76119H129.048V34H124.965L124.492 29.9594C123.202 32.8394 120.365 34.6448 116.669 34.6448ZM117.614 30.3463C121.354 30.3463 123.976 27.0794 123.976 22.437C123.976 17.9236 121.397 14.7857 117.7 14.7857C113.918 14.7857 111.296 17.9666 111.296 22.523C111.296 27.1224 113.875 30.3463 117.614 30.3463ZM143.101 34.6448C136.138 34.6448 131.367 29.6585 131.367 22.6949C131.367 15.1725 136.31 10.5301 142.672 10.5301C149.119 10.5301 153.418 15.0436 153.547 22.437V23.6406H136.439C136.783 27.6382 139.276 30.3463 143.144 30.3463C145.767 30.3463 147.744 29.0567 148.518 26.7785H153.461C152.3 31.6788 148.475 34.6448 143.101 34.6448ZM136.654 20.0728H148.303C147.658 16.806 145.638 14.8287 142.672 14.8287C139.663 14.8287 137.427 16.806 136.654 20.0728ZM158.311 34H152.594L160.804 22.609L152.723 11.2179H158.397L163.684 18.8263L168.928 11.2179H174.602L166.521 22.609L174.731 34H169.014L163.684 26.1337L158.311 34Z" fill="#086841" />
                         </svg>
                         </p>
-                        <div className="text-[#5B677C] pt-1 pb-2">
-                            <p className="text-black font-semibold font-pp-mori-semibold">Dubai</p>
-                            <p>
-                                Credex DSO IFZA,
-                            </p>
-                            <p>
-                                IFZA Properties, Dubai Silicon Oasis,
-                            </p>
-                            <p>
-                                Dubai, UAE. 342001
-                            </p>
+                        <div className="text-[#5B677C] pt-4 pb-2 flex gap-x-10 flex-wrap">
 
-                            <p className="text-black font-semibold font-pp-mori-semibold mt-2">India </p>
+                            <div>
 
-                            <p>
-                                DLF Forum, Cyber City,
-                            </p>
-                            <p>
-                                Phase-III, DLF QE,
-                            </p>
-                            <p>
-                                Gurgaon 122002, Haryana, India
-                            </p>
-                            <a href="mailto:team@credex.rocks" className="pt-2 inline-block underline cursor-pointer z-[10] relative">Email: team@credex.rocks</a>
+                                <p className="text-black font-semibold font-pp-mori-semibold">UAE</p>
+                                <p>
+                                    DSO-IFZA, IFZA Properties,
+                                </p>
+                                <p>
+                                    Dubai Silicon Oasis,
+                                </p>
+                                <p>
+                                    Dubai
+                                </p>
+                            </div>
+
+
+                            <div className="mt-2 md:mt-0">
+
+                                <p className="text-black font-semibold font-pp-mori-semibold">India </p>
+
+                                <p>
+                                    We Work, DLF Forum,
+                                </p>
+                                <p>
+                                    Cyber City Phase-III,
+                                </p>
+                                <p>
+                                    Gurgaon - 122002
+                                </p>
+                            </div>
                         </div>
+
+                        <a href="mailto:team@credex.rocks" className="pt-2 underline cursor-pointer z-[10] relative flex text-xl items-center gap-x-1">
+                            <Mail className="" size={20} /> team@credex.rocks
+                        </a>
+
+
                     </div>
                     {/* <div className="mt-10 md:mt-0 w-[85%] md:w-[25%] text-justify text-[#5B677C]">
                         Credex is independent and not affiliated with the vendors listed; names/logos are used for identification only.
@@ -123,25 +136,32 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                 </div>
             </div>
             <div className="py-5 px-4 md:px-0">
-                <div className="h-px w-full md:w-[99%] mx-auto bg-[#242424] mt-4 md:mt-0"></div>
-                <div className="flex md:pl-28 gap-x-5 text-[#5B677C] py-4 flex-wrap items-center">
-                    <p>© 2025 Credex</p>
-                    <p className="flex items-center gap-x-1 shrink-0">
-                        <p className="text-3xl">
-                            •
+                <div className="h-px w-full md:w-[99%] mx-auto bg-[#242424] mt-12 md:mt-0"></div>
+                <div className="flex md:px-28 gap-x-5 text-[#5B677C] py-4 flex-wrap items-center justify-between ">
+                    <div className="flex flex-wrap items-center gap-x-5">
+
+                        <p>© 2025 Credex</p>
+                        <p className="flex items-center gap-x-1 shrink-0">
+                            <p className="text-3xl">
+                                •
+                            </p>
+                            <Link to={'/term-condition'}>
+                                Terms & Condition
+                            </Link>
                         </p>
-                        <Link to={'/term-condition'}>
-                            Terms & Condition
-                        </Link>
-                    </p>
-                    <p className="flex items-center gap-x-1">
-                        <p className="text-3xl">
-                            •
+                        <p className="flex items-center gap-x-1">
+                            <p className="text-3xl">
+                                •
+                            </p>
+                            <Link to={"/privacy"} className="md:mt-0">
+                                Privacy
+                            </Link>
                         </p>
-                        <Link to={"/privacy"} className="md:mt-0">
-                            Privacy
-                        </Link>
-                    </p>
+                    </div>
+
+                    <a href="https://www.linkedin.com/company/credexmarketplace/" target="_blank" className="pt-2 relative z-[10] block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide cursor-pointer lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+                    </a>
                 </div>
             </div>
         </footer >

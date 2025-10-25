@@ -71,7 +71,7 @@ function StatsFeatureSection() {
                         className="text-[16px] md:text-lg text-white/80 pt-4 max-w-md"
                         variants={fadeUp}
                     >
-                        We match you with real prepaid credits from verified companies same APIs but better pricing.
+                        We match you with real prepaid credits from verified companies, same APIs but better pricing.
                     </motion.p>
                 </div>
                 <motion.div className="h-[245px]" variants={fadeUp}>

@@ -103,14 +103,14 @@ export default function PrivacyPolicyPage() {
                     </ul>
 
                     <h2 className="text-xl font-semibold mb-2">4. Data Security</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         We employ industry-standard security measures, such as encryption and secure servers, to protect your personal
                         information. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute
                         security.
                     </p>
 
                     <h2 className="text-xl font-semibold mb-2">5. Cookies</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         Our website uses cookies to enhance your user experience. Cookies are small data files stored on your device that
                         help us remember your preferences and track your usage patterns.
                     </p>
@@ -125,12 +125,12 @@ export default function PrivacyPolicyPage() {
                     <p className="mb-4 pl-6">To exercise any of these rights, please contact us at <a href="mailto:legal@credex.rocks" className="text-blue-600 underline">legal@credex.rocks</a></p>
 
                     <h2 className="text-xl font-semibold mb-2">7. Data Retention</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         We will retain your personal data only for as long as necessary for the purposes outlined in this Privacy Policy, or as required by law.
                     </p>
 
                     <h2 className="text-xl font-semibold mb-2">8. Changes to This Policy</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         Credex reserves the right to update or modify this Privacy Policy at any time. We will notify you of any significant
                         changes by posting an updated version on our website.
                     </p>
@@ -145,6 +145,7 @@ export default function PrivacyPolicyPage() {
             <ContactFormModal
                 isOpen={myBoolean}
                 onClose={() => setMyBoolean(false)}
+                id="me1a0l"
             />
 
         </main>

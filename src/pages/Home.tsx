@@ -17,13 +17,13 @@ import FatimaImg from "../assets/buyers/Fatima Al Qasimi (UAE).webp";
 import JensImg from "../assets/buyers/Jens Müller (Germany).webp";
 import LucaImg from "../assets/buyers/Luca Romano (Italy).webp";
 import MartaImg from "../assets/buyers/Marta García (Spain).webp";
-import MayaImg from "../assets/buyers/Maya_thompson.webp";
-import OmarImg from "../assets/buyers/Omar Al Mansoori.webp";
+import MayaImg from "../assets/buyers/Maya thompson (USA).webp";
+import OmarImg from "../assets/buyers/Omar Al Mansoori (UAE).webp";
 import PriyaImg from "../assets/buyers/Priya Nair (India).webp";
 import RachelImg from "../assets/buyers/Rachel Lim (Singapore).webp";
-import RohitImg from "../assets/buyers/Rohit Iyer.webp";
+import RohitImg from "../assets/buyers/Rohit Iyer (India).webp";
 import SofiaImg from "../assets/buyers/Sofia Nilsson (Sweden).webp";
-import WeiLinImg from "../assets/buyers/Wei-Lin Tan.webp";
+import WeiLinImg from "../assets/buyers/Wei-Lin Tan (Singapore).webp";
 function Home() {
     const { myBoolean, setMyBoolean } = useBoolean()
     const faqs = [
@@ -229,6 +229,7 @@ function Home() {
 
             <ContactForm isOpen={myBoolean}
                 onClose={() => setMyBoolean(false)}
+                id="me1a0l"
             />
         </section>
     )

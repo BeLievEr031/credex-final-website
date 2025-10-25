@@ -33,7 +33,7 @@ function Testimonial({ reviews }: IProp) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="text-[#00000080] text-[12px] md:text-[16px]">
+                    className="text-[#00000080] text-[10px] md:text-[14px]">
 
                     <p>
                         (<b>Note</b>: Names, photos, and company names are representative due to NDA. Results are real, identities are anonymized.)
@@ -46,7 +46,7 @@ function Testimonial({ reviews }: IProp) {
                 style={{ willChange: "transform" }}
 
             >
-                {reviews.map(({ designation, name, review, img }) => (
+                {[...reviews, ...reviews].map(({ designation, name, review, img }) => (
                     <ReviewCard designation={designation} name={name} review={review} imgSrc={img} />
                 ))}
                 {reviews.map(({ designation, name, review, img }) => (
@@ -83,8 +83,7 @@ function ReviewCard({ designation, name, review, imgSrc }: { name: string; desig
     return (
         <div className="rounded-2xl border-1 border-[#19363F73] bg-[#19363F0D] w-[185px] h-[300px] md:w-[330px] md:h-[420px] p-[18px] md:p-8 flex flex-col justify-between shrink-0">
             <p className={clsx("text-[12px] md:text-[16px]", {
-                "text-justify": review.length > 35,
-                "text-left": review.length < 25
+
             })}
 
             >“{review}”</p>

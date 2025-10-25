@@ -48,7 +48,7 @@ export default function TermsAndConditionsPage() {
                     </p>
 
                     <h2 className="text-xl font-semibold mb-2">1. Acceptance of Terms</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         By accessing or using the Credex website and services, you ("User", "Customer", "Buyer", or "Seller") agree to comply with
                         these Terms and Conditions. If you do not agree with any part of these terms, do not use the services.
                     </p>
@@ -64,7 +64,7 @@ export default function TermsAndConditionsPage() {
                     </ul>
 
                     <h2 className="text-xl font-semibold mb-2">3. Eligibility</h2>
-                    <p className="mb-4 pl-6">You must be at least 18 years old and legally capable of entering into binding contracts to use our services.</p>
+                    <p className="mb-4">You must be at least 18 years old and legally capable of entering into binding contracts to use our services.</p>
 
                     <h2 className="text-xl font-semibold mb-2">4. Account Ownership and Transfer</h2>
                     <ul className="list-disc list-inside mb-4 pl-6">
@@ -120,12 +120,12 @@ export default function TermsAndConditionsPage() {
                     <p className="mb-4 pl-6">Credex's liability is limited to the amount paid for the credits.</p>
 
                     <h2 className="text-xl font-semibold mb-2">10. Indemnification</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         Users agree to indemnify and hold harmless Credex, its affiliates, directors, officers, and employees from any claims, damages, or liabilities arising from their use of services or violation of these Terms.
                     </p>
 
                     <h2 className="text-xl font-semibold mb-2">11. Governing Law and Dispute Resolution</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         This Agreement will be governed by the laws of <strong>
                             the Dubai International Financial Centre (DIFC).
                         </strong>
@@ -143,12 +143,12 @@ export default function TermsAndConditionsPage() {
                     </p>
 
                     <h2 className="text-xl font-semibold mb-2">12. Changes to Terms</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         Credex reserves the right to modify or amend these Terms at any time. Updates will be posted on this page, and it is your responsibility to review them periodically.
                     </p>
 
                     <h2 className="text-xl font-semibold mb-2">13. Termination</h2>
-                    <p className="mb-4 pl-6">
+                    <p className="mb-4">
                         Credex reserves the right to suspend or terminate access to its services for any user who violates these Terms and Conditions.
                     </p>
                 </div>
@@ -158,6 +158,7 @@ export default function TermsAndConditionsPage() {
             <ContactFormModal
                 isOpen={myBoolean}
                 onClose={() => setMyBoolean(false)}
+                id="me1a0l"
             />
         </main>
     );
