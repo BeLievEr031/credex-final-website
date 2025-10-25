@@ -49,7 +49,7 @@ export default function InfoCards() {
                                     "Payout is released after buyer confirmation.",
                                 ].map((text, i) => (
                                     <li key={i} className="flex items-start gap-3 border-b border-gray-200 pb-4">
-                                        <CheckCircle2 className="text-gray-400 mt-1 size-7 md:h-5 md:w-5" />
+                                        <CheckCircle2 className="text-gray-400 mt-1 size-6 md:h-5 md:w-5 shrink-0" />
                                         <span className="text-[16px] md:text-[20px] font-pp-mori-semibold font-semibold text-base">
                                             {text}
                                         </span>
@@ -116,7 +116,7 @@ export default function InfoCards() {
                                     "Account screenshots: credits, validity and any rate-limit tier.",
                                 ].map((text, i) => (
                                     <li key={i} className="flex items-start gap-3 border-b border-gray-200 pb-4">
-                                        <CheckCircle2 className="text-gray-400 mt-1 size-7 md:h-5 md:w-5" />
+                                        <CheckCircle2 className="text-gray-400 mt-1 size-6 md:h-5 md:w-5 shrink-0" />
                                         <span className="text-[16px] md:text-[20px] font-pp-mori-semibold font-semibold text-base">
                                             {text}
                                         </span>

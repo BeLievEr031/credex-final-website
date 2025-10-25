@@ -42,7 +42,7 @@ function Testimonial({ reviews }: IProp) {
             </div>
 
             <div
-                className="pt-12 md:pt-24 flex gap-x-4 animate-scroll"
+                className="pt-12 md:pt-24 flex gap-x-2 animate-scroll"
                 style={{ willChange: "transform" }}
 
             >
