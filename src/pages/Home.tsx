@@ -17,7 +17,7 @@ import FatimaImg from "../assets/buyers/Fatima Al Qasimi (UAE).webp";
 import JensImg from "../assets/buyers/Jens Müller (Germany).webp";
 import LucaImg from "../assets/buyers/Luca Romano (Italy).webp";
 import MartaImg from "../assets/buyers/Marta García (Spain).webp";
-import MayaImg from "../assets/buyers/Maya thompson (USA).webp";
+import MayaImg from "../assets/buyers/Maya Thompson (USA).webp";
 import OmarImg from "../assets/buyers/Omar Al Mansoori (UAE).webp";
 import PriyaImg from "../assets/buyers/Priya Nair (India).webp";
 import RachelImg from "../assets/buyers/Rachel Lim (Singapore).webp";
