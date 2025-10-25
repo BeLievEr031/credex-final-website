@@ -23,24 +23,24 @@ export default function PrivacyPolicyPage() {
         <main className="min-h-screen pt-[150px] md:pt-[120px] font-pp-mori-regular">
 
             <Navbar
-                links={[
-                    {
-                        lable: "How it Works",
-                        link: '#how-it-works'
-                    },
-                    {
-                        lable: "Gurantee",
-                        link: '#gurantee'
-                    },
-                    {
-                        lable: "FAQ",
-                        link: '#faq'
-                    },
-                    {
-                        lable: "Contact",
-                        link: '#contact-us'
-                    },
-                ]}
+            // links={[
+            //     {
+            //         lable: "How it Works",
+            //         link: 'buyer/#how-it-works'
+            //     },
+            //     {
+            //         lable: "Gurantee",
+            //         link: '#gurantee'
+            //     },
+            //     {
+            //         lable: "FAQ",
+            //         link: '#faq'
+            //     },
+            //     {
+            //         lable: "Contact",
+            //         link: '#contact-us'
+            //     },
+            // ]}
             />
 
             <div className="max-w-4xl mx-auto px-3 md:px-0">

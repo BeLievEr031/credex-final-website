@@ -10,24 +10,24 @@ export default function TermsAndConditionsPage() {
     return (
         <main className="min-h-screen pt-[120px] font-pp-mori-regular">
             <Navbar
-                links={[
-                    {
-                        lable: "How it Works",
-                        link: '#how-it-works'
-                    },
-                    {
-                        lable: "Gurantee",
-                        link: '#gurantee'
-                    },
-                    {
-                        lable: "FAQ",
-                        link: '#faq'
-                    },
-                    {
-                        lable: "Contact",
-                        link: '#contact-us'
-                    },
-                ]}
+            // links={[
+            //     {
+            //         lable: "How it Works",
+            //         link: '#how-it-works'
+            //     },
+            //     {
+            //         lable: "Gurantee",
+            //         link: '#gurantee'
+            //     },
+            //     {
+            //         lable: "FAQ",
+            //         link: '#faq'
+            //     },
+            //     {
+            //         lable: "Contact",
+            //         link: '#contact-us'
+            //     },
+            // ]}
             />
             <div className="max-w-4xl mx-auto px-3 md:px-0">
                 <header className="mb-8 flex items-start justify-between gap-4 flex-wrap">

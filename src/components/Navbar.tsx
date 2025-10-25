@@ -117,10 +117,10 @@ import { useState, useEffect } from "react";
 import { useBoolean } from "../context/FormContext";
 
 interface IProp {
-    links: { lable: string; link: string }[];
+    links?: { lable: string; link: string }[];
 }
 
-function Navbar({ links }: IProp) {
+function Navbar({ links = [] }: IProp) {
     const location = useLocation();
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -179,7 +179,9 @@ function Navbar({ links }: IProp) {
             </Link>
 
             {/* Switch Tabs */}
-            <div className="md:flex gap-x-2 bg-[#D0D5CE33] px-2 py-2 rounded-full items-center hidden translate-x-1/4">
+            <div className={clsx("md:flex gap-x-2 bg-[#D0D5CE33] px-2 py-2 rounded-full items-center hidden ", {
+                "translate-x-1/4": links.length > 0
+            })}>
                 <Link
                     to={"/"}
                     className={clsx("rounded-full p-[12px]", {
@@ -204,7 +206,7 @@ function Navbar({ links }: IProp) {
             </div>
 
             {/* Right Links */}
-            <div className="hidden md:flex items-center gap-x-8 text-[#000000CC] pr-2">
+            {links.length > 0 && <div className="hidden md:flex items-center gap-x-8 text-[#000000CC] pr-2">
                 {links.map(({ lable, link }, index) => {
                     if (index !== links.length - 1) {
                         return <a key={lable} href={link}>
@@ -220,7 +222,7 @@ function Navbar({ links }: IProp) {
                 {/* <button className={clsx("rounded-full px-6 py-2  border border-[#086841] bg-[#afdcc957] cursor-pointer")}>
                     Contact
                 </button> */}
-            </div>
+            </div>}
 
             {/* Mobile Hamburger */}
             <div className="block md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
