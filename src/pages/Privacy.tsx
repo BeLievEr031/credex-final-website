@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
                 <header className="mb-8 flex items-start justify-between gap-4 flex-wrap">
                     <div className="text-center mx-auto">
                         <h1 className="text-3xl md:text-4xl font-semibold font-pp-mori-semibold leading-tight">Privacy Policy</h1>
-                        <p className="mt-1 text-sm text-slate-600">Effective Date: <span className="font-medium">01/04/2025</span></p>
+                        {/* <p className="mt-1 text-sm text-slate-600">Effective Date: <span className="font-medium">01/04/2025</span></p> */}
                     </div>
 
                     {/* <div className="flex items-center gap-2">

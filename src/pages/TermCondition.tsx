@@ -33,7 +33,7 @@ export default function TermsAndConditionsPage() {
                 <header className="mb-8 flex items-start justify-between gap-4 flex-wrap">
                     <div className="mx-auto text-center">
                         <h1 className="text-3xl md:text-4xl font-extrabold leading-tight">Terms and Conditions</h1>
-                        <p className="mt-1 text-sm text-slate-600">Effective Date: <span className="font-medium">01/04/2025</span></p>
+                        {/* <p className="mt-1 text-sm text-slate-600">Effective Date: <span className="font-medium">01/04/2025</span></p> */}
                     </div>
 
                 </header>
