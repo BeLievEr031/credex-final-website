@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Seller from "./pages/Seller";
 import Privacy from "./pages/Privacy";
 import TermsAndConditionsPage from "./pages/TermCondition";
+import CancellationRefundPolicy from "./pages/CancellationRefundPolicy";
+import ShippingDeliveryPolicy from "./pages/ShippingDeliveryPolicy";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
             {
                 path: "term-condition",
                 element: <TermsAndConditionsPage />
+            },
+            {
+                path: "cancellation-refunds",
+                element: <CancellationRefundPolicy />
+            },
+            {
+                path: "shipping",
+                element: <ShippingDeliveryPolicy />
             },
         ]
     }
