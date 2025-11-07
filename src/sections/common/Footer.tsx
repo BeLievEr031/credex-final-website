@@ -157,6 +157,22 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                                 Privacy
                             </Link>
                         </p>
+                        <p className="flex items-center gap-x-1">
+                            <p className="text-3xl">
+                                •
+                            </p>
+                            <Link to={"/shipping"} className="md:mt-0">
+                                Shipping Policy
+                            </Link>
+                        </p>
+                        <p className="flex items-center gap-x-1">
+                            <p className="text-3xl">
+                                •
+                            </p>
+                            <Link to={"/cancellation-refunds"} className="md:mt-0">
+                                Refund Policy
+                            </Link>
+                        </p>
                     </div>
 
                     <a href="https://www.linkedin.com/company/credexmarketplace/" target="_blank" className="pt-2 relative z-[10] block">
