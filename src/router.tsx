@@ -6,6 +6,8 @@ import Privacy from "./pages/Privacy";
 import TermsAndConditionsPage from "./pages/TermCondition";
 import CancellationRefundPolicy from "./pages/CancellationRefundPolicy";
 import ShippingDeliveryPolicy from "./pages/ShippingDeliveryPolicy";
+import Blog from "./pages/Blog";
+import SingleBlog from "./pages/SingleBlog";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
             {
                 path: "shipping",
                 element: <ShippingDeliveryPolicy />
+            },
+            {
+                path: "blog",
+                element: <Blog />
+            },
+            {
+                path: "blog/:id",
+                element: <SingleBlog />
             },
         ]
     }
