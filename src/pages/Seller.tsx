@@ -173,8 +173,8 @@ function Seller() {
                         link: '#how-it-works'
                     },
                     {
-                        lable: "Gurantee",
-                        link: '#gurantee'
+                        lable: "Guarantee",
+                        link: '#guarantee'
                     },
                     {
                         lable: "FAQ",

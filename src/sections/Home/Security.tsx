@@ -58,7 +58,7 @@ function Security() {
             whileInView="show"
             viewport={{ once: true, amount: 0.20 }}
             variants={container}
-            id="gurantee"
+            id="guarantee"
         >
             {/* TOP SECTION */}
             <motion.div

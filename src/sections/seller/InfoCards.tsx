@@ -17,7 +17,7 @@ export default function InfoCards() {
     return (
         <motion.section
             className="px-2 md:px-0 mt-16 md:mt-0"
-            id="gurantee"
+            id="guarantee"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}

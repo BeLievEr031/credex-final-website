@@ -27,7 +27,7 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${1}`)}>
+                    <div className="py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"A+Million+Dollar+Email/1"}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">A Million Dollar Email</p>
                         <div className="text-sm text-[#19363FB2]">
                             <p>Credex - 27th Nov, 2025</p>
@@ -54,7 +54,7 @@ function Blog() {
 
 const BlogCard = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${1}`)}>
+    return <div className="cursor-pointer" onClick={() => navigate(`${"A+Million+Dollar+Email/1"}`)}>
         <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" className="w-full h-full object-cover" />
         </div>
