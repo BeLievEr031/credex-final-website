@@ -14,7 +14,7 @@ function SingleBlog() {
                     {/* <p className="text-[#19363FB2] md:text-xl mt-2">Explore how Synth Assistant is reshaping productivity and collaboration across industries.</p> */}
                 </div>
 
-                <div className="w-full h-[290px] md:h-[585px] bg-black rounded-xl mt-10 overflow-hidden">
+                <div className="w-full md:h-[585px] bg-black rounded-xl mt-10 overflow-hidden">
                     <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" className="w-full h-full object-cover object-top" />
                 </div>
 
@@ -667,7 +667,7 @@ export default SingleBlog
 function BlogImg({ src }: { src: string }) {
     return (
         <div>
-            <div className="w-full h-[500px] bg-black rounded-xl mt-10 overflow-hidden">
+            <div className="w-full md:h-[500px] bg-black rounded-xl mt-10 overflow-hidden">
                 <img src={src} alt="" className="" />
             </div>
         </div>
