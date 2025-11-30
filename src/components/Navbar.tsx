@@ -208,11 +208,16 @@ function Navbar({ links = [] }: IProp) {
             {/* Right Links */}
             {links.length > 0 && <div className="hidden md:flex items-center gap-x-8 text-[#000000CC] pr-2">
                 {links.map(({ lable, link }, index) => {
-                    if (index !== links.length - 1) {
+                    if (lable !== "Blog" && lable !== "Contact") {
                         return <a key={lable} href={link}>
                             {lable}
                         </a>
-                    } else {
+                    } else if (lable === "Blog") {
+                        return <Link to={"/blog"} >
+                            Blog
+                        </Link>
+                    }
+                    else {
                         return <button className="cursor-pointer" onClick={() => setMyBoolean(true)}>
                             Contact
                         </button>

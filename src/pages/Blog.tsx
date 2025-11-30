@@ -3,6 +3,8 @@ import Navbar from "../components/Navbar"
 import Footer from "../sections/common/Footer"
 
 function Blog() {
+    const navigate = useNavigate()
+
     return (
         <main className="pt-40 md:pt-48 font-pp-mori-regular">
             <Navbar />
@@ -25,27 +27,22 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2">
-                        <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">How Credex will make your framer workflow superfast.</p>
+                    <div className="py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${1}`)}>
+                        <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">A Million Dollar Email</p>
                         <div className="text-sm text-[#19363FB2]">
                             <img src="" alt="" />
-                            <p>Ethan Taylor - 28th feb, 2025</p>
+                            <p>Credex - 27th Nov, 2025</p>
                         </div>
-                        <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p>
+                        {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
 
-                        <div className="w-full md:w-[520px] h-[281px] bg-[#1C1C1C] rounded-xl mt-6">
-                            <img src="" alt="" />
+                        <div className="w-full md:w-[520px] h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" />
                         </div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 pt-8 md:pt-24 gap-x-5 gap-y-5">
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
-                    <BlogCard />
                     <BlogCard />
                 </div>
             </section>
@@ -59,17 +56,19 @@ function Blog() {
 const BlogCard = () => {
     const navigate = useNavigate()
     return <div className="cursor-pointer" onClick={() => navigate(`${1}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px]">
-            <img src="" alt="" />
+        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" className="w-full h-full object-cover" />
         </div>
-        <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">Designing with Clarity: The Power of White Space</p>
+        <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
+            A Million Dollar Email
+        </p>
         <div className="text-sm text-[#19363FB2]">
             <img src="" alt="" />
-            <p>Ethan Taylor - 28th feb, 2025</p>
+            <p>Credex- 27th Nov, 2025</p>
         </div>
-        <p>
+        {/* <p>
             Explore how strategic use of white space improves focus, hierarchy, and overall user experience.
-        </p>
+        </p> */}
     </div>
 }
 

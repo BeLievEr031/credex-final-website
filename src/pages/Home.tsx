@@ -211,6 +211,10 @@ function Home() {
                         lable: "Contact",
                         link: '#contact-us'
                     },
+                    {
+                        lable: "Blog",
+                        link: '/blog'
+                    },
                 ]}
             />
             <Hero />
