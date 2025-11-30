@@ -315,18 +315,26 @@ function Navbar({ links = [] }: IProp) {
                     </Link>
                 </div>
 
-                {links.map(({ lable, link }, index) => {
-                    if (index !== links.length - 1) {
-                        return <a key={lable} className="px-4" href={link} onClick={() => setIsMenuOpen(false)}>
-                            {lable}
-                        </a>
-                    } else {
-                        return <button className="cursor-pointer inline w-fit px-4" onClick={() => { setMyBoolean(true); setIsMenuOpen(false) }}>
-                            Contact
-                        </button>
-                    }
-                })}
+                <div className="flex flex-col items-start gap-y-2 px-3">
 
+                    {links.map(({ lable, link }) => {
+                        console.log(lable);
+
+                        if (lable !== "Blog" && lable !== "Contact") {
+                            return <a key={lable} href={link}>
+                                {lable}
+                            </a>
+                        } else if (lable === "Blog") {
+                            return <Link to={"/blog"} >
+                                Blog
+                            </Link>
+                        } else {
+                            return <button className="cursor-pointer" onClick={() => setMyBoolean(true)}>
+                                Contact
+                            </button>
+                        }
+                    })}
+                </div>
 
             </div>
         </header >

@@ -27,17 +27,16 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${1}`)}>
+                    <div className="py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${1}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">A Million Dollar Email</p>
                         <div className="text-sm text-[#19363FB2]">
-                            <img src="" alt="" />
                             <p>Credex - 27th Nov, 2025</p>
                         </div>
                         {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
 
-                        <div className="w-full md:w-[520px] h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
-                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" />
+                        <div className="w-full md:w-[520px] h-[230px] md:h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
