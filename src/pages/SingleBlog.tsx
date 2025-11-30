@@ -668,7 +668,7 @@ function BlogImg({ src }: { src: string }) {
     return (
         <div>
             <div className="w-full md:h-[500px] bg-black rounded-xl mt-10 overflow-hidden">
-                <img src={src} alt="" className="" />
+                <img src={src} alt="" className="w-full object-cover" />
             </div>
         </div>
     )
