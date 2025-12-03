@@ -27,7 +27,7 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"A+Million+Dollar+Email/1"}`)}>
+                    <div className="py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"a-million-dollar-email"}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">A Million Dollar Email</p>
                         <div className="text-sm text-[#19363FB2]">
                             <p>Credex - 27th Nov, 2025</p>
