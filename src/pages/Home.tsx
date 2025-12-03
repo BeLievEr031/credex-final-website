@@ -106,85 +106,85 @@ function Home() {
 
     const reviews = [
         {
-            name: "Maya Thompson",
-            designation: "CTO, Verisynth AI (USA, AI)",
+            name: "CTO",
+            designation: "Software Company, USA",
             review:
                 "We were burning cash experimenting with multiple LLMs. Credex let us lock in credits ~40% cheaper without touching our code. Read-only checks before paying gave my team confidence, and transfer was done the next day. It took pressure off our runway and let us ship faster.",
             img: MayaImg,
         },
         {
-            name: "Rohit Iyer",
-            designation: "Co-founder, NayiDisha Learning Cloud (India, EdTech)",
+            name: "Co-founder",
+            designation: "EdTech, India",
             review:
                 "Our OpenAI usage kept spiking during exam season. With Credex, we bought Tier-5 accounts at a discount and kept our latency targets. The savings went straight to expanding scholarships. Support was responsive even on Sunday nights.",
             img: RohitImg,
         },
         {
-            name: "Wei-Lin Tan",
-            designation: "Head of Data, LionCity Analytics (Singapore, Analytics)",
+            name: "Head of Data",
+            designation: "Analytics, Singapore",
             review:
                 "Procurement cycles can kill momentum. Credex’s escrow + proof screenshots made approvals easy, then we switched the account owner and turned on 2FA. Zero production changes, immediate savings.",
             img: WeiLinImg,
         },
         {
-            name: "Sofia Nilsson",
-            designation: "VP Product, NordicCare AI (Sweden, Health Tech)",
+            name: "VP Product",
+            designation: "Health Tech, Sweden",
             review:
                 "We model patient-support workflows on Claude and GPT-4. The discounted credits helped us scale while staying within our non-profit budget. Audit trails and vendor verification were the deciding factors for our board.",
             img: SofiaImg,
         },
         {
-            name: "Omar Al Mansoori",
-            designation: "Engineering Lead, DesertByte Robotics (UAE, Robotics/AI)",
+            name: "Engineering Lead",
+            designation: "Robotics, UAE",
             review:
                 "We needed burst capacity for a client demo week. Credex got us verified accounts with top-tier limits and clean ownership. No drop in performance. The 24/7 chat actually answered rare these days.",
             img: OmarImg,
         },
         {
-            name: "Avery Nguyen",
-            designation: "Founder, Lextera Labs (USA, Legal Tech)",
+            name: "Founder",
+            designation: "Legal Tech, USA",
             review:
                 "Our case-summaries app has unpredictable traffic. Credex let us lock predictable pricing and cut our cloud + LLM blend by ~38%. The refund/replacement guarantee reduced my risk enough to say ‘yes’.",
             img: AveryImg,
         },
         {
-            name: "Luca Romano",
-            designation: "COO, MedInnova Systems (Italy, Health IT)",
+            name: "COO",
+            designation: "Health Tech, Italy",
             review:
                 "We’re conservative about vendors. Getting screenshots + limited access to test API calls before purchase made our security team comfortable. Transfer was quick, and monthly costs dropped exactly as quoted.",
             img: LucaImg,
         },
         {
-            name: "Priya Nair",
-            designation: "Data Science Manager, Marigold Commerce (India, E-commerce)",
+            name: "Data Science Manager",
+            designation: "E-commerce, India",
             review:
                 "We moved our training jobs to discounted GCP/AWS credits. No rate-limit surprises, no mystery blockers, just real accounts with runway left. Would do it again.",
             img: PriyaImg,
         },
         {
-            name: "Fatima Al Qasimi",
-            designation: "CEO, OasisEd (UAE, EdTech)",
+            name: "CEO",
+            designation: "EdTech, UAE",
             review:
                 "The team helped us buy time before a regional pilot. The NDA approach and identity shielding mattered to our partners. We scaled student chatbots across three campuses within budget.",
             img: FatimaImg,
         },
         {
-            name: "Jens Müller",
-            designation: "CTO, BergTech Systems (Germany, IT Services)",
+            name: "CTO",
+            designation: "IT Services, Germany",
             review:
                 "Solid process: NDA, escrow, proof, transfer, done. We saved on OpenAI and reallocated the budget to human QA. Hard to argue with that.",
             img: JensImg,
         },
         {
-            name: "Marta García",
-            designation: "Product Lead, Legalía Cloud (Spain, Legal Tech)",
+            name: "Product Lead",
+            designation: "Legal Tech, Spain",
             review:
                 "We tested via read-only access and saw the limits we needed. After transfer, we flipped passwords and 2FA and were alive in an hour. It felt like buying time as much as credits.",
             img: MartaImg,
         },
         {
-            name: "Rachel Lim",
-            designation: "Co-founder, Harbor Light AI (Singapore, FinTech)",
+            name: "Co-founder",
+            designation: "FinTech, Singapore",
             review:
                 "The savings let us launch two features that were stuck in cost limbo. We kept hitting our SLAs with zero code changes exactly as promised.",
             img: RachelImg,
@@ -224,7 +224,9 @@ function Home() {
             <div className="px-2 md:px-0">
                 <AgencySavings />
             </div>
-            <Testimonial reviews={reviews} />
+            <Testimonial reviews={reviews}
+                description="These quotes are from real buyers using Credex to buy or sell unused credits.Identifying details (names & company names) are anonymized due to NDAs. Roles, regions, industries, and outcomes are accurate. For serious evaluations, we can share reference customers under NDA."
+            />
             {/* contact us */}
             {/* <ContactForm /> */}
             {/* <Pricing /> */}

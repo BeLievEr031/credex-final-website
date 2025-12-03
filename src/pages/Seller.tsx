@@ -79,85 +79,85 @@ function Seller() {
     ];
     const reviews = [
         {
-            name: "Anthony Reed",
-            designation: "CFO, SkyLattice Cloud (USA, Cloud Tools)",
+            name: "CFO",
+            designation: "Cloud Tools, USA",
             review:
                 "After a product pivot, we had a pile of unused credits. Credex’s verification felt rigorous but fair. Once the buyer confirmed usage, escrow released and cash hit our account. It recovered the budget we’d written off.",
             img: AnthonyImg,
         },
         {
-            name: "Ananya Sharma",
-            designation: "Founder, PrismStack Labs (India, AI Studio)",
+            name: "Founder",
+            designation: "AI Studio, India",
             review:
                 "We shut down a prototype program and listed our remaining credits. Identity shielding mattered; we didn't want our name in the wild. The team handled the paperwork and kept it discreet.",
             img: AnanyaImg,
         },
         {
-            name: "Mohammed Al Habsi",
-            designation: "Operations, Oasis Quantum Systems (UAE, R&D)",
+            name: "Operations lead",
+            designation: "R&D, UAE",
             review:
                 "The process was clean: NDA, screenshots, then transfer. No haggling theatrics. We moved on from a pivot without feeling wasteful.",
             img: MohammedImg,
         },
         {
-            name: "Elena Popescu",
-            designation: "COO, BrightPath EMEA (Romania, EdTech)",
+            name: "COO",
+            designation: "EdTech, Romania",
             review:
                 "We had grants we couldn’t fully use. Credex turned that into cash for a new content partnership. The transparency around credit history gave us confidence the deal would stick.",
             img: ElenaImg,
         },
         {
-            name: "Ethan Cole",
-            designation: "Finance Lead, DeltaSense Robotics (USA, Robotics)",
+            name: "Finance Lead",
+            designation: "Robotics, USA",
             review:
                 "Happy with the escrow model. We didn’t want to risk chargebacks or gray-area buyers. Verification plus auditing protected both sides.",
             img: EthanImg,
         },
         {
-            name: "Sofia Dimitrova",
-            designation: "Head of Ops, BluePine Legal AI (Bulgaria, Legal Tech)",
+            name: "Head of Ops",
+            designation: "Legal Tech, Bulgaria",
             review:
                 "Our internal shutdown timeline was tight; Credex still closed within the week after docs were done. The buyer got the limits they wanted, we got paid, and everyone moved on.",
             img: SofiaImg,
         },
         {
-            name: "Karan Mehta",
-            designation: "Program Manager, Amberline Health (India, Health Tech)",
+            name: "Program Manager",
+            designation: "Health Tech, India",
             review:
                 "I liked that they weren’t reselling sketchy vouchers. It's a real account ownership transfer with proper 2FA handoff, which kept our compliance team calm.",
             img: KaranImg,
         },
         {
-            name: "Clara Dubois",
-            designation: "CEO, Veridian Studio (France, AI/Creative)",
+            name: "CEO",
+            designation: "Media & Entertainment, France",
             review:
                 "We had mis-sized our credits during a hiring freeze. Converting them via Credex gave us a runway for marketing without the sunk-cost sting.",
             img: ClaraImg,
         },
         {
-            name: "Hussain Al Nuaimi",
-            designation: "CTO, SandBridge IT (UAE, IT Services)",
+            name: "CTO",
+            designation: "Consulting, UAE",
             review:
                 "The auditing step looked for expiry risks before listing. We appreciated that diligence and avoided buyer disputes later.",
             img: HussainImg,
         },
         {
-            name: "Jakub Nowak",
-            designation: "Co-founder, BalticByte Analytics (Poland, Data)",
+            name: "Co-founder",
+            designation: "Data, Poland",
             review:
                 "Straightforward fee structure and clear communication. We provided proofs once, and the team handled buyer questions using read-only access.",
             img: JakubImg,
         },
         {
-            name: "Aisha Patel",
-            designation: "General Counsel, OnyxLegal AI (UK, Legal Tech)",
+            name: "General Counsel",
+            designation: "Legal Tech, UK",
             review:
                 "The NDA and identity shielding were non-negotiable for us. Credex respected both and documented the transfer trail properly.",
             img: AishaImg,
         },
         {
-            name: "Nikolai Petrov",
-            designation: "CFO, NorthForge Cloudworks (Czechia, Cloud)",
+            name: "CFO",
+            designation: "Cloud, Czechia",
             review:
                 "Nice to turn stranded credits into a budget for an EU compliance project. The payout was released right after the buyer confirmed access.",
             img: NikolaiImg,
@@ -198,7 +198,9 @@ function Seller() {
                 <ProofSection />
             </div> */}
             <div className="pt-[40px] md:pt-[100px]">
-                <Testimonial reviews={reviews} />
+                <Testimonial reviews={reviews}
+                    description="These quotes are from organizations that sold unused credits through Credex. Identifying details are anonymized; process and outcomes are unchanged."
+                />
             </div>
             <Faq faqs={faqs} />
             <Footer

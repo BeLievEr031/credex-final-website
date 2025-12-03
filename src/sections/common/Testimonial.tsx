@@ -1,9 +1,10 @@
 import clsx from "clsx";
 import { motion } from "motion/react"
 interface IProp {
-    reviews: { name: string; designation: string; review: string, img: string }[]
+    reviews: { name: string; designation: string; review: string, img: string }[],
+    description: string;
 }
-function Testimonial({ reviews }: IProp) {
+function Testimonial({ reviews, description }: IProp) {
 
 
     return (
@@ -26,7 +27,12 @@ function Testimonial({ reviews }: IProp) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className="text-[#00000080] text-[12px] md:text-[16px]">See what other clients are saying about their experience with Credex</motion.p>
+                    className="text-[#00000080] text-[12px] md:text-[16px] md:w-[65%] mx-auto">
+
+                    See what other clients are saying about their experience with Credex
+
+                    {/* {description} */}
+                </motion.p>
 
                 <motion.p
                     initial={{ opacity: 0, y: 40 }}
@@ -42,7 +48,7 @@ function Testimonial({ reviews }: IProp) {
             </div>
 
             <div
-                className="pt-12 md:pt-24 flex gap-x-2 animate-scroll"
+                className="pt-12 md:pt-24 flex gap-x-2 animate-scrolll"
                 style={{ willChange: "transform" }}
 
             >
