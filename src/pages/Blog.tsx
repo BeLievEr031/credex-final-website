@@ -54,7 +54,7 @@ function Blog() {
 
 const BlogCard = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"A+Million+Dollar+Email/1"}`)}>
+    return <div className="cursor-pointer" onClick={() => navigate(`${"a-million-dollar-email"}`)}>
         <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" className="w-full h-full object-cover" />
         </div>
