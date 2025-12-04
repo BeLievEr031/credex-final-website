@@ -4,7 +4,7 @@ interface IProp {
     reviews: { name: string; designation: string; review: string, img: string }[],
     description: string;
 }
-function Testimonial({ reviews, description }: IProp) {
+function Testimonial({ reviews }: IProp) {
 
 
     return (
