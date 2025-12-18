@@ -8,6 +8,7 @@ import CancellationRefundPolicy from "./pages/CancellationRefundPolicy";
 import ShippingDeliveryPolicy from "./pages/ShippingDeliveryPolicy";
 import Blog from "./pages/Blog";
 import SingleBlog from "./pages/SingleBlog";
+import SingleBlog2 from "./pages/SingleBlog2";
 
 const router = createBrowserRouter([
     {
@@ -43,8 +44,12 @@ const router = createBrowserRouter([
                 element: <Blog />
             },
             {
-                path: "blog/:id",
+                path: "blog/a-million-dollar-email",
                 element: <SingleBlog />
+            },
+            {
+                path: "blog/how-we-bootstrapped-a-fintech-startup-to-$2m-arr-using-smart-ai-infrastructure:-a-founder’s-case-study",
+                element: <SingleBlog2 />
             },
         ]
     }
