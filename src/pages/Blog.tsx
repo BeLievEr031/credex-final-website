@@ -27,10 +27,10 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"a-million-dollar-email"}`)}>
-                        <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">A Million Dollar Email</p>
+                    <div className="py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"how-we-bootstrapped-a-fintech-startup-to-$2m-arr-using-smart-ai-infrastructure:-a-founder’s-case-study"}`)}>
+                        <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">How We Bootstrapped a Fintech Startup to $2M ARR...l</p>
                         <div className="text-sm text-[#19363FB2]">
-                            <p>Credex - 27th Nov, 2025</p>
+                            <p>Credex - 9th Dec, 2025</p>
                         </div>
                         {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
