@@ -36,14 +36,14 @@ function Blog() {
 
 
                         <div className="w-full md:w-[520px] h-[230px] md:h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
-                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" className="w-full h-full object-cover" />
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*YMpisxvxklmlNKviyAA33g.png" alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 pt-8 md:pt-24 gap-x-5 gap-y-5">
-                    <BlogCard />
                     <BlogCard2 />
+                    <BlogCard />
                 </div>
             </section>
             <Footer />
@@ -82,7 +82,7 @@ const BlogCard2 = () => {
         </p>
         <div className="text-sm text-[#19363FB2]">
             <img src="" alt="" />
-            <p>Credex- 27th Nov, 2025</p>
+            <p>Credex- 9th Dec, 2025</p>
         </div>
         {/* <p>
             Explore how strategic use of white space improves focus, hierarchy, and overall user experience.

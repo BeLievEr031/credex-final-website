@@ -12,12 +12,16 @@ function SingleBlog2() {
                         How We Bootstrapped a Fintech Startup to $2M ARR Using Smart AI Infrastructure: A Founder’s Case
                         Study
                     </h1>
+                    <BlogImg
+                        src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*YMpisxvxklmlNKviyAA33g.png" />
                 </div>
-                <div className="pt-10 md:pt-24">
-
+                <div className="grid md:grid-cols-[1fr_3fr] pt-10 md:pt-24">
+                    <div>
+                        <p className="font-pp-mori-regular tracking-widest">Dec 09, 2025</p>
+                        <p>By Credex</p>
+                    </div>
                     <div className="space-y-10 md:space-y-20 mt-4 md:mt-0">
-                        <BlogImg
-                            src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*YMpisxvxklmlNKviyAA33g.png" />
+
                         <div className="">
                             <h1 className="md:text-3xl text-2xl font-semibold font-pp-mori-semibold">The 3 AM Panic Attack
                                 That Changed Everything</h1>
