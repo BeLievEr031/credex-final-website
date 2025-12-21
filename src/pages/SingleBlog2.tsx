@@ -9,8 +9,7 @@ function SingleBlog2() {
             <section className="px-3 md:px-24">
                 <div>
                     <h1 className="font-semibold font-pp-mori-semibold text-[32px] md:text-[48px] leading-tight">
-                        How We Bootstrapped a Fintech Startup to $2M ARR Using Smart AI Infrastructure: A Founder’s Case
-                        Study
+                        How We Bootstrapped a Fintech Startup to $2M ARR Using Smart AI Infrastructure: A Founder’s Case Study
                     </h1>
                     <BlogImg
                         src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*YMpisxvxklmlNKviyAA33g.png" />

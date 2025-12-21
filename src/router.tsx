@@ -9,6 +9,7 @@ import ShippingDeliveryPolicy from "./pages/ShippingDeliveryPolicy";
 import Blog from "./pages/Blog";
 import SingleBlog from "./pages/SingleBlog";
 import SingleBlog2 from "./pages/SingleBlog2";
+import SingleBlog3 from "./pages/SingleBlog3";
 
 const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/how-we-bootstrapped-a-fintech-startup-to-$2m-arr-using-smart-ai-infrastructure:-a-founder’s-case-study",
                 element: <SingleBlog2 />
+            },
+            {
+                path: "blog/the-unit-economics-of-virality:-how-we-scaled-gemini-1.5-pro-to-50k-users-without-going-bankrupt",
+                element: <SingleBlog3 />
             },
         ]
     }
