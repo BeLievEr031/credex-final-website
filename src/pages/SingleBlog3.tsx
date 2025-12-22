@@ -510,14 +510,14 @@ function BlogImg({ src }: { src: string }) {
     )
 }
 
-function P() {
-    return <p className="text-[#19363FB2] md:text-xl mt-4">
-        <Outlet />
-    </p>
-}
+// function P() {
+//     return <p className="text-[#19363FB2] md:text-xl mt-4">
+//         <Outlet />
+//     </p>
+// }
 
-function H1() {
-    return <h1 className="md:text-3xl text-2xl font-semibold font-pp-mori-semibold">
-        <Outlet />
-    </h1>
-}
+// function H1() {
+//     return <h1 className="md:text-3xl text-2xl font-semibold font-pp-mori-semibold">
+//         <Outlet />
+//     </h1>
+// }
