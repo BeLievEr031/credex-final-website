@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import SingleBlog from "./pages/SingleBlog";
 import SingleBlog2 from "./pages/SingleBlog2";
 import SingleBlog3 from "./pages/SingleBlog3";
+import SingleBlog4 from "./pages/SingleBlog4";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/the-unit-economics-of-virality:-how-we-scaled-gemini-1.5-pro-to-50k-users-without-going-bankrupt",
                 element: <SingleBlog3 />
+            },
+            {
+                path: "blog/aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit",
+                element: <SingleBlog4 />
             },
         ]
     }

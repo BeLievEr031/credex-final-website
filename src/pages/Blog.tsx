@@ -27,21 +27,24 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"the-unit-economics-of-virality:-how-we-scaled-gemini-1.5-pro-to-50k-users-without-going-bankrupt"}`)}>
-                        <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">The Unit Economics of Virality: How We Scaled Gemini 1.5 Pro to 50k...</p>
+                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit"}`)}>
+                        <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">
+                            AWS Costs Kill Valuations: How a $287K AWS Bill Almost Killed a $50M Exit
+                        </p>
                         <div className="text-sm text-[#19363FB2]">
-                            <p>Credex - 18th Dec, 2025</p>
+                            <p>Credex - 3rd Jan, 2025</p>
                         </div>
                         {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
 
                         <div className="w-full md:w-[520px] h-[230px] md:h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
-                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*MlMUXF54yNChRizfRuWCow.png" alt="" className="w-full h-full object-cover" />
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*xD86V5pAsmsx68pdrCqoqg.png" alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 pt-8 md:pt-24 gap-x-5 gap-y-5">
+                    <BlogCard4 />
                     <BlogCard3 />
                     <BlogCard2 />
                     <BlogCard />
@@ -102,6 +105,25 @@ const BlogCard3 = () => {
         <div className="text-sm text-[#19363FB2]">
             <img src="" alt="" />
             <p>Credex- 18th Dec, 2025</p>
+        </div>
+        {/* <p>
+            Explore how strategic use of white space improves focus, hierarchy, and overall user experience.
+        </p> */}
+    </div>
+}
+
+const BlogCard4 = () => {
+    const navigate = useNavigate()
+    return <div className="cursor-pointer" onClick={() => navigate(`${"aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit"}`)}>
+        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*xD86V5pAsmsx68pdrCqoqg.png" alt="" className="w-full h-full object-cover" />
+        </div>
+        <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
+            AWS Costs Kill Valuations: How a $287K AWS Bill Almost Killed a $50M Exit
+        </p>
+        <div className="text-sm text-[#19363FB2]">
+            <img src="" alt="" />
+            <p>Credex- 3rd Jan, 2025</p>
         </div>
         {/* <p>
             Explore how strategic use of white space improves focus, hierarchy, and overall user experience.
