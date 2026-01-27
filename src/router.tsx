@@ -11,6 +11,7 @@ import SingleBlog from "./pages/SingleBlog";
 import SingleBlog2 from "./pages/SingleBlog2";
 import SingleBlog3 from "./pages/SingleBlog3";
 import SingleBlog4 from "./pages/SingleBlog4";
+import SingleBlog5 from "./pages/SingleBlog5";
 
 const router = createBrowserRouter([
     {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit",
                 element: <SingleBlog4 />
+            },
+            {
+                path: "blog/cut-aws-costs-by-50-in-2-weeks-the-cloud-credit-strategy-that-saved-our-series",
+                element: <SingleBlog5 />
             },
         ]
     }

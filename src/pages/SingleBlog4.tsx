@@ -22,7 +22,7 @@ function SingleBlog4() {
                 </div>
                 <div className="grid md:grid-cols-[1fr_3fr] pt-10 md:pt-24">
                     <div>
-                        <p className="font-pp-mori-regular tracking-widest">Jan 3, 2025</p>
+                        <p className="font-pp-mori-regular tracking-widest">Jan 3, 2026</p>
                         <p>By Credex</p>
                     </div>
                     <div className="space-y-10 md:space-y-20 mt-4 md:mt-0">

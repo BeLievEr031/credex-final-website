@@ -27,9 +27,9 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit"}`)}>
+                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"cut-aws-costs-by-50-in-2-weeks-the-cloud-credit-strategy-that-saved-our-series"}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">
-                            AWS Costs Kill Valuations: How a $287K AWS Bill Almost Killed a $50M Exit
+                            Cut AWS Costs by 50% in 2 Weeks: The Cloud Credit Strategy That Saved Our Series C.
                         </p>
                         <div className="text-sm text-[#19363FB2]">
                             <p>Credex - 3rd Jan, 2025</p>
@@ -38,12 +38,13 @@ function Blog() {
 
 
                         <div className="w-full md:w-[520px] h-[230px] md:h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
-                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*xD86V5pAsmsx68pdrCqoqg.png" alt="" className="w-full h-full object-cover" />
+                            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*tUvVv7vdyVrHi5hV4XbSXQ.png" alt="" className="w-full h-full object-cover" />
                         </div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 pt-8 md:pt-24 gap-x-5 gap-y-5">
+                    <BlogCard5 />
                     <BlogCard4 />
                     <BlogCard3 />
                     <BlogCard2 />
@@ -111,7 +112,6 @@ const BlogCard3 = () => {
         </p> */}
     </div>
 }
-
 const BlogCard4 = () => {
     const navigate = useNavigate()
     return <div className="cursor-pointer" onClick={() => navigate(`${"aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit"}`)}>
@@ -125,9 +125,22 @@ const BlogCard4 = () => {
             <img src="" alt="" />
             <p>Credex- 3rd Jan, 2025</p>
         </div>
-        {/* <p>
-            Explore how strategic use of white space improves focus, hierarchy, and overall user experience.
-        </p> */}
+    </div>
+}
+
+const BlogCard5 = () => {
+    const navigate = useNavigate()
+    return <div className="cursor-pointer" onClick={() => navigate(`${"cut-aws-costs-by-50-in-2-weeks-the-cloud-credit-strategy-that-saved-our-series"}`)}>
+        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+            <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*tUvVv7vdyVrHi5hV4XbSXQ.png" alt="" className="w-full h-full object-cover" />
+        </div>
+        <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
+            AWS Costs Kill Valuations: How a $287K AWS Bill Almost Killed a $50M Exit
+        </p>
+        <div className="text-sm text-[#19363FB2]">
+            <img src="" alt="" />
+            <p>Credex- 25th Jan, 2026</p>
+        </div>
     </div>
 }
 
