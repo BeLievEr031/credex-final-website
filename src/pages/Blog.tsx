@@ -32,7 +32,7 @@ function Blog() {
                             Cut AWS Costs by 50% in 2 Weeks: The Cloud Credit Strategy That Saved Our Series C.
                         </p>
                         <div className="text-sm text-[#19363FB2]">
-                            <p>Credex - 3rd Jan, 2025</p>
+                            <p>Credex - 3rd Jan, 2026</p>
                         </div>
                         {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
