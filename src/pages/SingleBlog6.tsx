@@ -65,7 +65,7 @@ function SingleBlog6() {
 
 
 
-                            <p className="text-[#19363FB2] md:text-xl mt-4">
+                            <p className="text-[#19363FB2] md:text-xl mt-4 px-4">
                                 <ul>
                                     <li className="list-disc">
                                         Lost Revenue: Throttled API calls mean degraded user experience, which means churn
@@ -107,7 +107,7 @@ function SingleBlog6() {
                                 Instead of waiting 3–4 months and sending countless support tickets, you get:
                             </p>
 
-                            <p className="text-[#19363FB2] md:text-xl mt-4">
+                            <p className="text-[#19363FB2] md:text-xl mt-4 px-4">
                                 <ul>
                                     <li className="list-disc">
                                         Tier 5 OpenAI accounts with enterprise-level throughput from day one
@@ -142,7 +142,7 @@ function SingleBlog6() {
                                         Let’s be clear about what you’re gaining:
                                     </p>
 
-                                    <p className="text-[#19363FB2] md:text-xl mt-4">
+                                    <p className="text-[#19363FB2] md:text-xl mt-4 px-4">
                                         <ul>
                                             <li className="list-disc">
 
@@ -165,7 +165,7 @@ function SingleBlog6() {
 
                                     <BlogImg src="	https://miro.medium.com/v2/resize:fit:828/format:webp/1*vPEbJdkwv6-Sy2v7Y2jA2Q.png" />
 
-                                    <p className="text-[#19363FB2] md:text-xl mt-4 p-5">
+                                    <p className="text-[#19363FB2] md:text-xl mt-4 px-5">
                                         Credex Path:
                                         <ul className="flex flex-col gap-3 decoration-dotted">
                                             <li className="list-disc">
