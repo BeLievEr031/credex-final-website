@@ -27,7 +27,7 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"cut-aws-costs-by-50-in-2-weeks-the-cloud-credit-strategy-that-saved-our-series"}`)}>
+                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"scale-your-ai-product-in-1-week-not-in-4-months"}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">
                             Scale your AI product in 1 week not in 4 months
                         </p>

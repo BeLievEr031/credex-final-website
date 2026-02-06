@@ -8,19 +8,30 @@ function SingleBlog6() {
         <main className="pt-40 md:pt-48 font-pp-mori-regular">
             <Navbar />
             <section className="px-3 md:px-24">
-                <div>
-                    <h1 className="font-semibold font-pp-mori-semibold text-[32px] md:text-[48px] leading-tight">
-                        Scale your AI product in 1 week not in 4 months
-                    </h1>
-                    <BlogImg
-                        src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*uEyEXWvltD0_aNDnGByo7w.png" />
+
+                <div className=" flex flex-col justify-center items-center">
+                    <div className="w-full md:w-1/2">
+
+                        <h1 className="font-semibold font-pp-mori-semibold text-[32px] md:text-[48px] leading-tight">
+                            Scale your AI product in 1 week not in 4 months
+                        </h1>
+                        <div>
+                            <p className="font-pp-mori-regular tracking-widest">Feb 04, 2026</p>
+                            <p>By Credex</p>
+                        </div>
+                    </div>
+                    <div className="w-full md:w-1/2">
+
+                        <BlogImg
+                            src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*uEyEXWvltD0_aNDnGByo7w.png" />
+                    </div>
                 </div>
-                <div className="grid md:grid-cols-[1fr_3fr] pt-10 md:pt-24">
-                    <div>
+                <div className="flex justify-center pt-10 md:pt-24">
+                    {/* <div>
                         <p className="font-pp-mori-regular tracking-widest">Feb 04, 2026</p>
                         <p>By Credex</p>
-                    </div>
-                    <div className="space-y-10 md:space-y-20 mt-4 md:mt-0">
+                    </div> */}
+                    <div className="space-y-10 md:space-y-20 mt-4 md:mt-0 w-full md:w-1/2">
                         <div className="">
                             <h1 className="md:text-3xl text-2xl font-semibold font-pp-mori-semibold">
                                 The Rate Limit Trap That’s Stalling Your Growth
@@ -261,7 +272,7 @@ export default SingleBlog6;
 function BlogImg({ src }: { src: string }) {
     return (
         <div>
-            <div className="w-full md:h-[500px] bg-black rounded-xl mt-10 overflow-hidden">
+            <div className="bg-black rounded-xl mt-5 overflow-hidden">
                 <img src={src} alt="" className="w-full object-cover h-full" />
             </div>
         </div>
