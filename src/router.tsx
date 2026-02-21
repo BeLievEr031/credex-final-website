@@ -13,6 +13,7 @@ import SingleBlog3 from "./pages/SingleBlog3";
 import SingleBlog4 from "./pages/SingleBlog4";
 import SingleBlog5 from "./pages/SingleBlog5";
 import SingleBlog6 from "./pages/SingleBlog6";
+import SingleBlog7 from "./pages/SingleBlog7";
 
 const router = createBrowserRouter([
     {
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/scale-your-ai-product-in-1-week-not-in-4-months",
                 element: <SingleBlog6 />
+            },
+            {
+                path: "blog/why-claude-by-anthropic-is-redefining-enterprise-ai-in-2026",
+                element: <SingleBlog7 />
             },
         ]
     }

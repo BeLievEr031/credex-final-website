@@ -27,23 +27,24 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"scale-your-ai-product-in-1-week-not-in-4-months"}`)}>
+                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"why-claude-by-anthropic-is-redefining-enterprise-ai-in-2026"}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">
-                            Scale your AI product in 1 week not in 4 months
+                            Why Claude by Anthropic is Redefining Enterprise AI in 2026
                         </p>
                         <div className="text-sm text-[#19363FB2]">
-                            <p>Credex - 4th Feb, 2026</p>
+                            <p>Credex - 19th Feb, 2026</p>
                         </div>
                         {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
 
                         <div className="w-full md:w-[520px] h-[230px] md:h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
-                            <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*uEyEXWvltD0_aNDnGByo7w.png" alt="" className="w-full h-full object-cover object-top" />
+                            <img src="https://miro.medium.com/v2/resize:fit:788/1*bOMbAH4trKymB7tV3yYKtA.png" alt="" className="w-full h-full object-cover object-top" />
                         </div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 pt-8 md:pt-24 gap-x-5 gap-y-5">
+                    <BlogCard7 />
                     <BlogCard6 />
                     <BlogCard5 />
                     <BlogCard4 />
@@ -156,6 +157,21 @@ const BlogCard6 = () => {
         <div className="text-sm text-[#19363FB2]">
             <img src="" alt="" />
             <p>Credex- 4th Feb, 2026</p>
+        </div>
+    </div>
+}
+const BlogCard7 = () => {
+    const navigate = useNavigate()
+    return <div className="cursor-pointer" onClick={() => navigate(`${"why-claude-by-anthropic-is-redefining-enterprise-ai-in-2026"}`)}>
+        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+            <img src="https://miro.medium.com/v2/resize:fit:788/1*bOMbAH4trKymB7tV3yYKtA.png" alt="" className="w-full h-full object-cover object-top" />
+        </div>
+        <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
+            Why Claude by Anthropic is Redefining Enterprise AI in 2026
+        </p>
+        <div className="text-sm text-[#19363FB2]">
+            <img src="" alt="" />
+            <p>Credex- 19th Feb, 2026</p>
         </div>
     </div>
 }
