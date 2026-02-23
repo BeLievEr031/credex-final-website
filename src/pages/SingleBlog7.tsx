@@ -522,8 +522,15 @@ export default SingleBlog7;
 function BlogImg({ src }: { src: string }) {
     return (
         <div>
-            <div className="bg-black rounded-xl mt-5 overflow-hidden">
+            <div className="bg-black  mt-5 overflow-hidden relative">
                 <img src={src} alt="" className="w-full object-cover h-full" />
+
+                <div className="absolute w-full h-2 top-0 left-0 bg-white"></div>
+                <div className="absolute w-full h-2 bottom-0 left-0 bg-white"></div>
+                <div className="absolute w-2 h-full top-0 left-0 bg-white"></div>
+                <div className="absolute w-2 h-full top-0 right-0 bg-white"></div>
+
+
             </div>
         </div>
     )
