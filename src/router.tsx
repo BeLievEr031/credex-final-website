@@ -1,19 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "./layouts/Root";
-import Home from "./pages/Home";
-import Seller from "./pages/Seller";
-import Privacy from "./pages/Privacy";
-import TermsAndConditionsPage from "./pages/TermCondition";
-import CancellationRefundPolicy from "./pages/CancellationRefundPolicy";
-import ShippingDeliveryPolicy from "./pages/ShippingDeliveryPolicy";
-import Blog from "./pages/Blog";
-import SingleBlog from "./pages/SingleBlog";
-import SingleBlog2 from "./pages/SingleBlog2";
-import SingleBlog3 from "./pages/SingleBlog3";
-import SingleBlog4 from "./pages/SingleBlog4";
-import SingleBlog5 from "./pages/SingleBlog5";
-import SingleBlog6 from "./pages/SingleBlog6";
-import SingleBlog7 from "./pages/SingleBlog7";
+import { lazy } from "react";
+
+const Root = lazy(() => import("./layouts/Root"));
+const Home = lazy(() => import("./pages/Home"));
+const Seller = lazy(() => import("./pages/Seller"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const TermsAndConditionsPage = lazy(() => import("./pages/TermCondition"));
+const CancellationRefundPolicy = lazy(() => import("./pages/CancellationRefundPolicy"));
+const ShippingDeliveryPolicy = lazy(() => import("./pages/ShippingDeliveryPolicy"));
+const Blog = lazy(() => import("./pages/Blog"));
+
+const SingleBlog = lazy(() => import("./pages/SingleBlog"));
+const SingleBlog2 = lazy(() => import("./pages/SingleBlog2"));
+const SingleBlog3 = lazy(() => import("./pages/SingleBlog3"));
+const SingleBlog4 = lazy(() => import("./pages/SingleBlog4"));
+const SingleBlog5 = lazy(() => import("./pages/SingleBlog5"));
+const SingleBlog6 = lazy(() => import("./pages/SingleBlog6"));
+const SingleBlog7 = lazy(() => import("./pages/SingleBlog7"));
 
 const router = createBrowserRouter([
     {

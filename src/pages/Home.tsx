@@ -12,18 +12,18 @@ import ContactForm from "../sections/common/ContactUs"
 import { useBoolean } from "../context/FormContext"
 
 
-import AveryImg from "../assets/buyers/Avery Nguyen (USA).webp";
-import FatimaImg from "../assets/buyers/Fatima Al Qasimi (UAE).webp";
-import JensImg from "../assets/buyers/Jens Müller (Germany).webp";
-import LucaImg from "../assets/buyers/Luca Romano (Italy).webp";
-import MartaImg from "../assets/buyers/Marta García (Spain).webp";
-import MayaImg from "../assets/buyers/Maya Thompson (USA).webp";
-import OmarImg from "../assets/buyers/Omar Al Mansoori (UAE).webp";
-import PriyaImg from "../assets/buyers/Priya Nair (India).webp";
-import RachelImg from "../assets/buyers/Rachel Lim (Singapore).webp";
-import RohitImg from "../assets/buyers/Rohit Iyer (India).webp";
-import SofiaImg from "../assets/buyers/Sofia Nilsson (Sweden).webp";
-import WeiLinImg from "../assets/buyers/Wei-Lin Tan (Singapore).webp";
+import AveryImg from "../assets/buyers/Avery_Nguyen_USA_13_50.webp";
+import FatimaImg from "../assets/buyers/Fatima_Al_Qasimi_UAE_3_50.webp";
+import JensImg from "../assets/buyers/Jens_Muller_Germany_2_50.webp";
+import LucaImg from "../assets/buyers/Luca_Romano_Italy_2_50.webp";
+import MartaImg from "../assets/buyers/Marta_Garcia_Spain_2_50.webp";
+import MayaImg from "../assets/buyers/Maya_Thompson_USA_2_50.webp";
+import OmarImg from "../assets/buyers/Omar_Al_Mansoori_UAE_3_50.webp";
+import PriyaImg from "../assets/buyers/Priya_Nair_India_2_50.webp";
+import RachelImg from "../assets/buyers/Rachel_Lim_Singapore_3_50.webp";
+import RohitImg from "../assets/buyers/Rohit_Iyer_India_3_50.webp";
+import SofiaImg from "../assets/buyers/Sofia_Nilsson_Sweden_3_50.webp";
+import WeiLinImg from "../assets/buyers/Wei-Lin_Tan_Singapore_2_50.webp";
 function Home() {
     const { myBoolean, setMyBoolean } = useBoolean()
     const faqs = [

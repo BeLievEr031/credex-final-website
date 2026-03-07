@@ -1,5 +1,5 @@
 import { motion, type Variants } from "motion/react"
-import StatsImg1 from "../../assets/stats1.png"
+import StatsImg1 from "../../assets/stats1.webp"
 import OpenAiIMg from "../../assets/openai.png"
 import GCPImg from "../../assets/gcp.png"
 import AWSImg from "../../assets/aws.png"
@@ -10,6 +10,17 @@ import GeminiImg from "../../assets/gemini.png"
 import clsx from "clsx"
 
 function StatsFeatureSection() {
+
+    const images = [
+        { src: OpenAiIMg, alt: "Open AI logo" },
+        { src: ClaudImg, alt: "Claude logo" },
+        { src: AWSImg, alt: "AWS logo" },
+        { src: AzureImg, alt: "Azure logo" },
+        { src: Openailogo, alt: "OpenAI logo" },
+        { src: GCPImg, alt: "GCP logo" },
+        { src: GeminiImg, alt: "Gemini logo" }
+    ];
+
     // Animation Variants
     const container = {
         hidden: { opacity: 0 },
@@ -125,12 +136,12 @@ function StatsFeatureSection() {
                         className="flex items-center justify-center gap-4 flex-wrap opacity-90 bg-white/5 w-[90%] rounded-xl py-8 px-4"
                         variants={container}
                     >
-                        {[OpenAiIMg, ClaudImg, AWSImg, AzureImg, Openailogo, GCPImg, GeminiImg].map(
-                            (logo, idx) => (
+                        {images.map(
+                            (img, idx) => (
                                 <motion.img
                                     key={idx}
-                                    src={logo}
-                                    alt={`logo-${idx}`}
+                                    src={img.src}
+                                    alt={img.alt}
                                     className={clsx({
                                         "h-10": idx !== 5,
                                         "h-14": idx === 5

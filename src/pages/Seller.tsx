@@ -9,18 +9,18 @@ import Testimonial from "../sections/common/Testimonial"
 // import ProofSection from "../sections/common/Proof"
 import ContactForm from "../sections/common/ContactUs"
 import { useBoolean } from "../context/FormContext"
-import AishaImg from "../assets/sellers/Aisha Patel (UK).webp";
-import AnanyaImg from "../assets/sellers/Ananya Sharma (India).webp";
-import AnthonyImg from "../assets/sellers/Anthony Reed (USA).webp";
-import ClaraImg from "../assets/sellers/Clara Dubois (France).webp";
-import ElenaImg from "../assets/sellers/Elena Popescu (Romania).webp";
-import EthanImg from "../assets/sellers/Ethan Cole (USA).webp";
-import HussainImg from "../assets/sellers/Hussain Al Nuaimi (UAE).webp";
-import JakubImg from "../assets/sellers/Jakub Nowak (Poland).webp";
-import KaranImg from "../assets/sellers/Karan Mehta (India).webp";
-import MohammedImg from "../assets/sellers/Mohammed Al Habsi (UAE).webp";
-import NikolaiImg from "../assets/sellers/Nikolai Petrov (Czechia).webp";
-import SofiaImg from "../assets/sellers/Sofia Dimitrova (Bulgaria).webp";
+import AishaImg from "../assets/sellers/Aisha_Patel_UK_50.webp";
+import AnanyaImg from "../assets/sellers/Ananya_Sharma_India_50.webp";
+import AnthonyImg from "../assets/sellers/Anthony_Reed_USA_50.webp";
+import ClaraImg from "../assets/sellers/Clara_Dubois_France_50.webp";
+import ElenaImg from "../assets/sellers/Elena_Popescu_Romania_50.webp";
+import EthanImg from "../assets/sellers/Ethan_Cole_USA_50.webp";
+import HussainImg from "../assets/sellers/Hussain_Al_Nuaimi_UAE_50.webp";
+import JakubImg from "../assets/sellers/Jakub_Nowak_Poland_50.webp";
+import KaranImg from "../assets/sellers/Karan_Mehta_India_50.webp";
+import MohammedImg from "../assets/sellers/Mohammed_Al_Habsi_UAE_50.webp";
+import NikolaiImg from "../assets/sellers/Nikolai_Petrov_Czechia_50.webp";
+import SofiaImg from "../assets/sellers/Sofia_Dimitrova_Bulgaria_50.webp";
 
 function Seller() {
 
