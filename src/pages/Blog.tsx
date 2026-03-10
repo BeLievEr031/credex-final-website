@@ -43,7 +43,7 @@ function Blog() {
                     </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 pt-8 md:pt-24 gap-x-5 gap-y-5">
+                <div className="grid md:grid-cols-3 3xl:grid-cols-4 pt-8 md:pt-24 gap-x-5 gap-y-5">
                     <BlogCard7 />
                     <BlogCard6 />
                     <BlogCard5 />
@@ -62,8 +62,8 @@ function Blog() {
 
 const BlogCard = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"a-million-dollar-email"}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+    return <div className="cursor-pointer w-full max-w-[378px]" onClick={() => navigate(`${"a-million-dollar-email"}`)}>
+        <div className="bg-[#121212] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-rCRNFVhXMR8P9TmX4Gw0Q.png" alt="" className="w-full h-full object-cover" />
         </div>
         <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
@@ -80,8 +80,8 @@ const BlogCard = () => {
 }
 const BlogCard2 = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"how-we-bootstrapped-a-fintech-startup-to-$2m-arr-using-smart-ai-infrastructure:-a-founder’s-case-study"}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+    return <div className="cursor-pointer w-full max-w-[378px]" onClick={() => navigate(`${"how-we-bootstrapped-a-fintech-startup-to-$2m-arr-using-smart-ai-infrastructure:-a-founder’s-case-study"}`)}>
+        <div className="bg-[#121212] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*YMpisxvxklmlNKviyAA33g.png" alt="" className="w-full h-full object-cover" />
         </div>
         <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
@@ -98,8 +98,8 @@ const BlogCard2 = () => {
 }
 const BlogCard3 = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"the-unit-economics-of-virality:-how-we-scaled-gemini-1.5-pro-to-50k-users-without-going-bankrupt"}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+    return <div className="cursor-pointer w-full max-w-[378px]" onClick={() => navigate(`${"the-unit-economics-of-virality:-how-we-scaled-gemini-1.5-pro-to-50k-users-without-going-bankrupt"}`)}>
+        <div className="bg-[#121212] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*MlMUXF54yNChRizfRuWCow.png" alt="" className="w-full h-full object-cover" />
         </div>
         <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
@@ -116,8 +116,8 @@ const BlogCard3 = () => {
 }
 const BlogCard4 = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit"}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+    return <div className="cursor-pointer w-full max-w-[378px]" onClick={() => navigate(`${"aws-costs-kill-valuations-how-a-$287k-aws-bill-almost-killed-a-$50m-exit"}`)}>
+        <div className="bg-[#121212] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*xD86V5pAsmsx68pdrCqoqg.png" alt="" className="w-full h-full object-cover" />
         </div>
         <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
@@ -132,8 +132,8 @@ const BlogCard4 = () => {
 
 const BlogCard5 = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"cut-aws-costs-by-50-in-2-weeks-the-cloud-credit-strategy-that-saved-our-series"}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+    return <div className="cursor-pointer w-full max-w-[378px]" onClick={() => navigate(`${"cut-aws-costs-by-50-in-2-weeks-the-cloud-credit-strategy-that-saved-our-series"}`)}>
+        <div className="bg-[#121212] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*tUvVv7vdyVrHi5hV4XbSXQ.png" alt="" className="w-full h-full object-cover" />
         </div>
         <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
@@ -147,8 +147,8 @@ const BlogCard5 = () => {
 }
 const BlogCard6 = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"scale-your-ai-product-in-1-week-not-in-4-months"}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
+    return <div className="cursor-pointer w-full max-w-[378px]" onClick={() => navigate(`${"scale-your-ai-product-in-1-week-not-in-4-months"}`)}>
+        <div className="bg-[#121212] h-[230px] rounded-[20px] overflow-hidden">
             <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*uEyEXWvltD0_aNDnGByo7w.png" alt="" className="w-full h-full object-cover object-top" />
         </div>
         <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
@@ -162,16 +162,26 @@ const BlogCard6 = () => {
 }
 const BlogCard7 = () => {
     const navigate = useNavigate()
-    return <div className="cursor-pointer" onClick={() => navigate(`${"why-claude-by-anthropic-is-redefining-enterprise-ai-in-2026"}`)}>
-        <div className="bg-[#121212] md:w-[378px] h-[230px] rounded-[20px] overflow-hidden">
-            <img src="https://miro.medium.com/v2/resize:fit:788/1*bOMbAH4trKymB7tV3yYKtA.png" alt="" className="w-full h-full object-cover object-top" />
+    return <div
+        className="cursor-pointer w-full max-w-[378px]"
+        onClick={() =>
+            navigate("why-claude-by-anthropic-is-redefining-enterprise-ai-in-2026")
+        }
+    >
+        <div className="bg-[#121212] w-full h-[200px] sm:h-[220px] md:h-[230px] rounded-[20px] overflow-hidden">
+            <img
+                src="https://miro.medium.com/v2/resize:fit:788/1*bOMbAH4trKymB7tV3yYKtA.png"
+                alt=""
+                className="w-full h-full object-cover object-top"
+            />
         </div>
-        <p className="text-2xl font-semibold font-pp-mori-semibold pt-4">
+
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold pt-4 w-full">
             Why Claude by Anthropic is Redefining Enterprise AI in 2026
         </p>
-        <div className="text-sm text-[#19363FB2]">
-            <img src="" alt="" />
-            <p>Credex- 19th Feb, 2026</p>
+
+        <div className="flex items-center gap-2 text-sm text-[#19363FB2] pt-2">
+            <p>Credex • 19th Feb, 2026</p>
         </div>
     </div>
 }
