@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
+import ThankYou from "./pages/ThankYou";
 
 const Root = lazy(() => import("./layouts/Root"));
 const Home = lazy(() => import("./pages/Home"));
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path: "shipping",
                 element: <ShippingDeliveryPolicy />
+            },
+            {
+                path: "form-submission",
+                element: <ThankYou />
             },
             {
                 path: "blog",
