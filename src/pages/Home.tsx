@@ -24,6 +24,7 @@ import RachelImg from "../assets/buyers/Rachel_Lim_Singapore_3_50.webp";
 import RohitImg from "../assets/buyers/Rohit_Iyer_India_3_50.webp";
 import SofiaImg from "../assets/buyers/Sofia_Nilsson_Sweden_3_50.webp";
 import WeiLinImg from "../assets/buyers/Wei-Lin_Tan_Singapore_2_50.webp";
+// import PlansAndPricing from "../sections/Home/PlansAndPricing"
 function Home() {
     const { myBoolean, setMyBoolean } = useBoolean()
     const faqs = [
@@ -230,6 +231,7 @@ function Home() {
             {/* contact us */}
             {/* <ContactForm /> */}
             {/* <Pricing /> */}
+            {/* <PlansAndPricing /> */}
             <Faq faqs={faqs} />
             <Footer />
 
