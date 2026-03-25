@@ -1,5 +1,5 @@
 import FTLogo from "../../assets/ft-logo.png"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useBoolean } from "../../context/FormContext";
 import { Mail } from "lucide-react";
 
@@ -13,12 +13,13 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
     actionBtnLink = "https://wa.me/918956042145?text=Hi,%20I%27m%20a%20Buyer"
 }: IProp) {
 
+    const location = useLocation();
     const { setMyBoolean } = useBoolean()
     return (
         <footer className="mt-[50px] md:mt-24 overflow-x-hidden">
             <div className="px-2 md:px-0">
 
-                <div className="w-full md:max-w-3xl h-[273px] bg-[#062524] mx-auto flex flex-col items-center justify-center relative">
+                {(!location.pathname.includes("blog") || (location.pathname.includes("blog") && location.pathname.split("blog")[1].length <= 0)) && <div className="w-full md:max-w-3xl h-[273px] bg-[#062524] mx-auto flex flex-col items-center justify-center relative">
                     <h1 className="text-[27px] md:text-4xl text-center leading-tight font-pp-mori-semibold font-semibold text-white px-5">
                         {
                             title.split("-").map((item) => {
@@ -44,7 +45,7 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
 
 
                     </div>
-                </div>
+                </div>}
             </div>
 
             <div className="mt-32 md:mt-14 relative h-[305px] md:flex md:justify-end md:px-28">

@@ -27,23 +27,25 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"why-claude-by-anthropic-is-redefining-enterprise-ai-in-2026"}`)}>
+                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"how-to-train-foundation-models-without-getting-stuck-in-gpu-waitlists"}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">
-                            Why Claude by Anthropic is Redefining Enterprise AI in 2026
+                            How to Train Foundation Models Without Getting Stuck in GPU Waitlists
                         </p>
                         <div className="text-sm text-[#19363FB2]">
-                            <p>Credex - 19th Feb, 2026</p>
+                            <p>Credex - 22nd March, 2026</p>
                         </div>
                         {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
 
                         <div className="w-full md:w-[520px] h-[230px] md:h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
-                            <img src="https://miro.medium.com/v2/resize:fit:788/1*bOMbAH4trKymB7tV3yYKtA.png" alt="" className="w-full h-full object-cover object-top" />
+                            <img src="https://miro.medium.com/v2/resize:fit:788/1*ml6ryqeCs-2q34vFq_ZCOg.png" alt="" className="w-full h-full object-cover object-top" />
                         </div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 3xl:grid-cols-4 pt-8 md:pt-24 gap-x-5 gap-y-5">
+                    <BlogCard9 />
+                    <BlogCard8 />
                     <BlogCard7 />
                     <BlogCard6 />
                     <BlogCard5 />
@@ -182,6 +184,56 @@ const BlogCard7 = () => {
 
         <div className="flex items-center gap-2 text-sm text-[#19363FB2] pt-2">
             <p>Credex • 19th Feb, 2026</p>
+        </div>
+    </div>
+}
+const BlogCard8 = () => {
+    const navigate = useNavigate()
+    return <div
+        className="cursor-pointer w-full max-w-[378px]"
+        onClick={() =>
+            navigate("how-to-power-openclaw-at-45-lower-cost-with-credex-llm-router")
+        }
+    >
+        <div className="bg-[#121212] w-full h-[200px] sm:h-[220px] md:h-[230px] rounded-[20px] overflow-hidden">
+            <img
+                src="https://miro.medium.com/v2/resize:fit:788/1*7NL-cTMHRmHeQTRYi0IrXg.png"
+                alt=""
+                className="w-full h-full object-cover object-top"
+            />
+        </div>
+
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold pt-4 w-full">
+            How to Power OpenClaw at 45% Lower Cost with Credex LLM
+        </p>
+
+        <div className="flex items-center gap-2 text-sm text-[#19363FB2] pt-2">
+            <p>Credex • 05th March, 2026</p>
+        </div>
+    </div>
+}
+const BlogCard9 = () => {
+    const navigate = useNavigate()
+    return <div
+        className="cursor-pointer w-full max-w-[378px]"
+        onClick={() =>
+            navigate("how-to-train-foundation-models-without-getting-stuck-in-gpu-waitlists")
+        }
+    >
+        <div className="bg-[#121212] w-full h-[200px] sm:h-[220px] md:h-[230px] rounded-[20px] overflow-hidden">
+            <img
+                src="https://miro.medium.com/v2/resize:fit:788/1*ml6ryqeCs-2q34vFq_ZCOg.png"
+                alt=""
+                className="w-full h-full object-cover object-top"
+            />
+        </div>
+
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold pt-4 w-full">
+            How to Train Foundation Models Without Getting Stuck in GPU Waitlists
+        </p>
+
+        <div className="flex items-center gap-2 text-sm text-[#19363FB2] pt-2">
+            <p>Credex • 22nd March, 2026</p>
         </div>
     </div>
 }
