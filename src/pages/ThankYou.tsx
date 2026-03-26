@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 
 export default function ThankYou() {
-    const [count, setCount] = useState(3)
+    // const [count, setCount] = useState(3)
     const navigate = useNavigate()
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCount((prev) => {
-                if (prev <= 1) {
-                    clearInterval(interval);
-                    navigate("/");
-                    return 0;
-                }
-                return prev - 1;
-            });
-        }, 1000);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCount((prev) => {
+    //             if (prev <= 1) {
+    //                 clearInterval(interval);
+    //                 navigate("/");
+    //                 return 0;
+    //             }
+    //             return prev - 1;
+    //         });
+    //     }, 1000);
 
-        return () => clearInterval(interval);
-    }, [navigate]);
+    //     return () => clearInterval(interval);
+    // }, [navigate]);
 
     useEffect(() => {
         const script = document.createElement('script');
@@ -51,9 +51,13 @@ export default function ThankYou() {
                         We’ll get back to you shortly.
                     </p>
 
-                    <p>
-                        Redirecting to home page in {count}
-                    </p>
+                    <button className="bg-green-900 text-white font-pp-mori-semibold font-semibold px-6 py-4 rounded-xl cursor-pointer"
+                    onClick={()=>{
+                        navigate("/")
+                    }}
+                    >
+                        Go to Home Page
+                    </button>
 
                 </div>
             </div>
