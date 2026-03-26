@@ -1,4 +1,5 @@
 // import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar"
 import Footer from "../sections/common/Footer"
 
@@ -7,8 +8,8 @@ function SingleBlog7() {
     return (
         <main className="font-pp-mori-regular">
             <Navbar />
-            <section className="w-full bg-[#062524] pt-28 md:pt-44 pb-20 grid grid-cols-2 justify-items-center px-28">
-                <div className="w-[500px]">
+            <section className="w-full bg-[#062524] pt-28 md:pt-44 pb-20 md:grid grid-cols-2 justify-items-center px-5 md:px-28 flex flex-col-reverse">
+                <div className="md:w-[500px] mt-5 md:mt-0">
                     <h1 className="font-semibold font-pp-mori-semibold text-[32px] md:text-[40px] leading-tight text-white">
                         Why Claude by Anthropic is Redefining Enterprise AI in 2026
                     </h1>
@@ -18,15 +19,15 @@ function SingleBlog7() {
                     </div>
                 </div>
                 <div>
-                    <div className="cursor-pointer">
-                        <div className="bg-[#121212] md:w-[638px] h-[410px] rounded-[20px] overflow-hidden">
+                    <div className="cursor-pointer mt-5 md:mt-0">
+                        <div className="bg-[#121212] md:w-[638px] md:h-[410px] rounded-[20px] overflow-hidden">
                             <img src="https://miro.medium.com/v2/resize:fit:788/1*bOMbAH4trKymB7tV3yYKtA.png" alt="" className="w-full h-full object-cover object-top" />
                         </div>
                     </div>
                 </div>
             </section>
-            <main className="flex gap-2 justify-center">
-                <section className="w-[790px] pr-10 text-justify">
+            <main className="flex flex-col md:flex-row gap-2 justify-center">
+                <section className="md:w-[790px] px-5 md:pr-10 md:text-justify">
                     <div className="flex justify-center pt-5 md:pt-12">
                         <div className="space-y-10 md:space-y-20 mt-4 md:mt-0">
                             <div className="">
@@ -515,9 +516,9 @@ function SingleBlog7() {
                     </div>
                 </section>
 
-                <section className=" w-[411px] pt-10 relative">
+                <section className=" md:w-[411px] pt-10 relative hidden md:block">
                     <div className="flex justify-center items-center sticky top-[100px]">
-                        <div className="bg-[#062f2a] text-white  rounded-sm shadow-lg relative py-15 px-10 w-full">
+                        <div className="bg-[#062f2a] text-white  rounded-sm shadow-lg relative py-7 md:py-15 px-10 md:px-10 w-[95%] md:w-full">
 
                             <h2 className="text-3xl font-semibold leading-tight mb-6">
                                 Ready to recover sunk costs?
@@ -534,14 +535,14 @@ function SingleBlog7() {
                             </ul>
 
                             <div className="flex justify-center">
-                                <button className="bg-[#0FF395] hover:bg-emerald-300 text-black font-medium px-6 py-3 rounded-lg transition">
+                                <Link to={"/#plan-pricing"} className="bg-[#0FF395] hover:bg-emerald-300 text-black font-medium px-6 py-3 rounded-lg transition">
                                     Explore Credex packages
-                                </button>
+                                </Link>
                             </div>
 
                         </div>
 
-                        <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 -z-10">
+                        <div className="absolute -bottom-5 md:-bottom-16 left-1/2 -translate-x-1/2 -z-10">
                             <svg width="300" height="164" viewBox="0 0 669 164" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden md:block">
                                 <path d="M0 0H669V164L334.5 155L0 164V0Z" fill="#F15A42" />
                             </svg>

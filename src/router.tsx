@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import ThankYou from "./pages/ThankYou";
+import SingleBlog8 from "./pages/SingleBlog8";
+import SingleBlog9 from "./pages/SingleBlog9";
 
 const Root = lazy(() => import("./layouts/Root"));
 const Home = lazy(() => import("./pages/Home"));
@@ -83,6 +85,14 @@ const router = createBrowserRouter([
             {
                 path: "blog/why-claude-by-anthropic-is-redefining-enterprise-ai-in-2026",
                 element: <SingleBlog7 />
+            },
+            {
+                path: "blog/how-to-train-foundation-models-without-getting-stuck-in-gpu-waitlists",
+                element: <SingleBlog8 />
+            },
+            {
+                path: "blog/how-to-power-openclaw-at-45-lower-cost-with-credex-llm-router",
+                element: <SingleBlog9 />
             },
         ]
     }
