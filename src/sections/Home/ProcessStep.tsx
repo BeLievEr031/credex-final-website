@@ -222,7 +222,7 @@ function ProcessStep() {
     return (
         <motion.section
             ref={sectionRef}
-            className="md:grid md:grid-cols-2 max-w-6xl mx-auto gap-x-28 items-center mt-[70px] md:mt-[220px] px-2 md:px-0 sticky top-0"
+            className="md:grid md:grid-cols-2 max-w-6xl mx-auto gap-x-28 items-center mt-[40px] md:mt-[120px] px-2 md:px-0 sticky top-0"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}

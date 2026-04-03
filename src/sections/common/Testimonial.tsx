@@ -1,3 +1,4 @@
+// import axios from "axios";
 import clsx from "clsx";
 import { motion } from "motion/react"
 interface IProp {
@@ -6,6 +7,29 @@ interface IProp {
 }
 function Testimonial({ reviews }: IProp) {
 
+    // console.log(reviews);
+
+    // const [newReview, setReviews] = useState<{ name: string; designation: string; review: string, img: string }[]>([])
+    // useEffect(() => {
+    //     async function fetchData() {
+    //         try {
+    //             const res = await axios.get("https://credex-dashboard-backend.onrender.com/api/testimonial")
+    //             // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //             setReviews(res.data.data.map((item: any) => {
+    //                 return {
+    //                     name: item.company,
+    //                     designation: item.designation,
+    //                     review: item.feedback,
+    //                     img: item.imageUrl
+    //                 }
+    //             }))
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     }
+
+    //     fetchData();
+    // }, [])
 
     return (
         <section className="py-10 mx-auto mt-[50px] md:mt-[120px] font-pp-mori-regular overflow-x-hidden px-2 md:px-0">

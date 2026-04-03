@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import ThankYou from "./pages/ThankYou";
-import SingleBlog8 from "./pages/SingleBlog8";
-import SingleBlog9 from "./pages/SingleBlog9";
 
 const Root = lazy(() => import("./layouts/Root"));
 const Home = lazy(() => import("./pages/Home"));
@@ -20,6 +18,8 @@ const SingleBlog4 = lazy(() => import("./pages/SingleBlog4"));
 const SingleBlog5 = lazy(() => import("./pages/SingleBlog5"));
 const SingleBlog6 = lazy(() => import("./pages/SingleBlog6"));
 const SingleBlog7 = lazy(() => import("./pages/SingleBlog7"));
+const SingleBlog8 = lazy(() => import("./pages/SingleBlog8"));
+const SingleBlog9 = lazy(() => import("./pages/SingleBlog9"));
 
 const router = createBrowserRouter([
     {
