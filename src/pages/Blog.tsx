@@ -32,7 +32,7 @@ function Blog() {
                             How to Build Voice AI Without Burning Through Your Budget: $500K in Deepgram Credits at 50% Off
                         </p>
                         <div className="text-sm text-[#19363FB2]">
-                            <p>Credex - 22nd March, 2026</p>
+                            <p>Credex - 03rd April, 2026</p>
                         </div>
                         {/* <p className="text-[#19363FB2] text-[20px]">Create superior code, compose emails, boost any kind of work within a collaborative team.</p> */}
 
