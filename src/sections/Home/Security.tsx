@@ -1,4 +1,4 @@
-import SecurityImg from "../../assets/security.png";
+import SecurityImg from "../../assets/security.webp";
 import { motion } from "motion/react";
 import ProofSection from "../common/Proof";
 

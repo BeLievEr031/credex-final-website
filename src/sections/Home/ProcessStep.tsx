@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import ProcessStepImg from "../../assets/processimg.png";
+import ProcessStepImg from "../../assets/processing.webp";
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import { useBoolean } from "../../context/FormContext";
@@ -275,7 +275,7 @@ function ProcessStep() {
             {/* RIGHT SIDE — Image & CTA Card */}
             <motion.div className="mt-20 md:mt-32" variants={container}>
                 <motion.div variants={imageVariant}>
-                    <img src={ProcessStepImg} alt="Process steps" className="w-[298px] md:w-[470px] mx-auto" />
+                    <img src={ProcessStepImg} alt="Process steps" className="w-[298px] md:w-[470px] mx-auto" loading="lazy" />
                 </motion.div>
 
                 <motion.div className="pt-20" variants={cardVariant}>
