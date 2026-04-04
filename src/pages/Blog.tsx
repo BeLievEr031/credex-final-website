@@ -27,9 +27,9 @@ function Blog() {
                         </div>
                     </div>
 
-                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"how-to-train-foundation-models-without-getting-stuck-in-gpu-waitlists"}`)}>
+                    <div className="hidden md:block py-12 md:py-3 bg-[#1212120A] md:px-4 rounded-xl space-y-2 cursor-pointer" onClick={() => navigate(`${"how-to-build-voice-ai-without-burning-through-your-budget-500k-in-deepgram-credits-at-50-off"}`)}>
                         <p className="text-2xl font-semibold font-pp-mori-semibold w-[75%]">
-                            How to Train Foundation Models Without Getting Stuck in GPU Waitlists
+                            How to Build Voice AI Without Burning Through Your Budget: $500K in Deepgram Credits at 50% Off
                         </p>
                         <div className="text-sm text-[#19363FB2]">
                             <p>Credex - 22nd March, 2026</p>
@@ -38,12 +38,13 @@ function Blog() {
 
 
                         <div className="w-full md:w-[520px] h-[230px] md:h-[281px] bg-[#1C1C1C] rounded-xl mt-6 overflow-hidden">
-                            <img src="https://miro.medium.com/v2/resize:fit:788/1*ml6ryqeCs-2q34vFq_ZCOg.png" alt="" className="w-full h-full object-cover object-top" />
+                            <img src="https://miro.medium.com/v2/resize:fit:788/1*I3RDF2JS_Tg0LObY45vgPw.png" alt="" className="w-full h-full object-cover object-top" />
                         </div>
                     </div>
                 </div>
 
                 <div className="grid md:grid-cols-3 3xl:grid-cols-4 pt-8 md:pt-24 gap-x-5 gap-y-5">
+                    <BlogCard10 />
                     <BlogCard9 />
                     <BlogCard8 />
                     <BlogCard7 />
@@ -234,6 +235,31 @@ const BlogCard9 = () => {
 
         <div className="flex items-center gap-2 text-sm text-[#19363FB2] pt-2">
             <p>Credex • 22nd March, 2026</p>
+        </div>
+    </div>
+}
+const BlogCard10 = () => {
+    const navigate = useNavigate()
+    return <div
+        className="cursor-pointer w-full max-w-[378px]"
+        onClick={() =>
+            navigate("how-to-build-voice-ai-without-burning-through-your-budget-500k-in-deepgram-credits-at-50-off")
+        }
+    >
+        <div className="bg-[#121212] w-full h-[200px] sm:h-[220px] md:h-[230px] rounded-[20px] overflow-hidden">
+            <img
+                src="https://miro.medium.com/v2/resize:fit:788/1*I3RDF2JS_Tg0LObY45vgPw.png"
+                alt=""
+                className="w-full h-full object-cover object-top"
+            />
+        </div>
+
+        <p className="text-lg sm:text-xl md:text-2xl font-semibold pt-4 w-full">
+            How to Build Voice AI Without Burning Through Your Budget: $500K in Deepgram Credits at 50% Off
+        </p>
+
+        <div className="flex items-center gap-2 text-sm text-[#19363FB2] pt-2">
+            <p>Credex • 03rd April, 2026</p>
         </div>
     </div>
 }

@@ -20,6 +20,7 @@ const SingleBlog6 = lazy(() => import("./pages/SingleBlog6"));
 const SingleBlog7 = lazy(() => import("./pages/SingleBlog7"));
 const SingleBlog8 = lazy(() => import("./pages/SingleBlog8"));
 const SingleBlog9 = lazy(() => import("./pages/SingleBlog9"));
+const SingleBlog10 = lazy(() => import("./pages/SingleBlog10"));
 
 const router = createBrowserRouter([
     {
@@ -93,6 +94,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/how-to-power-openclaw-at-45-lower-cost-with-credex-llm-router",
                 element: <SingleBlog9 />
+            },
+            {
+                path: "blog/how-to-build-voice-ai-without-burning-through-your-budget-500k-in-deepgram-credits-at-50-off",
+                element: <SingleBlog10 />
             },
         ]
     }
