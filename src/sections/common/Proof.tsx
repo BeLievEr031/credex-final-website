@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import FolderImg from "../../assets/grouped-folder.png";
+import FolderImg from "../../assets/grouped-folder.webp";
 import { useBoolean } from "../../context/FormContext";
 
 export default function ProofSection() {
