@@ -6,10 +6,8 @@ import GeminiLogo from "../../assets/logos/gemini.png";
 import ChatgptLogo from "../../assets/logos/chatgpt.png";
 import AWSLogo from "../../assets/logos/aws.png";
 import AzureLogo from "../../assets/logos/azure.png";
-import { useBoolean } from "../../context/FormContext";
 
 function Hero() {
-    const { setMyBoolean } = useBoolean()
     const features = [
         "24×7 support",
         "Anonymity",
@@ -154,7 +152,7 @@ function Hero() {
                             className="bg-[#1A1A1A] cursor-pointer p-5 text-white rounded-md text-xl block"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.97 }}
-                            onClick={() => setMyBoolean(true)}
+                            onClick={() => { window.location.href = '#contact' }}
                         >
                             Start selling credits
                         </motion.button>

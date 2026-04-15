@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import ProcessStepImg from "../../assets/transaction.png";
 import clsx from "clsx";
-import { useBoolean } from "../../context/FormContext";
 
 export function CheckIconGray() {
     return (
@@ -29,7 +28,6 @@ export function CheckIconGray() {
 }
 
 function ProcessStep() {
-    const { setMyBoolean } = useBoolean()
     return (
         <section
             className="md:grid md:grid-cols-2 py-20 max-w-7xl mx-auto gap-x-10 items-center hide-scrollbar px-2 md:px-0"
@@ -103,7 +101,7 @@ function ProcessStep() {
                     transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
                     viewport={{ once: true }}>
                     <button className="w-full md:w-[480px] px-[30px] md:px-[40px] py-[24px] md:py-[32px] flex justify-between items-center rounded-3xl md:rounded-2xl mx-auto bg-[#19363F] cursor-pointer"
-                        onClick={() => setMyBoolean(true)}
+                        onClick={() => { window.location.href = '#contact' }}
                     >
                         <p className="text-[#FBD008] text-[18px] md:text-2xl font-semibold md:w-[65%] w-[75%] shrink-0 text-left">
                             Start Saving Money On Cloud Credits Now!

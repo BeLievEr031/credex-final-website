@@ -1,9 +1,7 @@
 import { motion } from "motion/react";
 import FolderImg from "../../assets/grouped-folder.webp";
-import { useBoolean } from "../../context/FormContext";
 
 export default function ProofSection() {
-    const { setMyBoolean } = useBoolean();
     return (
         <div className="px-2 md:px-0">
             <motion.div
@@ -45,7 +43,7 @@ export default function ProofSection() {
                             className="bg-[#1A1A1A] p-4 text-white rounded-md text-[18px] md:text-xl block cursor-pointer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.97 }}
-                            onClick={() => setMyBoolean(true)}
+                            onClick={() => { window.location.href = '#contact' }}
                         >
                             Start buying credits
                         </motion.button>

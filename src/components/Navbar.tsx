@@ -114,7 +114,6 @@
 import clsx from "clsx";
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useBoolean } from "../context/FormContext";
 
 interface IProp {
     links?: { lable: string; link: string }[];
@@ -125,7 +124,6 @@ function Navbar({ links = [] }: IProp) {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [isMenuOpen, setIsMenuOpen] = useState(false); // for mobile menu toggle
-    const { setMyBoolean } = useBoolean()
     // Scroll listener
     useEffect(() => {
         const handleScroll = () => {
@@ -208,7 +206,7 @@ function Navbar({ links = [] }: IProp) {
             {/* Right Links */}
             {links.length > 0 && <div className="hidden md:flex items-center gap-x-8 text-[#000000CC] pr-2">
                 {links.map(({ lable, link }) => {
-                    if (lable !== "Blog" && lable !== "Contact") {
+                    if (lable !== "Blog") {
                         return <a key={lable} href={link}>
                             {lable}
                         </a>
@@ -218,7 +216,7 @@ function Navbar({ links = [] }: IProp) {
                         </Link>
                     }
                     else {
-                        return <button className="cursor-pointer" onClick={() => setMyBoolean(true)}>
+                        return <button className="cursor-pointer" onClick={() => { window.location.href = '#contact' }}>
                             Contact
                         </button>
                     }
@@ -318,9 +316,9 @@ function Navbar({ links = [] }: IProp) {
                 <div className="flex flex-col items-start gap-y-2 px-3">
 
                     {links.map(({ lable, link }) => {
-                        console.log(lable);
+                        // console.log(lable);
 
-                        if (lable !== "Blog" && lable !== "Contact") {
+                        if (lable !== "Blog") {
                             return <a key={lable} href={link}>
                                 {lable}
                             </a>
@@ -329,7 +327,7 @@ function Navbar({ links = [] }: IProp) {
                                 Blog
                             </Link>
                         } else {
-                            return <button className="cursor-pointer" onClick={() => setMyBoolean(true)}>
+                            return <button className="cursor-pointer" onClick={() => { window.location.href = '#contact' }}>
                                 Contact
                             </button>
                         }

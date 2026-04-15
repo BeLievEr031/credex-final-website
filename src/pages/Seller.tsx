@@ -7,8 +7,7 @@ import ProcessStep from "../sections/seller/ProcessStep"
 import Navbar from "../components/Navbar"
 import Testimonial from "../sections/common/Testimonial"
 // import ProofSection from "../sections/common/Proof"
-import ContactForm from "../sections/common/ContactUs"
-import { useBoolean } from "../context/FormContext"
+// import ContactForm from "../sections/common/ContactUs"
 import AishaImg from "../assets/sellers/Aisha_Patel_UK_50.webp";
 import AnanyaImg from "../assets/sellers/Ananya_Sharma_India_50.webp";
 import AnthonyImg from "../assets/sellers/Anthony_Reed_USA_50.webp";
@@ -24,7 +23,6 @@ import SofiaImg from "../assets/sellers/Sofia_Dimitrova_Bulgaria_50.webp";
 
 function Seller() {
 
-    const { myBoolean, setMyBoolean } = useBoolean()
 
 
     const faqs = [
@@ -182,7 +180,7 @@ function Seller() {
                     },
                     {
                         lable: "Contact",
-                        link: '#contact-us'
+                        link: '#contact'
                     },
                     {
                         lable: "Blog",
@@ -200,16 +198,15 @@ function Seller() {
             <div className="pt-[40px] md:pt-[100px]">
                 <Testimonial reviews={reviews}
                     description="These quotes are from organizations that sold unused credits through Credex. Identifying details are anonymized; process and outcomes are unchanged."
+                    type="SELLER"
                 />
             </div>
-            <Faq faqs={faqs} />
+            <Faq faqs={faqs} type="SELLER" />
             <Footer
                 title="Ready to recover sunk - costs?"
                 actionBtn1Text="Sell credits"
                 actionBtnLink="https://wa.me/918956042145?text=Hi,%20I%27m%20a%20Seller"
-            />
-            <ContactForm isOpen={myBoolean} onClose={() => setMyBoolean(false)}
-                id="dW9doN"
+
             />
         </main>
     )

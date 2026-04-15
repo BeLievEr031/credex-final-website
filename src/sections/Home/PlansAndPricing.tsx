@@ -18,6 +18,7 @@ import LambdaSrc from "../../assets/logos/lambda.png"
 import { useLocation } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
+// import { productApi } from '../../api/api'
 
 interface IPlatform {
     platform: string;
@@ -149,11 +150,12 @@ function PlansAndPricing() {
     const location = useLocation();
     const [showModal, setShowModal] = useState(false);
     // const [platforms, setPlatforms] = useState<IPlatform[]>([])
+    const [loading] = useState(false)
 
     // useEffect(() => {
     //     async function fetchData() {
     //         try {
-    //             const res = await axios.get("https://credex-dashboard-backend.onrender.com/api/product/view");
+    //             const res = await productApi.getProducts({ active: true });
     //             console.log(res.data)
     //             setPlatforms(res.data.products.map((item) => {
     //                 return {
@@ -166,11 +168,15 @@ function PlansAndPricing() {
     //             }))
     //         } catch (error) {
     //             console.log(error)
+    //         } finally {
+    //             setLoading(false)
     //         }
     //     }
 
     //     fetchData();
     // }, [])
+
+    const displayPlatforms = platforms.length > 0 ? platforms : [];
 
     useEffect(() => {
         if (location.hash) {
@@ -180,7 +186,7 @@ function PlansAndPricing() {
             }
         }
     }, [location]);
-    const doubled = [...platforms, ...platforms];
+    // const doubled = [...platforms, ...platforms];
     const trackRef = useRef(null);
     const posRef = useRef(0);
     const rafRef = useRef(null);
@@ -225,22 +231,26 @@ function PlansAndPricing() {
                     >View all plans</button>
                 </div>
                 <motion.div className='grid grid-cols-2 md:grid-cols-3 pt-10 gap-5' variants={sectionVariants}>
-                    {platforms.map((p, i) => (
-                        <motion.div
-                            key={`${p.platform}-${i}`}
-                            variants={cardVariants}
-                            onMouseEnter={() => setPaused(true)}
-                            onMouseLeave={() => setPaused(false)}
-                        >
-                            <PricingCard
-                                logo={p.logo}
-                                product={p.platform}
-                                credits={p.credits.join(" / ")}
-                                validity={p.validity}
-                                rateLimits={p.rateLimits}
-                            />
-                        </motion.div>
-                    ))}
+                    {loading && displayPlatforms === platforms ? (
+                        <div className="col-span-full py-10 text-center">Loading plans...</div>
+                    ) : (
+                        displayPlatforms.map((p, i) => (
+                            <motion.div
+                                key={`${p.platform}-${i}`}
+                                variants={cardVariants}
+                                onMouseEnter={() => setPaused(true)}
+                                onMouseLeave={() => setPaused(false)}
+                            >
+                                <PricingCard
+                                    logo={p.logo}
+                                    product={p.platform}
+                                    credits={p.credits.join(" / ")}
+                                    validity={p.validity}
+                                    rateLimits={p.rateLimits}
+                                />
+                            </motion.div>
+                        ))
+                    )}
                 </motion.div>
             </div>
             <AnimatePresence>
@@ -284,7 +294,7 @@ function PlansAndPricing() {
                             {/* Table */}
                             <div className='px-7 pb-7 w-[50vw]'>
 
-                                <CreditsTable platforms={platforms} />
+                                <CreditsTable platforms={displayPlatforms} />
                             </div>
                         </motion.div>
                     </motion.div>

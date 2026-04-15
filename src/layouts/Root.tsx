@@ -1,7 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
-import { BooleanProvider } from "../context/FormContext";
 
 export default function Root() {
     const location = useLocation();
@@ -57,9 +56,7 @@ export default function Root() {
             {/* 🔹 Animated page transitions */}
             <AnimatePresence mode="sync">
                 {!isTransitioning && (
-                    <BooleanProvider>
                         <Outlet />
-                    </BooleanProvider>
                 )}
             </AnimatePresence>
         </div>

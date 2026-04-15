@@ -1,6 +1,4 @@
 import Navbar from "../components/Navbar";
-import { useBoolean } from "../context/FormContext";
-import ContactFormModal from "../sections/common/ContactUs";
 import Footer from "../sections/common/Footer";
 
 export default function PrivacyPolicyPage() {
@@ -18,7 +16,6 @@ export default function PrivacyPolicyPage() {
     //     window.print();
     // };
 
-    const { myBoolean, setMyBoolean } = useBoolean()
     return (
         <main className="min-h-screen pt-[150px] md:pt-[120px] font-pp-mori-regular">
 
@@ -142,11 +139,6 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <Footer />
-            <ContactFormModal
-                isOpen={myBoolean}
-                onClose={() => setMyBoolean(false)}
-                id="me1a0l"
-            />
 
         </main>
     );

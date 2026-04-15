@@ -1,35 +1,71 @@
-// import axios from "axios";
+import { useEffect, useRef, useState } from "react";
+// import { testimonialApi } from "../../api/api";
 import clsx from "clsx";
 import { motion } from "motion/react"
+
 interface IProp {
     reviews: { name: string; designation: string; review: string, img: string }[],
-    description: string;
+    description?: string;
+    type?: "SELLER" | "BUYER";
 }
-function Testimonial({ reviews }: IProp) {
 
-    // console.log(reviews);
+function Testimonial({ reviews, }: IProp) {
+    const [testimonialList] = useState<{ name: string; designation: string; review: string, img: string }[]>(reviews || [])
+    const [loading] = useState(false);
+    const [paused, setPaused] = useState(false);
+    const trackRef = useRef<HTMLDivElement>(null);
+    const posRef = useRef(0);
+    const rafRef = useRef<number | null>(null);
 
-    // const [newReview, setReviews] = useState<{ name: string; designation: string; review: string, img: string }[]>([])
     // useEffect(() => {
     //     async function fetchData() {
     //         try {
-    //             const res = await axios.get("https://credex-dashboard-backend.onrender.com/api/testimonial")
-    //             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    //             setReviews(res.data.data.map((item: any) => {
-    //                 return {
-    //                     name: item.company,
-    //                     designation: item.designation,
-    //                     review: item.feedback,
-    //                     img: item.imageUrl
-    //                 }
-    //             }))
+    //             const res = await testimonialApi.getTestimonials({ type });
+    //             if (res.data && res.data.data) {
+    //                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //                 setTestimonialList(res.data.data.map((item: any) => {
+    //                     return {
+    //                         name: item.company,
+    //                         designation: item.designation,
+    //                         review: item.feedback,
+    //                         img: item.imageUrl
+    //                     }
+    //                 }))
+    //             }
     //         } catch (error) {
-    //             console.log(error)
+    //             console.log("Failed to fetch testimonials", error)
+    //         } finally {
+    //             setLoading(false);
     //         }
     //     }
 
     //     fetchData();
-    // }, [])
+    // }, [type])
+
+    const displayReviews = testimonialList.length > 0 ? testimonialList : reviews;
+
+    useEffect(() => {
+        const track = trackRef.current;
+        if (!track || loading || displayReviews.length === 0) return;
+
+        const halfWidth = track.scrollWidth / 2;
+
+        const animate = () => {
+            if (!paused) {
+                posRef.current -= 0.6; // Speed adjustment
+                if (Math.abs(posRef.current) >= halfWidth) {
+                    posRef.current = 0;
+                }
+                track.style.transform = `translateX(${posRef.current}px)`;
+            }
+            rafRef.current = requestAnimationFrame(animate);
+        };
+
+        rafRef.current = requestAnimationFrame(animate);
+        return () => {
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        };
+    }, [paused, loading, displayReviews.length]);
 
     return (
         <section className="py-10 mx-auto mt-[50px] md:mt-[120px] font-pp-mori-regular overflow-x-hidden px-2 md:px-0">
@@ -52,74 +88,51 @@ function Testimonial({ reviews }: IProp) {
                     transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="text-[#00000080] text-[12px] md:text-[16px] md:w-[65%] mx-auto">
-
                     See what other clients are saying about their experience with Credex
-
-                    {/* {description} */}
                 </motion.p>
 
-                <motion.p
+                <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
                     viewport={{ once: true }}
                     className="text-[#00000080] text-[10px] md:text-[14px]">
-
                     <p>
                         (<b>Note</b>: Names, photos, and company names are representative due to NDA. Results are real, identities are anonymized.)
                     </p>
-                </motion.p>
+                </motion.div>
             </div>
 
-            <div
-                className="pt-12 md:pt-24 flex gap-x-2 animate-scroll"
-                style={{ willChange: "transform" }}
-
-            >
-                {[...reviews, ...reviews].map(({ designation, name, review, img }) => (
-                    <ReviewCard designation={designation} name={name} review={review} imgSrc={img} />
-                ))}
-                {reviews.map(({ designation, name, review, img }) => (
-                    <ReviewCard designation={designation} name={name} review={review} imgSrc={img} />
-                ))}
+            <div className="overflow-hidden w-full relative">
+                <div
+                    ref={trackRef}
+                    className="pt-12 md:pt-24 flex gap-x-2 w-max"
+                    style={{ willChange: "transform" }}
+                    onMouseEnter={() => setPaused(true)}
+                    onMouseLeave={() => setPaused(false)}
+                >
+                    {loading ? (
+                        <p className="text-center w-screen py-10">Loading testimonials...</p>
+                    ) : (
+                        <>
+                            {[...displayReviews, ...displayReviews].map(({ designation, name, review, img }, i) => (
+                                <ReviewCard key={`rc-${i}`} designation={designation} name={name} review={review} imgSrc={img} />
+                            ))}
+                        </>
+                    )}
+                </div>
             </div>
         </section>
     )
 }
 
 function ReviewCard({ designation, name, review, imgSrc }: { name: string; designation: string; review: string, imgSrc: string }) {
-    // function generateAvatarPattern(seed?: string) {
-    //     const size = 5
-    //     const colors = ["#0FF395", "#F15A42", "#FFCE45", "#4CC9F0", "#7C3AED", "#22D3EE"]
-    //     const random = seed
-    //         ? () => {
-    //             let hash = 0
-    //             for (let i = 0; i < seed.length; i++) {
-    //                 hash = seed.charCodeAt(i) + ((hash << 5) - hash)
-    //             }
-    //             return (hash = (hash & 0xfffffff) / 0xfffffff)
-    //         }
-    //         : Math.random
-    //     const color = colors[Math.floor(random() * colors.length)]
-    //     const pattern = Array(size)
-    //         .fill(0)
-    //         .map(() => Array(size).fill(0).map(() => (random() > 0.5 ? color : "transparent")))
-    //     return { pattern, color }
-    // }
-
-    // const { pattern } = generateAvatarPattern()
-    // const blockSize = 80 / pattern.length
-
     return (
         <div className="rounded-2xl border-1 border-[#19363F73] bg-[#19363F0D] w-[185px] h-[300px] md:w-[330px] md:h-[420px] p-[18px] md:p-8 flex flex-col justify-between shrink-0">
-            <p className={clsx("text-[12px] md:text-[16px]", {
-
-            })}
-
-            >“{review}”</p>
+            <p className={clsx("text-[12px] md:text-[16px]")}>“{review}”</p>
             <div className="flex gap-x-2 md:gap-x-4 mt-4 items-center">
                 <div className="shrink-0 rounded-full overflow-hidden border border-gray-200 size-[25px] md:size-[50px]">
-                    <img src={imgSrc} alt="" className="scale-125 object-cover object-top" />
+                    <img src={imgSrc} alt="" className="scale-125 object-cover object-top w-full h-full" />
                 </div>
                 <div className="">
                     <p className="text-[#1A1A1A] font-medium text-[9px] md:text-[16px]">{name}</p>

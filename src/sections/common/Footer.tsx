@@ -1,6 +1,5 @@
 import FTLogo from "../../assets/ft-logo.png"
 import { Link, useLocation } from "react-router-dom";
-import { useBoolean } from "../../context/FormContext";
 import { Mail } from "lucide-react";
 
 interface IProp {
@@ -14,7 +13,6 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
 }: IProp) {
 
     const location = useLocation();
-    const { setMyBoolean } = useBoolean()
     return (
         <footer className="mt-[50px] md:mt-24 overflow-x-hidden">
             <div className="px-2 md:px-0">
@@ -29,7 +27,7 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                     </h1>
                     <div className="pt-4 flex gap-x-2.5">
                         <button onClick={() => {
-                            setMyBoolean(true)
+                            window.location.href = '#contact'
                         }} className="py-[12px] px-[15px] md:py-[16px] text-[15px] md:px-[20px] bg-[#0FF395] rounded-md block font-semibold font-pp-mori-semibold md:text-xl cursor-pointer relative z-10">{actionBtn1Text}</button>
                         <a href={actionBtnLink} target="_blank" className="py-[12px] px-[15px] md:py-[16px] text-[15px] md:px-[20px] bg-[#0FF39533] rounded-md text-white block font-semibold font-pp-mori-semibold md:text-xl">{actionBtn2Text}</a>
                     </div>
@@ -141,7 +139,7 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                 <div className="flex md:px-28 gap-x-5 text-[#5B677C] py-4 flex-wrap items-center justify-between ">
                     <div className="flex flex-wrap items-center gap-x-5">
 
-                        <p>© 2025 Credex</p>
+                        <p>© 2025 Credex</p>
                         <p className="flex items-center gap-x-1 shrink-0">
                             <p className="text-3xl">
                                 •

@@ -2,13 +2,11 @@ import { useRef, useState, useEffect } from "react";
 import ProcessStepImg from "../../assets/processing.webp";
 import clsx from "clsx";
 import { motion } from "framer-motion";
-import { useBoolean } from "../../context/FormContext";
 
 function ProcessStep() {
     const [isScrollable, setIsScrollable] = useState(false);
     const scrollableRef = useRef<HTMLDivElement>(null);
     const sectionRef = useRef<HTMLElement>(null);
-    const { setMyBoolean } = useBoolean();
 
     const steps = [
         {
@@ -281,7 +279,7 @@ function ProcessStep() {
                 <motion.div className="pt-20" variants={cardVariant}>
                     <button
                         className="w-full md:w-[480px] px-[30px] md:px-[40px] py-[24px] md:py-[32px] flex justify-between items-center rounded-3xl md:rounded-2xl mx-auto bg-[#19363F] cursor-pointer"
-                        onClick={() => setMyBoolean(true)}
+                        onClick={() => { window.location.href = '#contact' }}
                     >
                         <p className="text-[#FBD008] text-[18px] md:text-2xl font-semibold md:w-[65%] w-[75%] shrink-0 text-left">
                             Start Saving Money On Cloud Credits Now!

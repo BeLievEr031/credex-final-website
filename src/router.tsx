@@ -99,6 +99,10 @@ const router = createBrowserRouter([
                 path: "blog/how-to-build-voice-ai-without-burning-through-your-budget-500k-in-deepgram-credits-at-50-off",
                 element: <SingleBlog10 />
             },
+            // {
+            //     path: "blog/:slug",
+            //     element: <SingleBlog10 />
+            // },
         ]
     }
 ])

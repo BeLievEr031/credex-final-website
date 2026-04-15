@@ -7,16 +7,9 @@ import ChatgptLogo from "../../assets/logos/chatgpt.png";
 import AWSLogo from "../../assets/logos/aws.png";
 import AzureLogo from "../../assets/logos/azure.png";
 import { motion, type Variants } from "motion/react"; // ✅ use framer-motion directly
-import { useBoolean } from '../../context/FormContext';
 
 
 function Hero() {
-
-    const { setMyBoolean } = useBoolean();
-
-    const handleToggle = () => {
-        setMyBoolean(true);
-    };
 
     const features = [
         "Verified vendors",
@@ -214,7 +207,7 @@ function Hero() {
                         className="bg-[#1A1A1A] p-5 text-white rounded-md text-xl block mt-5 md:mt-0"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.97 }}
-                        onClick={handleToggle}
+                        onClick={() => { window.location.href = '#contact' }}
                     >
                         Start buying credits
                     </motion.button>

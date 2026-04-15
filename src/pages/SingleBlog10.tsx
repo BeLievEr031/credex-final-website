@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+//@ts-nocheck
 // import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar"

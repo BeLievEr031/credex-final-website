@@ -8,8 +8,8 @@ import Security from "../sections/Home/Security"
 import StatsFeatureSection from "../sections/Home/StatsFeatureSection"
 import Testimonial from "../sections/common/Testimonial"
 import Navbar from "../components/Navbar"
-import ContactForm from "../sections/common/ContactUs"
-import { useBoolean } from "../context/FormContext"
+// import ContactForm from "../sections/common/ContactUs"
+// import Newsletter from "../sections/common/Newsletter"
 
 
 import AveryImg from "../assets/buyers/Avery_Nguyen_USA_13_50.webp";
@@ -26,7 +26,6 @@ import SofiaImg from "../assets/buyers/Sofia_Nilsson_Sweden_3_50.webp";
 import WeiLinImg from "../assets/buyers/Wei-Lin_Tan_Singapore_2_50.webp";
 import PlansAndPricing from "../sections/Home/PlansAndPricing"
 function Home() {
-    const { myBoolean, setMyBoolean } = useBoolean()
     const faqs = [
         {
             question: "What is Credex?",
@@ -210,7 +209,7 @@ function Home() {
                     },
                     {
                         lable: "Contact",
-                        link: '#contact-us'
+                        link: '#contact'
                     },
                     {
                         lable: "Blog",
@@ -228,17 +227,15 @@ function Home() {
             </div>
             <Testimonial reviews={reviews}
                 description="These quotes are from real buyers using Credex to buy or sell unused credits.Identifying details (names & company names) are anonymized due to NDAs. Roles, regions, industries, and outcomes are accurate. For serious evaluations, we can share reference customers under NDA."
+                type="BUYER"
             />
             {/* contact us */}
             {/* <ContactForm /> */}
             {/* <Pricing /> */}
-            <Faq faqs={faqs} />
+            <Faq faqs={faqs} type="BUYER" />
+            {/* <Newsletter /> */}
             <Footer />
 
-            <ContactForm isOpen={myBoolean}
-                onClose={() => setMyBoolean(false)}
-                id="rjoPb5"
-            />
         </section>
     )
 }
