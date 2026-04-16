@@ -16,12 +16,12 @@ export default function PricingCard({
 }: PricingCardProps) {
 
     return (
-        <div className="flex items-center justify-center bg-gray-50 shrink-0 cursor-pointer" onClick={() => { window.location.href = '#contact' }}>
-            <div className="w-[300px] md:w-full shrink-0 rounded-2xl border border-gray-300 bg-white p-8 shadow-sm">
+        <div className="flex items-center justify-center shrink-0 cursor-pointer h-full" onClick={() => { window.location.href = '#contact' }}>
+            <div className="w-[90%] md:w-full shrink-0 rounded-2xl border border-gray-200 bg-white p-8 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-300">
 
                 {/* Logo - centered on mobile, left on desktop */}
                 <div className="mb-8 flex justify-center md:justify-start">
-                    <img src={logo} alt={product} className="h-8 object-contain" />
+                    <img src={logo} alt={product} className="h-10 md:h-8 object-contain" />
                 </div>
 
                 <div className="space-y-5">

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 
@@ -123,13 +124,12 @@ const platforms = [
 ]
 
 const sectionVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0 },
     visible: {
         opacity: 1,
-        y: 0,
         transition: {
-            when: "beforeChildren",
             staggerChildren: 0.08,
+            delayChildren: 0.1,
             duration: 0.5,
             ease: "easeOut",
         },
@@ -215,18 +215,18 @@ function PlansAndPricing() {
             id="plan-pricing"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1, margin: "0px 0px -100px 0px" }} // Trigger slightly before it enters
             variants={sectionVariants}
         >
 
             <div className='md:pt-10 overflow-hidden'>
 
-                <div className='md:flex md:flex-row justify-between md:px-0 px-5 mt-14'>
+                <div className='flex md:flex-row justify-between md:px-0 px-5 mt-14'>
                     <div>
                         <p className='uppercase font-pp-mori-regular text-[#747373] tracking-widest'>Credit plans</p>
                         <p className='font-semibold font-pp-mori-semibold text-2xl md:text-3xl'>Explore our plans</p>
                     </div>
-                    <button className='bg-[#1A1A1A] px-[20px] rounded-xl text-white font-pp-mori-regular cursor-pointer mt-5 md:mt-0 py-4 md:py-0'
+                    <button className='bg-[#1A1A1A] px-[20px] rounded-xl text-white font-pp-mori-regular cursor-pointer md:mt-0 py-4 md:py-0'
                         onClick={() => setShowModal(true)}
                     >View all plans</button>
                 </div>
@@ -238,8 +238,6 @@ function PlansAndPricing() {
                             <motion.div
                                 key={`${p.platform}-${i}`}
                                 variants={cardVariants}
-                                onMouseEnter={() => setPaused(true)}
-                                onMouseLeave={() => setPaused(false)}
                             >
                                 <PricingCard
                                     logo={p.logo}
@@ -292,7 +290,7 @@ function PlansAndPricing() {
 
                             <h2 className="text-4xl font-semibold font-pp-mori-semibold text-center pb-7 ">Pricing Plans</h2>
                             {/* Table */}
-                            <div className='px-7 pb-7 w-[50vw]'>
+                            <div className='px-7 pb-7 w-[90vw] md:w-[50vw]'>
 
                                 <CreditsTable platforms={displayPlatforms} />
                             </div>
