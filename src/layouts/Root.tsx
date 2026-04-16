@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
@@ -6,12 +7,16 @@ export default function Root() {
     const location = useLocation();
     const [isTransitioning, setIsTransitioning] = useState(false);
 
+    console.log(
+        window.location.hash
+
+    )
     useEffect(() => {
         // Whenever route changes → start transition
         setIsTransitioning(true);
 
         setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            (!["#plan-pricing", "#contact"].includes(window.location.hash)) ? window.scrollTo({ top: 0, behavior: "smooth" }) : null;
         }, 600)
 
         // Check scroll position until it reaches top
@@ -56,7 +61,7 @@ export default function Root() {
             {/* 🔹 Animated page transitions */}
             <AnimatePresence mode="sync">
                 {!isTransitioning && (
-                        <Outlet />
+                    <Outlet />
                 )}
             </AnimatePresence>
         </div>

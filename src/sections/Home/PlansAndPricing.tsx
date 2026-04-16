@@ -44,14 +44,14 @@ const platforms = [
         "rateLimits": "Enterprise Rate Limits"
     },
     {
-        "platform": "AWS (Claud Models via Bedrock)",
+        "platform": "AWS (Claude Models via Bedrock)",
         "logo": AwsSrc,
         "credits": ["$5K", "$10K", "$25K", "$100K"],
         "validity": "2 yr",
         "rateLimits": "Enterprise Support"
     },
     {
-        "platform": "GCP/Vertex A (Gemini Models)",
+        "platform": "GCP/Vertex AI (Gemini Models)",
         "logo": GCPSrc,
         "credits": ["$25K", "$100K"],
         "validity": "1 yr",
@@ -219,18 +219,18 @@ function PlansAndPricing() {
             variants={sectionVariants}
         >
 
-            <div className='pt-10 overflow-hidden'>
+            <div className='md:pt-10 overflow-hidden'>
 
-                <div className='flex justify-between md:px-0 px-5 mt-14'>
+                <div className='md:flex md:flex-row justify-between md:px-0 px-5 mt-14'>
                     <div>
                         <p className='uppercase font-pp-mori-regular text-[#747373] tracking-widest'>Credit plans</p>
                         <p className='font-semibold font-pp-mori-semibold text-2xl md:text-3xl'>Explore our plans</p>
                     </div>
-                    <button className='bg-[#1A1A1A] px-[20px] rounded-xl text-white font-pp-mori-regular cursor-pointer'
+                    <button className='bg-[#1A1A1A] px-[20px] rounded-xl text-white font-pp-mori-regular cursor-pointer mt-5 md:mt-0 py-4 md:py-0'
                         onClick={() => setShowModal(true)}
                     >View all plans</button>
                 </div>
-                <motion.div className='grid grid-cols-2 md:grid-cols-3 pt-10 gap-5' variants={sectionVariants}>
+                <motion.div className='grid grid-cols-1 md:grid-cols-3 pt-10 gap-5' variants={sectionVariants}>
                     {loading && displayPlatforms === platforms ? (
                         <div className="col-span-full py-10 text-center">Loading plans...</div>
                     ) : (

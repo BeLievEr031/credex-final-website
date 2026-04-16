@@ -1,9 +1,39 @@
 import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../sections/common/Footer"
+import { newsletterApi } from "../api/api"
+import { Loader2 } from "lucide-react"
 
 function Blog() {
     const navigate = useNavigate()
+    const [email, setEmail] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [status, setStatus] = useState<{ type: "success" | "error"; message: string } | null>(null)
+
+    const handleSubscribe = async () => {
+        if (!email) {
+            setStatus({ type: "error", message: "Please enter your email." })
+            return
+        }
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            setStatus({ type: "error", message: "Please enter a valid email." })
+            return
+        }
+
+        setLoading(true)
+        setStatus(null)
+        try {
+            await newsletterApi.subscribe({ email })
+            setStatus({ type: "success", message: "Successfully subscribed!" })
+            setEmail("")
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (error: any) {
+            setStatus({ type: "error", message: error.response?.data?.message || "Failed to subscribe. Please try again." })
+        } finally {
+            setLoading(false)
+        }
+    }
 
     return (
         <main className="pt-40 md:pt-48 font-pp-mori-regular">
@@ -20,10 +50,28 @@ function Blog() {
                         </div>
                         <div>
                             <p className="text-[#747373]">Get updates, news straight to your inbox.</p>
-                            <div className="space-x-2 pt-3">
-                                <input type="text" className="bg-[#121212] px-4 py-2 rounded-full outline-none text-[#E2E2E2]" placeholder="Jessica@email.com" />
-                                <button className="bg-[#E2E2E2] px-4 py-2 rounded-full mt-2 md:mt-0">Subscribe</button>
+                            <div className="flex flex-col md:flex-row gap-2 pt-3 w-12/13">
+                                <input
+                                    type="email"
+                                    className="bg-[#121212] px-4 py-2 rounded-full outline-none text-[#E2E2E2] flex-grow"
+                                    placeholder="team@credex.rocks"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    disabled={loading}
+                                />
+                                <button
+                                    onClick={handleSubscribe}
+                                    disabled={loading}
+                                    className="bg-[#E2E2E2] px-6 py-2 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-white transition-colors disabled:opacity-50"
+                                >
+                                    {loading ? <Loader2 className="animate-spin" size={18} /> : "Subscribe"}
+                                </button>
                             </div>
+                            {status && (
+                                <p className={`text-xs mt-2 ${status.type === "success" ? "text-green-500" : "text-red-500"}`}>
+                                    {status.message}
+                                </p>
+                            )}
                         </div>
                     </div>
 

@@ -17,7 +17,7 @@ export default function PricingCard({
 
     return (
         <div className="flex items-center justify-center bg-gray-50 shrink-0 cursor-pointer" onClick={() => { window.location.href = '#contact' }}>
-            <div className="w-[250px] md:w-full shrink-0 rounded-2xl border border-gray-300 bg-white p-8 shadow-sm">
+            <div className="w-[300px] md:w-full shrink-0 rounded-2xl border border-gray-300 bg-white p-8 shadow-sm">
 
                 {/* Logo - centered on mobile, left on desktop */}
                 <div className="mb-8 flex justify-center md:justify-start">

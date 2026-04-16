@@ -13,6 +13,7 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
 }: IProp) {
 
     const location = useLocation();
+    console.log(location.pathname)
     return (
         <footer className="mt-[50px] md:mt-24 overflow-x-hidden">
             <div className="px-2 md:px-0">
@@ -27,7 +28,7 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                     </h1>
                     <div className="pt-4 flex gap-x-2.5">
                         <button onClick={() => {
-                            window.location.href = '#contact'
+                            window.location.href = (location.pathname === "/" || location.pathname === "/seller") ? "#contact" : "/#contact"
                         }} className="py-[12px] px-[15px] md:py-[16px] text-[15px] md:px-[20px] bg-[#0FF395] rounded-md block font-semibold font-pp-mori-semibold md:text-xl cursor-pointer relative z-10">{actionBtn1Text}</button>
                         <a href={actionBtnLink} target="_blank" className="py-[12px] px-[15px] md:py-[16px] text-[15px] md:px-[20px] bg-[#0FF39533] rounded-md text-white block font-semibold font-pp-mori-semibold md:text-xl">{actionBtn2Text}</a>
                     </div>

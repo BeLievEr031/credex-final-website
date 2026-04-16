@@ -103,8 +103,8 @@ function ContactForm({ type }: { type?: "SELLER" | "BUYER" }) {
     const platforms = [
         { platform: "OpenAI", color: "#000000" },
         { platform: "Anthropic/Claude", color: "#D97706" },
-        { platform: "AWS (Claud Models via Bedrock)", color: "#FF9900" },
-        { platform: "GCP/Vertex A (Gemini Models)", color: "#34A853" },
+        { platform: "AWS (Claude Models via Bedrock)", color: "#FF9900" },
+        { platform: "GCP/Vertex AI (Gemini Models)", color: "#34A853" },
         { platform: "Azure OpenAI (GPT Models)", color: "#0078D4" },
         { platform: "MongoDB", color: "#47A248" },
         { platform: "Supabase", color: "#3ECF8E" },
@@ -124,8 +124,7 @@ function ContactForm({ type }: { type?: "SELLER" | "BUYER" }) {
     }));
 
     const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
+        name: "",
         email: "",
         phone: "",
         companyName: "",
@@ -141,8 +140,7 @@ function ContactForm({ type }: { type?: "SELLER" | "BUYER" }) {
 
     const validate = () => {
         const newErrors: Record<string, string> = {};
-        if (!formData.firstName) newErrors.firstName = "First name is required";
-        if (!formData.lastName) newErrors.lastName = "Last name is required";
+        if (!formData.name) newErrors.name = "Full name is required";
         if (!formData.email) {
             newErrors.email = "Email is required";
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
@@ -165,8 +163,7 @@ function ContactForm({ type }: { type?: "SELLER" | "BUYER" }) {
             await inquiryApi.submitInquiry({ ...formData, type: type || "BUYER" });
             setIsSuccess(true);
             setFormData({
-                firstName: "",
-                lastName: "",
+                name: "",
                 email: "",
                 phone: "",
                 companyName: "",
@@ -183,7 +180,7 @@ function ContactForm({ type }: { type?: "SELLER" | "BUYER" }) {
         }
 
         // Reset success message after 5 seconds
-        setTimeout(() => setIsSuccess(false), 5000);
+        setTimeout(() => setIsSuccess(false), 7000);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -217,221 +214,206 @@ function ContactForm({ type }: { type?: "SELLER" | "BUYER" }) {
         errors[name] ? "border-red-400 focus:border-red-500" : "border-transparent focus:border-black/10 focus:bg-white"
     );
 
-    const labelClasses = "block text-[12px] md:text-[14px] font-medium mb-1.5 text-black/60 ml-1";
-
-    if (isSuccess) {
-        return (
-            <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-green-50 border-2 border-green-100 p-10 rounded-3xl text-center"
-            >
-                <div className="size-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
-                    <Check size={32} strokeWidth={3} />
-                </div>
-                <h3 className="text-2xl font-pp-mori-semibold font-semibold mb-2">Message Received!</h3>
-                <p className="text-black/60">Thank you for reaching out. We'll be in touch soon.</p>
-                <button
-                    onClick={() => setIsSuccess(false)}
-                    className="mt-6 text-sm font-semibold underline underline-offset-4 cursor-pointer"
-                >
-                    Send another message
-                </button>
-            </motion.div>
-        );
-    }
+    const labelClasses = "block text-[15px] md:text-[16px] font-bold mb-1.5 text-black/85 ml-1";
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* First Name */}
-                <div>
-                    <label className={labelClasses}>First Name <span className="text-red-500">*</span></label>
-                    <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        placeholder="John"
-                        className={inputClasses("firstName")}
-                    />
-                    {errors.firstName && <p className="text-red-500 text-xs mt-1 ml-1">{errors.firstName}</p>}
-                </div>
+        <div className="min-h-[850px] md:min-h-[780px] flex flex-col">
+            {isSuccess ? (
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="bg-green-50 border-2 border-green-100 p-10 rounded-3xl text-center my-auto"
+                >
+                    <div className="size-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white">
+                        <Check size={32} strokeWidth={3} />
+                    </div>
+                    <h3 className="text-2xl font-pp-mori-semibold font-semibold mb-2">Message Received!</h3>
+                    <p className="text-black/60">
+                        Thanks for sharing your information! Our team will be in touch with you shortly.</p>
+                    {/* <button
+                        onClick={() => setIsSuccess(false)}
+                        className="mt-6 text-sm font-semibold underline underline-offset-4 cursor-pointer"
+                    >
+                        Send another message
+                    </button> */}
+                </motion.div>
+            ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                    {/* Name */}
+                    <div>
+                        <label className={labelClasses}>Full Name <span className="text-red-500">*</span></label>
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="e.g. Sarah Ferguson"
+                            className={inputClasses("name")}
+                        />
+                        {errors.name && <p className="text-red-500 text-xs mt-1 ml-1">{errors.name}</p>}
+                    </div>
 
-                {/* Last Name */}
-                <div>
-                    <label className={labelClasses}>Last Name <span className="text-red-500">*</span></label>
-                    <input
-                        type="text"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        placeholder="Doe"
-                        className={inputClasses("lastName")}
-                    />
-                    {errors.lastName && <p className="text-red-500 text-xs mt-1 ml-1">{errors.lastName}</p>}
-                </div>
-            </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Email */}
+                        <div>
+                            <label className={labelClasses}>Email Address <span className="text-red-500">*</span></label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="team@credex.rocks"
+                                className={inputClasses("email")}
+                            />
+                            {errors.email && <p className="text-red-500 text-xs mt-1 ml-1">{errors.email}</p>}
+                        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Email */}
-                <div>
-                    <label className={labelClasses}>Email Address <span className="text-red-500">*</span></label>
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="john@example.com"
-                        className={inputClasses("email")}
-                    />
-                    {errors.email && <p className="text-red-500 text-xs mt-1 ml-1">{errors.email}</p>}
-                </div>
+                        {/* Phone */}
+                        <div>
+                            <label className={labelClasses}>Phone Number <span className="text-red-500">*</span></label>
+                            <input
+                                type="tel"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder="+1 (555) 000-0000"
+                                className={inputClasses("phone")}
+                            />
+                            {errors.phone && <p className="text-red-500 text-xs mt-1 ml-1">{errors.phone}</p>}
+                        </div>
+                    </div>
 
-                {/* Phone */}
-                <div>
-                    <label className={labelClasses}>Phone Number <span className="text-red-500">*</span></label>
-                    <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+1 (555) 000-0000"
-                        className={inputClasses("phone")}
-                    />
-                    {errors.phone && <p className="text-red-500 text-xs mt-1 ml-1">{errors.phone}</p>}
-                </div>
-            </div>
+                    {/* Company Name */}
+                    <div>
+                        <label className={labelClasses}>Company Name <span className="text-red-500">*</span></label>
+                        <input
+                            type="text"
+                            name="companyName"
+                            value={formData.companyName}
+                            onChange={handleChange}
+                            placeholder="Credex"
+                            className={inputClasses("companyName")}
+                        />
+                        {errors.companyName && <p className="text-red-500 text-xs mt-1 ml-1">{errors.companyName}</p>}
+                    </div>
 
-            {/* Company Name */}
-            <div>
-                <label className={labelClasses}>Company Name <span className="text-red-500">*</span></label>
-                <input
-                    type="text"
-                    name="companyName"
-                    value={formData.companyName}
-                    onChange={handleChange}
-                    placeholder="Acme Inc."
-                    className={inputClasses("companyName")}
-                />
-                {errors.companyName && <p className="text-red-500 text-xs mt-1 ml-1">{errors.companyName}</p>}
-            </div>
+                    {/* Select Platforms (react-select) */}
+                    <div className="relative">
+                        <label className={labelClasses}>Select Platforms <span className="text-red-500">*</span></label>
+                        <Select
+                            isMulti
+                            options={options}
+                            value={options.filter(opt => formData.selectedLicenses.includes(opt.value))}
+                            onChange={handleSelectChange}
+                            placeholder="Select platforms..."
+                            className={clsx(
+                                "text-[14px] md:text-[16px]",
+                                errors.selectedLicenses ? "border-red-400" : "border-transparent"
+                            )}
+                            classNamePrefix="select"
+                            styles={{
+                                control: (base, state) => ({
+                                    ...base,
+                                    backgroundColor: "#f9f9f9",
+                                    borderColor: errors.selectedLicenses ? "#f87171" : state.isFocused ? "rgba(0,0,0,0.1)" : "transparent",
+                                    borderWidth: "2px",
+                                    borderRadius: "0.75rem",
+                                    padding: "4px",
+                                    boxShadow: "none",
+                                    "&:hover": {
+                                        borderColor: state.isFocused ? "rgba(0,0,0,0.1)" : "transparent",
+                                    }
+                                }),
+                                multiValue: (base, state) => ({
+                                    ...base,
+                                    backgroundColor: state.data.color ? `${state.data.color}eb` : "#000000eb", // added small transparency
+                                    color: "#fff",
+                                    borderRadius: "8px",
+                                    padding: "2px 6px",
+                                    margin: "2px",
+                                }),
+                                multiValueLabel: (base) => ({
+                                    ...base,
+                                    color: "#fff",
+                                    fontSize: "13px",
+                                    fontWeight: "600",
+                                    paddingLeft: "4px",
+                                }),
+                                multiValueRemove: (base) => ({
+                                    ...base,
+                                    color: "#fff",
+                                    cursor: "pointer",
+                                    "&:hover": {
+                                        backgroundColor: "rgba(255,255,255,0.2)",
+                                        color: "#fff",
+                                    }
+                                }),
+                                option: (base, state) => ({
+                                    ...base,
+                                    backgroundColor: state.isFocused ? "rgba(0,0,0,0.05)" : "white",
+                                    color: "black",
+                                    cursor: "pointer",
+                                    fontSize: "14px",
+                                    padding: "10px 15px",
+                                    "&:active": {
+                                        backgroundColor: "rgba(0,0,0,0.1)",
+                                    }
+                                })
+                            }}
+                        />
+                        {errors.selectedLicenses && <p className="text-red-500 text-xs mt-1 ml-1">{errors.selectedLicenses}</p>}
+                    </div>
 
-            {/* Select Platforms (react-select) */}
-            <div className="relative">
-                <label className={labelClasses}>Select Platforms <span className="text-red-500">*</span></label>
-                <Select
-                    isMulti
-                    options={options}
-                    value={options.filter(opt => formData.selectedLicenses.includes(opt.value))}
-                    onChange={handleSelectChange}
-                    placeholder="Select platforms..."
-                    className={clsx(
-                        "text-[14px] md:text-[16px]",
-                        errors.selectedLicenses ? "border-red-400" : "border-transparent"
-                    )}
-                    classNamePrefix="select"
-                    styles={{
-                        control: (base, state) => ({
-                            ...base,
-                            backgroundColor: "#f9f9f9",
-                            borderColor: errors.selectedLicenses ? "#f87171" : state.isFocused ? "rgba(0,0,0,0.1)" : "transparent",
-                            borderWidth: "2px",
-                            borderRadius: "0.75rem",
-                            padding: "4px",
-                            boxShadow: "none",
-                            "&:hover": {
-                                borderColor: state.isFocused ? "rgba(0,0,0,0.1)" : "transparent",
-                            }
-                        }),
-                        multiValue: (base, state) => ({
-                            ...base,
-                            backgroundColor: state.data.color ? `${state.data.color}eb` : "#000000eb", // added small transparency
-                            color: "#fff",
-                            borderRadius: "8px",
-                            padding: "2px 6px",
-                            margin: "2px",
-                        }),
-                        multiValueLabel: (base) => ({
-                            ...base,
-                            color: "#fff",
-                            fontSize: "13px",
-                            fontWeight: "600",
-                            paddingLeft: "4px",
-                        }),
-                        multiValueRemove: (base) => ({
-                            ...base,
-                            color: "#fff",
-                            cursor: "pointer",
-                            "&:hover": {
-                                backgroundColor: "rgba(255,255,255,0.2)",
-                                color: "#fff",
-                            }
-                        }),
-                        option: (base, state) => ({
-                            ...base,
-                            backgroundColor: state.isFocused ? "rgba(0,0,0,0.05)" : "white",
-                            color: "black",
-                            cursor: "pointer",
-                            fontSize: "14px",
-                            padding: "10px 15px",
-                            "&:active": {
-                                backgroundColor: "rgba(0,0,0,0.1)",
-                            }
-                        })
-                    }}
-                />
-                {errors.selectedLicenses && <p className="text-red-500 text-xs mt-1 ml-1">{errors.selectedLicenses}</p>}
-            </div>
+                    {/* Other Platforms */}
+                    <div>
+                        <label className={labelClasses}>Others (Please specify)</label>
+                        <input
+                            type="text"
+                            name="otherPlatforms"
+                            value={formData.otherPlatforms}
+                            onChange={handleChange}
+                            placeholder="e.g. Gemma AI, etc."
+                            className={inputClasses("otherPlatforms")}
+                        />
+                    </div>
 
-            {/* Other Platforms */}
-            <div>
-                <label className={labelClasses}>Others (Please specify)</label>
-                <input
-                    type="text"
-                    name="otherPlatforms"
-                    value={formData.otherPlatforms}
-                    onChange={handleChange}
-                    placeholder="e.g. lala.ai, etc."
-                    className={inputClasses("otherPlatforms")}
-                />
-            </div>
+                    {/* Message */}
+                    <div>
+                        <label className={labelClasses}>Message (Optional)</label>
+                        <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            placeholder="How can we help you?"
+                            rows={4}
+                            className={clsx(inputClasses("message"), "resize-none")}
+                        />
+                    </div>
 
-            {/* Message */}
-            <div>
-                <label className={labelClasses}>Message (Optional)</label>
-                <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="How can we help you?"
-                    rows={4}
-                    className={clsx(inputClasses("message"), "resize-none")}
-                />
-            </div>
-
-            {/* Submit Button */}
-            <button
-                type="submit"
-                disabled={isSubmitting}
-                className={clsx(
-                    "w-full py-4 rounded-xl font-pp-mori-semibold font-semibold text-[16px] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer",
-                    isSubmitting
-                        ? "bg-gray-200 text-black/40 cursor-not-allowed"
-                        : "bg-black text-white hover:bg-black/90 active:scale-[0.98]"
-                )}
-            >
-                {isSubmitting ? (
-                    <>
-                        <Loader2 className="animate-spin" size={20} />
-                        Sending...
-                    </>
-                ) : (
-                    "Send Message"
-                )}
-            </button>
-        </form>
-    )
+                    {/* Submit Button */}
+                    <button
+                        type="submit"
+                        disabled={isSubmitting}
+                        className={clsx(
+                            "w-full py-4 rounded-xl font-pp-mori-semibold font-semibold text-[16px] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer",
+                            isSubmitting
+                                ? "bg-gray-200 text-black/40 cursor-not-allowed"
+                                : "bg-black text-white hover:bg-black/90 active:scale-[0.98]"
+                        )}
+                    >
+                        {isSubmitting ? (
+                            <>
+                                <Loader2 className="animate-spin" size={20} />
+                                Sending...
+                            </>
+                        ) : (
+                            "SUBMIT"
+                        )}
+                    </button>
+                </form>
+            )}
+        </div>
+    );
 }
 
 
