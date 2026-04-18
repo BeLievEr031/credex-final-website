@@ -140,7 +140,7 @@ function Footer({ actionBtn1Text = "Get credits", actionBtn2Text = "Talk to sale
                 <div className="flex md:px-28 gap-x-5 text-[#5B677C] py-4 flex-wrap items-center justify-between ">
                     <div className="flex flex-wrap items-center gap-x-5">
 
-                        <p>© 2025 Credex</p>
+                        <p>© 2026 Dreadnought Technology Private Limited</p>
                         <p className="flex items-center gap-x-1 shrink-0">
                             <p className="text-3xl">
                                 •
