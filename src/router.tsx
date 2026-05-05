@@ -21,6 +21,7 @@ const SingleBlog7 = lazy(() => import("./pages/SingleBlog7"));
 const SingleBlog8 = lazy(() => import("./pages/SingleBlog8"));
 const SingleBlog9 = lazy(() => import("./pages/SingleBlog9"));
 const SingleBlog10 = lazy(() => import("./pages/SingleBlog10"));
+const SingleBlog11 = lazy(() => import("./pages/SingleBlog11"));
 
 const router = createBrowserRouter([
     {
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/how-to-build-voice-ai-without-burning-through-your-budget-500k-in-deepgram-credits-at-50-off",
                 element: <SingleBlog10 />
+            },
+            {
+                path: "blog/how-to-build-ai-powered-products-without-burning-developer-budget",
+                element: <SingleBlog11 />
             },
             // {
             //     path: "blog/:slug",
