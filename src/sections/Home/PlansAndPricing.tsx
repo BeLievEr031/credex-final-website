@@ -18,6 +18,8 @@ import CursorSrc from "../../assets/logos/cursor.png"
 import LambdaSrc from "../../assets/logos/lambda.png"
 import OpenrouterSrc from "../../assets/logos/openrouter.webp"
 import CloudflareSrc from "../../assets/logos/cloudflare.png"
+
+
 import { useLocation } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -139,6 +141,13 @@ const platforms = [
         "credits": ["$100K", "$25K", "$10K", "$5k"],
         "validity": "2 yr",
         "rateLimits": "Enterprise Support"
+    },
+    {
+    "platform": "Digital Ocean",
+    "logo": DigitalSrc,
+    "credits": ["$50k", "$25k"],
+    "validity": "1 yr",
+    "rateLimits": "Enterprise Support"
     },
     {
         "platform": "GCP",
