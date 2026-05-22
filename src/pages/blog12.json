@@ -1,0 +1,607 @@
+{
+    "data": [
+        {
+            "h1": "Dodge The Claude Opus 4.7 Budget Trap: How AI Startups Are\n                    Burning $300K/Year on API Costs"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*RUJx-ywGV56Oev3VwcVrdQ.png"
+        },
+        {
+            "p": "Claude Opus 4.7 is one of the strongest coding models on the\n                  market. It is also expensive enough to quietly damage the\n                  economics of an AI startup."
+        },
+        {
+            "p": "For teams building AI products, this creates a painful choice:\n                  use the best model and risk blowing the budget, or downgrade\n                  quality to stay solvent."
+        },
+        {
+            "h2": "The API Cost Crisis Nobody Warned You About"
+        },
+        {
+            "p": "Your engineering team ships the MVP. The AI-powered code\n                  review feature works beautifully. Customers love the quality\n                  of Claude Opus suggestions. The roadmap looks strong."
+        },
+        {
+            "p": "Then the first full Anthropic bill arrives: $8,200."
+        },
+        {
+            "p": "You budgeted $2,000. Your AWS bill is $1,500. Your AI API bill\n                  is now more expensive than the rest of your cloud\n                  infrastructure."
+        },
+        {
+            "p": "Month 2: $14,300. Month 3: $23,800."
+        },
+        {
+            "p": "Usage is growing. Customers are happy. Product-market fit is\n                  getting closer. But the economics are becoming terrifying."
+        },
+        {
+            "p": "Your CFO schedules a meeting. Your runway just shortened. The\n                  board wants to know why AI infrastructure costs more than\n                  expected."
+        },
+        {
+            "p": "Welcome to the Claude Opus 4.7 budget trap."
+        },
+        {
+            "h2": "The Tokenizer Inflation Nobody Warned You About"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*CIxIKwhy5ZXzwr8SVD5nSA.png"
+        },
+        {
+            "p": "In April 2026, Anthropic released Claude Opus 4.7 with a\n                  critical change buried in the migration details: a new\n                  tokenizer that can produce more tokens for the same text."
+        },
+        {
+            "p": "The pricing may look unchanged: $5 per million input tokens\n                  and $25 per million output tokens. But if the same prompt\n                  becomes more token-heavy, the bill still goes up."
+        },
+        {
+            "p": "Here is what that looks like in practice:"
+        },
+        {
+            "p": "Code Review Platform Same\n                  10,000 pull request reviews/month Opus 4.6 cost:\n                  $9,200/month Opus 4.7 cost: $11,800/month Unexpected\n                  increase: $2,600/month"
+        },
+        {
+            "p": "AI Coding Assistant Same\n                  feature set, same user base Opus 4.6 cost:\n                  $18,500/month Opus 4.7 cost: $23,100/month Unexpected\n                  increase: $4,600/month"
+        },
+        {
+            "p": "Developer Tools Platform Same API call volume Opus 4.6 cost: $42,000/month Opus\n                  4.7 cost: $52,000/month Unexpected increase:\n                  $10,000/month"
+        },
+        {
+            "p": "The rate did not change. The way text converts into billable\n                  tokens did."
+        },
+        {
+            "p": "And most teams only discover this after the invoice arrives."
+        },
+        {
+            "h2": "Enterprise API Costs at Scale: The Real Numbers"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*72RzOA4wGZDdHABjGSaCNg.png"
+        },
+        {
+            "p": "Let’s be honest about what Claude Opus 4.7 costs when you are\n                  building a real AI product."
+        },
+        {
+            "p": "5-Person AI Startup Processing 50,000 coding tasks/month Average task: 5,000\n                  input tokens, 2,000 output tokens Monthly cost: about\n                  $3,750 Annual cost: $45,000"
+        },
+        {
+            "p": "That is one salary-sized expense just for API access."
+        },
+        {
+            "p": "20-Person Team AI code\n                  review: $4,500/month Automated testing: $3,200/month Documentation\n                  generation: $2,800/month Refactoring suggestions:\n                  $4,000/month Total monthly cost: $14,500 Annual\n                  cost: $174,000"
+        },
+        {
+            "p": "50+ Developer Organization Multiple AI products powered by Opus Internal developer\n                  tools using AI assistance Customer-facing AI features at\n                  scale Monthly cost: $35,000–$50,000 Annual cost:\n                  $420,000–$600,000"
+        },
+        {
+            "p": "These are not side-tool costs. For AI-native companies, model\n                  access becomes core infrastructure."
+        },
+        {
+            "h2": "The Impossible Trade-Offs"
+        },
+        {
+            "p": "When Claude API costs spiral, engineering leaders face brutal\n                  choices."
+        },
+        {
+            "p": "Option 1: Downgrade to Sonnet"
+        },
+        {
+            "p": "Sonnet is cheaper. But for complex coding workflows, the\n                  quality drop can be noticeable."
+        },
+        {
+            "p": "Code suggestions become weaker. Complex reasoning fails more\n                  often. Customer complaints increase. The product starts\n                  feeling less differentiated."
+        },
+        {
+            "p": "You save money, but you risk losing the quality that made the\n                  product valuable."
+        },
+        {
+            "p": "Option 2: Ration Opus Usage"
+        },
+        {
+            "p": "Use Opus only for premium customers. Use cheaper models for\n                  everyone else. Limit extended thinking. Disable advanced\n                  workflows."
+        },
+        {
+            "p": "This protects burn, but creates a two-tier product experience.\n                  The best version of your product becomes restricted, and\n                  engineering time gets spent managing model routing instead of\n                  building features."
+        },
+        {
+            "p": "Option 3: Build Your Own Models"
+        },
+        {
+            "p": "Some teams consider training their own models. Then reality\n                  hits."
+        },
+        {
+            "p": "It can take 18–24 months, millions in ML talent and\n                  infrastructure, and constant maintenance. Even then, matching\n                  Opus quality for coding can take years."
+        },
+        {
+            "p": "Option 4: Accept the Costs and Hope"
+        },
+        {
+            "p": "Keep paying. Burn the runway faster. Hope the next raise\n                  arrives before cash runs out."
+        },
+        {
+            "p": "Many teams choose this. Many do not survive it."
+        },
+        {
+            "h2": "The Budget Anxiety That Kills Velocity"
+        },
+        {
+            "p": "High API costs do more than hurt margins. They change how\n                  teams build."
+        },
+        {
+            "p": "Product teams start saying:"
+        },
+        {
+            "p": "“We cannot ship that feature. It will double API costs.” “Can\n                  we make this available only to paid users?” “Can we use a\n                  cheaper model here?”"
+        },
+        {
+            "p": "Engineering teams start designing around budget constraints\n                  instead of user value."
+        },
+        {
+            "p": "Growth teams hesitate to acquire more customers because every\n                  new customer increases burn."
+        },
+        {
+            "p": "Fundraising gets harder because investors ask why gross\n                  margins are 30% instead of 70%."
+        },
+        {
+            "p": "The result is product development paralysis."
+        },
+        {
+            "p": "This is not about being frugal. It is about survival."
+        },
+        {
+            "h2": "The Rate Limiting Problem"
+        },
+        {
+            "p": "Beyond cost, standard API access creates another problem: rate\n                  limits."
+        },
+        {
+            "p": "Production AI products need predictable throughput. But\n                  default API limits are often designed for smaller projects,\n                  not fast-growing products."
+        },
+        {
+            "p": "When traffic spikes, requests get throttled. Users see errors.\n                  Support tickets pile up. Your team scrambles to request higher\n                  limits at exactly the moment you need stability most."
+        },
+        {
+            "p": "Enterprise customers get priority access, higher limits, and\n                  guaranteed capacity. Standard-plan startups get forced to\n                  build carefully."
+        },
+        {
+            "p": "That creates a two-tier AI infrastructure market: teams with\n                  enterprise budgets move fast, while everyone else worries\n                  about throttling."
+        },
+        {
+            "h2": "There’s a Better Way to Access Claude Opus 4.7"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*4NnTzZ8xxWgi7AfJaQs73A.png"
+        },
+        {
+            "p": "Credex changes the economics of deploying AI at scale."
+        },
+        {
+            "p": "We provide $100K in Claude Opus 4.7 Enterprise API credits\n                  with one-year validity at 50% off standard pricing, including\n                  enterprise-tier features."
+        },
+        {
+            "p": "These are not short-lived promotional credits. They are not\n                  discounts that require massive usage first. They are verified\n                  Claude Enterprise credits accessible through AWS Bedrock\n                  designed for teams actively building AI products."
+        },
+        {
+            "p": "How it works:"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*JLMUR147NhsbiWULzkIC3w.png"
+        },
+        {
+            "p": "Credex sources AI infrastructure credits from companies that\n                  received platform allocations through accelerator programs,\n                  investor relationships, enterprise agreements, or\n                  overforecasted AI usage. Some pivoted. Some shut down. Some\n                  simply will not use the credits before they expire."
+        },
+        {
+            "p": "Instead of letting those credits go unused, Credex transfers\n                  them to companies that need AI capacity now."
+        },
+        {
+            "p": "You get:"
+        },
+        {
+            "p": "50% discount off standard Anthropic API pricing Enterprise\n                  rate limits and priority access Immediate access to\n                  Claude Opus 4.7 usage One-year validity for predictable\n                  budgeting Full API ownership with enterprise features\n                  included"
+        },
+        {
+            "p": "The budget constraint is not unsolvable. You just need a\n                  better path to enterprise capacity."
+        },
+        {
+            "h2": "Why Claude Opus 4.7 Became the Standard for AI Coding"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*oFBt5XGIDJgdWQbZbPsIgw.png"
+        },
+        {
+            "p": "Before talking about savings, it is important to understand\n                  why teams want Opus in the first place."
+        },
+        {
+            "p": "Claude Opus 4.7 is built for complex software engineering and\n                  autonomous coding tasks. For teams building developer tools,\n                  coding agents, code review platforms, or internal AI\n                  engineering workflows, model quality directly affects product\n                  quality."
+        },
+        {
+            "h2": "The Features That Actually Matter"
+        },
+        {
+            "p": "1. Advanced Software Engineering Capabilities"
+        },
+        {
+            "p": "Opus 4.7 performs strongly on coding tasks, multi-file\n                  reasoning, and long-running development workflows."
+        },
+        {
+            "p": "It can handle large refactors, understand repository context,\n                  and produce more reliable suggestions across complex\n                  codebases."
+        },
+        {
+            "p": "Why this matters: Better coding quality means fewer manual\n                  reviews, fewer bad suggestions, and more trust in AI-generated\n                  work."
+        },
+        {
+            "p": "2. Self-Verification and Error Detection"
+        },
+        {
+            "p": "Opus is better at checking its own work before reporting back."
+        },
+        {
+            "p": "It can catch logical mistakes, validate assumptions, and flag\n                  uncertainty instead of confidently hallucinating."
+        },
+        {
+            "p": "Why this matters: Production AI tools need reliability. A\n                  model that self-corrects reduces engineering review burden."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*NG4ACMIHZO9U2eEh3I5CrQ.png"
+        },
+        {
+            "p": "3. Extended Thinking"
+        },
+        {
+            "p": "Opus 4.7 gives teams more control over reasoning depth."
+        },
+        {
+            "p": "Routine tasks can run quickly. Complex architecture, security,\n                  or refactoring tasks can use deeper reasoning modes."
+        },
+        {
+            "p": "Why this matters: Teams can route effort intelligently instead\n                  of paying maximum cost for every task."
+        },
+        {
+            "p": "4. Better Vision"
+        },
+        {
+            "p": "Improved visual understanding makes Opus useful for UI\n                  debugging, screenshot analysis, visual testing, document\n                  review, and diagram interpretation."
+        },
+        {
+            "p": "Why this matters: AI can understand the product more like\n                  users see it."
+        },
+        {
+            "p": "5. Stronger Instruction Following"
+        },
+        {
+            "p": "Opus follows detailed requirements, coding standards, and\n                  constraints more consistently."
+        },
+        {
+            "p": "Why this matters: Customer-facing AI features need predictable\n                  behavior. Consistency becomes part of the product experience."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*DmcAjiWHLXlDwAiorOuBjw.png"
+        },
+        {
+            "h2": "Real-World Use Cases Where Opus 4.7 Excels"
+        },
+        {
+            "p": "Opus 4.7 is especially valuable for autonomous coding agents,\n                  AI code review, code generation platforms, automated testing,\n                  documentation generation, refactoring tools, onboarding\n                  assistants, architecture reviews, security remediation,\n                  performance optimization, and framework migration planning."
+        },
+        {
+            "h2": "Get Credex’s stories in your inbox"
+        },
+        {
+            "p": "Join Medium for free to get updates\n                      from this writer."
+        },
+        {
+            "p": "Remember me for faster sign in"
+        },
+        {
+            "p": "For these workflows, model quality is not a luxury. It is the\n                  product."
+        },
+        {
+            "h2": "Why Teams Choose Opus Over Sonnet"
+        },
+        {
+            "p": "Sonnet is often the right choice for simpler workflows. It is\n                  cheaper and fast."
+        },
+        {
+            "p": "But for mission-critical AI features, Opus can justify the\n                  premium."
+        },
+        {
+            "p": "Opus handles longer task horizons, deeper reasoning, better\n                  self-correction, and more reliable customer-facing outputs."
+        },
+        {
+            "p": "The math works when the quality difference affects revenue,\n                  reduces engineering time, improves retention, or enables\n                  features that cheaper models cannot support."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*q7CXhNf_P05QY6WpCNIhBQ.png"
+        },
+        {
+            "h2": "The Enterprise Access Problem"
+        },
+        {
+            "p": "Most startups discover enterprise access too late."
+        },
+        {
+            "p": "Standard API access usually means rate limits during traffic\n                  spikes, no guaranteed capacity, standard support, limited\n                  priority during production issues, and less predictable\n                  scaling."
+        },
+        {
+            "p": "Enterprise access can solve this, but direct contracts often\n                  require procurement, legal review, minimum annual commitments,\n                  security reviews, and custom pricing negotiations."
+        },
+        {
+            "p": "For a startup burning tens of thousands per month on Claude,\n                  waiting 8–12 weeks for enterprise procurement is not\n                  realistic."
+        },
+        {
+            "p": "This is exactly what Credex solves."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*vADqZHgQ6nvq4UyuU69DTw.png"
+        },
+        {
+            "h2": "Case Study: How DevForge AI Saved $156K and Shipped 3 Months\n                  Faster"
+        },
+        {
+            "p": "This story is based on a real Credex client journey, with the\n                  founder and company name changed for privacy."
+        },
+        {
+            "h2": "The Crisis"
+        },
+        {
+            "p": "DevForge AI was a 12-person startup building an AI-powered\n                  code review platform."
+        },
+        {
+            "p": "Their product analyzed pull requests, suggested improvements,\n                  caught bugs, generated tests, and provided architectural\n                  feedback using Claude Opus."
+        },
+        {
+            "p": "Customers loved it because the suggestions were better than\n                  competitors using cheaper models."
+        },
+        {
+            "p": "But DevForge was spending $26,000/month on Claude API usage."
+        },
+        {
+            "p": "Their total monthly burn was $95,000. Cash in the bank was\n                  $665,000. The runway was about seven months old."
+        },
+        {
+            "p": "Downgrading to Sonnet would save money, but user testing\n                  showed weaker suggestions and higher rejection rates. The\n                  model quality was the company’s competitive edge."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*w_V7pgbDoSRrpgKih_zPsw.png"
+        },
+        {
+            "h2": "The Breaking Point"
+        },
+        {
+            "p": "After upgrading to Opus 4.7, DevForge’s monthly API bill\n                  jumped to $32,000."
+        },
+        {
+            "p": "Same users. Same product. Same usage patterns."
+        },
+        {
+            "p": "The tokenizer change added roughly $6,000/month to burn."
+        },
+        {
+            "p": "The founder had three choices:"
+        },
+        {
+            "p": "Raise emergency funding Downgrade and weaken the\n                  product Find a better infrastructure path"
+        },
+        {
+            "p": "She found Credex."
+        },
+        {
+            "h2": "The Credex Solution"
+        },
+        {
+            "p": "DevForge purchased $100K in Claude Opus 4.7 Enterprise credits\n                  at 50% off, giving the company visibility into procuring $500K\n                  worth of API capacity in future."
+        },
+        {
+            "p": "Setup took a couple of hours."
+        },
+        {
+            "p": "Instead of waiting months for direct enterprise procurement,\n                  DevForge had credentials and capacity almost immediately."
+        },
+        {
+            "h2": "Immediate Financial Impact"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*ytLfy99RLHda-lSH7s5AqA.png"
+        },
+        {
+            "p": "Previous monthly API cost: $32,000 Credex effective\n                  monthly cost: $16,000 Monthly savings: $16,000"
+        },
+        {
+            "p": "Runway increased from 6.5 months to 14 months."
+        },
+        {
+            "p": "Cost per customer dropped from $145/month to $72.50/month."
+        },
+        {
+            "p": "Gross margin improved from 23% to 62%."
+        },
+        {
+            "p": "This changed the fundraising story completely. API costs went\n                  from the company’s biggest liability to a manageable\n                  infrastructure advantage."
+        },
+        {
+            "h2": "Product Impact"
+        },
+        {
+            "p": "With budget anxiety reduced, DevForge shipped features that\n                  had previously been too expensive."
+        },
+        {
+            "p": "They enabled extended thinking for complex reviews. They\n                  launched visual code analysis. They shipped automated\n                  refactoring. They added a multi-file repository context."
+        },
+        {
+            "p": "The product became stronger because the team stopped rationing\n                  model quality."
+        },
+        {
+            "h2": "Business Outcomes"
+        },
+        {
+            "p": "Six months later:"
+        },
+        {
+            "p": "Customer count grew from 180 teams to 520 teams. MRR grew\n                  from $81,000 to $234,000. API spend stayed controlled. Gross\n                  margins became investor-ready. The company closed an $8M\n                  Series A."
+        },
+        {
+            "p": "The key lesson: cost optimization did not just save money. It\n                  unlocked product velocity."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*JzUwB2_Tk_cJFd-S50Uhfw.png"
+        },
+        {
+            "h2": "The Credex Advantage: Enterprise Access Without Enterprise\n                  Complexity"
+        },
+        {
+            "p": "Credex gives startups access to enterprise Claude capacity\n                  without the traditional enterprise process."
+        },
+        {
+            "h2": "Immediate 50% Cost Reduction"
+        },
+        {
+            "p": "$50K in Credex credits equals $100K worth of Claude Opus 4.7\n                  API capacity."
+        },
+        {
+            "p": "For common AI products, the savings are significant:"
+        },
+        {
+            "p": "AI Code Review Platform: Standard annual cost: $10,800 Credex annual cost:\n                  $5,400 Savings: $5,400/year"
+        },
+        {
+            "p": "AI Coding Assistant SaaS: Standard annual cost: $216,000 Credex annual cost:\n                  $108,000 Savings: $108,000/year"
+        },
+        {
+            "p": "Enterprise AI Development Platform: Standard annual cost: $480,000 Credex annual cost:\n                  $240,000 Savings: $240,000/year"
+        },
+        {
+            "h2": "What $300K in Claude Credits Actually Buys You"
+        },
+        {
+            "p": "At standard pricing, $300K in credits can support massive\n                  production workloads."
+        },
+        {
+            "p": "That can translate into millions of coding tasks, hundreds of\n                  thousands of pull request reviews, large-scale unit test\n                  generation, repository analysis, autonomous agent workflows,\n                  and internal developer productivity tools."
+        },
+        {
+            "p": "For a startup, this can mean 12 months of serious AI product\n                  development without monthly cost panic."
+        },
+        {
+            "h2": "Enterprise Features Included"
+        },
+        {
+            "p": "Credex credits include enterprise-grade benefits such as:"
+        },
+        {
+            "p": "Priority Rate Limits: Higher\n                  throughput, less throttling, and better reliability during\n                  spikes. Enterprise Support: Faster help for production issues and better support when\n                  infrastructure matters. Advanced Features: Access to capabilities such as prompt caching, batch\n                  processing, and model improvements. Security and Compliance: Support for enterprise security needs, documentation,\n                  auditability, and compliance workflows. Cost Optimization Tools: Better visibility into usage, cost per workflow, and\n                  opportunities to reduce spend."
+        },
+        {
+            "h2": "1-Year Validity = Budget Predictability"
+        },
+        {
+            "p": "Month-to-month API billing creates uncertainty."
+        },
+        {
+            "p": "Tokenizer changes, usage spikes, model behavior changes, and\n                  product growth can all create surprise bills."
+        },
+        {
+            "p": "One-year Credex validity gives teams a clearer planning\n                  window."
+        },
+        {
+            "p": "For fundraising, this matters. Investors want predictable unit\n                  economics. “Our AI costs are fixed and discounted for the next\n                  year” is a stronger story than “our API bill jumped last month\n                  and we are still investigating.”"
+        },
+        {
+            "h2": "ROI Beyond Direct Cost Savings"
+        },
+        {
+            "p": "The direct savings are obvious. A 50% discount on $600K of\n                  capacity saves $300K."
+        },
+        {
+            "p": "But the bigger ROI is strategic."
+        },
+        {
+            "p": "Credex helps teams ship faster, keep using the best model,\n                  avoid quality downgrades, improve margins, scale customers\n                  sustainably, run more experiments, reduce budget anxiety, and\n                  strengthen fundraising narratives."
+        },
+        {
+            "p": "For AI startups, infrastructure economics shape product\n                  strategy. Better economics mean better products."
+        },
+        {
+            "h2": "What This Enables by Company Stage"
+        },
+        {
+            "p": "Early-Stage Startups: Use Opus\n                  during MVP and product-market fit search without burning the\n                  runway too quickly."
+        },
+        {
+            "p": "Seed and Series A Companies: Scale AI features, support more customers, and prove unit\n                  economics before the next raise."
+        },
+        {
+            "p": "Series B+ Companies: Power\n                  internal tools, customer-facing AI products, and strategic AI\n                  initiatives with enterprise-grade capacity."
+        },
+        {
+            "h2": "Stop Letting API Costs Determine Your Product Roadmap"
+        },
+        {
+            "p": "Claude Opus 4.7 is powerful. Your engineering team knows it.\n                  Your customers feel the difference. Your roadmap may depend on\n                  it."
+        },
+        {
+            "p": "But standard API pricing can make it difficult to use at\n                  scale."
+        },
+        {
+            "p": "DevForge AI was close to choosing between product quality and\n                  survival. Credex helped them keep both."
+        },
+        {
+            "p": "The question is not whether better AI infrastructure economics\n                  exist. The question is whether you find them before:"
+        },
+        {
+            "p": "Runway pressure forces a downgrade Competitors gain\n                  better model access Unit economics block fundraising Your\n                  team slows down because every feature feels too expensive"
+        },
+        {
+            "p": "$300K in Claude Opus 4.7 Enterprise credits through Credex\n                  gives you:"
+        },
+        {
+            "p": "50% savings versus standard API pricing Enterprise rate\n                  limits and priority access One-year budget\n                  predictability Immediate access Advanced\n                  capabilities Security and compliance support Startup-friendly\n                  economics"
+        },
+        {
+            "p": "The best AI model should not be reserved for companies with\n                  enterprise budgets. It should be your competitive advantage."
+        },
+        {
+            "p": "Stop rationing Claude Opus 4.7. Stop choosing between\n                  quality and runway. Stop letting API costs decide your\n                  roadmap."
+        },
+        {
+            "h2": "Contact Credex Today"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*bXAJ3YygSwjWz-0LnfEFIw.png"
+        },
+        {
+            "p": "Get enterprise-grade Claude Opus 4.7 access at\n                  startup-friendly economics enabled through AWS Bedrock."
+        },
+        {
+            "p": "Limited $100K credit allocations available."
+        },
+        {
+            "h2": "About Credex"
+        },
+        {
+            "p": "Credex represents an emerging category in AI infrastructure: verified\n                  marketplaces for discounted LLM credits with ownership\n                  transfer, enterprise rate limits, NDA protection, and refund\n                  guarantees."
+        },
+        {
+            "p": "We source credits from companies that pivoted, shut down, or\n                  overforecasted usage, then pass savings to teams actively\n                  building AI products."
+        },
+        {
+            "p": "For founders exploring Claude API cost optimization or buying\n                  Anthropic credits at a discount, the question is not whether\n                  these solutions exist. It is whether you discover them before\n                  the runway, margins, or competitors force your hand."
+        },
+        {
+            "p": "Follow us on LinkedIn for AI API cost optimization insights and Claude deployment\n                  strategies."
+        }
+    ]
+}

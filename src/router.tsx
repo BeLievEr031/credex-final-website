@@ -22,6 +22,8 @@ const SingleBlog8 = lazy(() => import("./pages/SingleBlog8"));
 const SingleBlog9 = lazy(() => import("./pages/SingleBlog9"));
 const SingleBlog10 = lazy(() => import("./pages/SingleBlog10"));
 const SingleBlog11 = lazy(() => import("./pages/SingleBlog11"));
+const SingleBlog12 = lazy(() => import("./pages/SingleBlog12"));
+
 
 const router = createBrowserRouter([
     {
@@ -103,6 +105,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/how-to-build-ai-powered-products-without-burning-developer-budget",
                 element: <SingleBlog11 />
+            },
+            {
+                path: "blog/dodge-the-claude-opus-4-7-budget-trap-how-ai-startups-are-burning-300k-year-on-api-costs",
+                element: <SingleBlog12 />
             },
             // {
             //     path: "blog/:slug",
