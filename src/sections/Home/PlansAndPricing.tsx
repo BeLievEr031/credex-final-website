@@ -16,8 +16,6 @@ import DeepgramSrc from "../../assets/logos/deepgram.jpeg"
 import OpenaiSrc from "../../assets/logos/openai.png"
 import CursorSrc from "../../assets/logos/cursor.png"
 import LambdaSrc from "../../assets/logos/lambda.png"
-import OpenrouterSrc from "../../assets/logos/openrouter.webp"
-import CloudflareSrc from "../../assets/logos/cloudflare.png"
 import { useLocation } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -123,94 +121,7 @@ interface IPlatform {
         "validity": "1 yr",
         "rateLimits": "Enterprise Rate Limits"
     },
-]*/
-
-const platforms = [
-    {
-        "platform": "OpenAI",
-        "logo": OpenaiSrc,
-        "credits": ["$5k", "$25K"],
-        "validity": "1 yr",
-        "rateLimits": "Tier 5"
-    },
-    {
-        "platform": "AWS",
-        "logo": AwsSrc,
-        "credits": ["$100K", "$25K", "$10K", "$5k"],
-        "validity": "2 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "GCP",
-        "logo": GCPSrc,
-        "credits": ["$25K", "$100K"],
-        "validity": "2 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Azure",
-        "logo": AzureSrc,
-        "credits": ["$150K", "$100K", "$25K", "$5k"],
-        "validity": "1 yr",
-        "rateLimits": "Normal Support"
-    },
-    {
-        "platform": "MongoDB",
-        "logo": MongoSrc,
-        "credits": ["$15K", "$125K"],
-        "validity": "1 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Supabase",
-        "logo": SupaSrc,
-        "credits": ["$25K", "$125K"],
-        "validity": "1 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Posthog",
-        "logo": PostHogSrc,
-        "credits": ["$50K"],
-        "validity": "No expiry",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Lamda - GPUs",
-        "logo": LambdaSrc,
-        "credits": ["$100K"],
-        "validity": "1 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Cursor",
-        "logo": CursorSrc,
-        "credits": ["$60K"],
-        "validity": "1 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Openrouter",
-        "logo": OpenrouterSrc,
-        "credits": ["$5K"],
-        "validity": "1 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Deepgram - Voice AI",
-        "logo": DeepgramSrc,
-        "credits": ["$500K"],
-        "validity": "1 yr",
-        "rateLimits": "Enterprise Support"
-    },
-    {
-        "platform": "Cloudflare",
-        "logo": CloudflareSrc,
-        "credits": ["$250K"],
-        "validity": "1 yr",
-        "rateLimits": "Enterprise Support"
-    }
-];
+]
 
 const sectionVariants = {
     hidden: { opacity: 0 },
@@ -350,44 +261,44 @@ function PlansAndPricing() {
                         transition={{ duration: 0.25 }}
                     >
                         {/* Overlay */}
-                        <motion.div
-                            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-                            onClick={() => setShowModal(false)}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                        />
+<motion.div
+    className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+    onClick={() => setShowModal(false)}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+/>
 
-                        {/* Modal Content */}
-                        <motion.div
-                            className="relative bg-white rounded-2xl max-h-[85vh] overflow-y-auto shadow-xl hide-scrollbar"
-                            initial={{ scale: 0.92, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.96, opacity: 0 }}
-                            transition={{ duration: 0.25, ease: "easeOut" }}
-                        >
-                            <div className="flex justify-end items-center mb-4">
+{/* Modal Content */ }
+<motion.div
+    className="relative bg-white rounded-2xl max-h-[85vh] overflow-y-auto shadow-xl hide-scrollbar"
+    initial={{ scale: 0.92, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    exit={{ scale: 0.96, opacity: 0 }}
+    transition={{ duration: 0.25, ease: "easeOut" }}
+>
+    <div className="flex justify-end items-center mb-4">
 
-                                <button
-                                    onClick={() => setShowModal(false)}
-                                    className="text-gray-500 hover:text-black text-xl p-2 px-4"
-                                >
-                                    ✕
-                                </button>
-                            </div>
-                            {/* Header */}
+        <button
+            onClick={() => setShowModal(false)}
+            className="text-gray-500 hover:text-black text-xl p-2 px-4"
+        >
+            ✕
+        </button>
+    </div>
+    {/* Header */}
 
-                            <h2 className="text-4xl font-semibold font-pp-mori-semibold text-center pb-7 ">Pricing Plans</h2>
-                            {/* Table */}
-                            <div className='px-7 pb-7 w-[90vw] md:w-[50vw]'>
+    <h2 className="text-4xl font-semibold font-pp-mori-semibold text-center pb-7 ">Pricing Plans</h2>
+    {/* Table */}
+    <div className='px-7 pb-7 w-[90vw] md:w-[50vw]'>
 
-                                <CreditsTable platforms={displayPlatforms} />
-                            </div>
-                        </motion.div>
-                    </motion.div>
+        <CreditsTable platforms={displayPlatforms} />
+    </div>
+</motion.div>
+                    </motion.div >
                 )}
-            </AnimatePresence>
-        </motion.div>
+            </AnimatePresence >
+        </motion.div >
     )
 }
 
