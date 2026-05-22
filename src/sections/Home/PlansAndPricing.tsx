@@ -29,7 +29,7 @@ interface IPlatform {
     rateLimits: string
 }
 
-/*const platforms = [
+const platforms = [
     {
         "platform": "OpenAI",
         "logo": OpenaiSrc,
@@ -261,40 +261,40 @@ function PlansAndPricing() {
                         transition={{ duration: 0.25 }}
                     >
                         {/* Overlay */}
-<motion.div
-    className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-    onClick={() => setShowModal(false)}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-/>
+                        <motion.div
+                            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                            onClick={() => setShowModal(false)}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                        />
 
-{/* Modal Content */ }
-<motion.div
-    className="relative bg-white rounded-2xl max-h-[85vh] overflow-y-auto shadow-xl hide-scrollbar"
-    initial={{ scale: 0.92, opacity: 0 }}
-    animate={{ scale: 1, opacity: 1 }}
-    exit={{ scale: 0.96, opacity: 0 }}
-    transition={{ duration: 0.25, ease: "easeOut" }}
->
-    <div className="flex justify-end items-center mb-4">
+                        {/* Modal Content */}
+                        <motion.div
+                            className="relative bg-white rounded-2xl max-h-[85vh] overflow-y-auto shadow-xl hide-scrollbar"
+                            initial={{ scale: 0.92, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.96, opacity: 0 }}
+                            transition={{ duration: 0.25, ease: "easeOut" }}
+                        >
+                            <div className="flex justify-end items-center mb-4">
 
-        <button
-            onClick={() => setShowModal(false)}
-            className="text-gray-500 hover:text-black text-xl p-2 px-4"
-        >
-            ✕
-        </button>
-    </div>
-    {/* Header */}
+                                <button
+                                    onClick={() => setShowModal(false)}
+                                    className="text-gray-500 hover:text-black text-xl p-2 px-4"
+                                >
+                                    ✕
+                                </button>
+                            </div>
+                            {/* Header */}
 
-    <h2 className="text-4xl font-semibold font-pp-mori-semibold text-center pb-7 ">Pricing Plans</h2>
-    {/* Table */}
-    <div className='px-7 pb-7 w-[90vw] md:w-[50vw]'>
+                            <h2 className="text-4xl font-semibold font-pp-mori-semibold text-center pb-7 ">Pricing Plans</h2>
+                            {/* Table */}
+                            <div className='px-7 pb-7 w-[90vw] md:w-[50vw]'>
 
-        <CreditsTable platforms={displayPlatforms} />
-    </div>
-</motion.div>
+                                <CreditsTable platforms={displayPlatforms} />
+                            </div>
+                        </motion.div>
                     </motion.div >
                 )}
             </AnimatePresence >
