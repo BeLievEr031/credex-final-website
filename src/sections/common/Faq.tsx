@@ -103,6 +103,7 @@ function ContactForm({ type }: { type?: "SELLER" | "BUYER" }) {
     const platforms = [
         { platform: "OpenAI", color: "#000000" },
         { platform: "Anthropic/Claude", color: "#D97706" },
+        { platform: "AWS", color: "#9f5704" },
         { platform: "AWS (Claude Models via Bedrock)", color: "#FF9900" },
         { platform: "GCP/Vertex AI (Gemini Models)", color: "#34A853" },
         { platform: "Azure OpenAI (GPT Models)", color: "#0078D4" },
