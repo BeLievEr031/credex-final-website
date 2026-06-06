@@ -23,6 +23,7 @@ const SingleBlog9 = lazy(() => import("./pages/SingleBlog9"));
 const SingleBlog10 = lazy(() => import("./pages/SingleBlog10"));
 const SingleBlog11 = lazy(() => import("./pages/SingleBlog11"));
 const SingleBlog12 = lazy(() => import("./pages/SingleBlog12"));
+const SingleBlog13 = lazy(() => import("./pages/SingleBlog13"));
 
 
 const router = createBrowserRouter([
@@ -109,6 +110,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/dodge-the-claude-opus-4-7-budget-trap-how-ai-startups-are-burning-300k-year-on-api-costs",
                 element: <SingleBlog12 />
+            },
+            {
+                path: "blog/how-to-get-cloudflare-enterprise-credits-at-50-off-250k-in-cdn-security-edge-compute",
+                element: <SingleBlog13 />
             },
             // {
             //     path: "blog/:slug",
