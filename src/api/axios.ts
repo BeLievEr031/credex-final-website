@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const API_BASE_URL = "https://api.credex.rocks/api";
+// const API_BASE_URL = "http://localhost:3000/api";
 
 const axiosInstance = axios.create({
     baseURL: API_BASE_URL,
