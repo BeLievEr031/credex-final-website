@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import ThankYou from "./pages/ThankYou";
-import SingleBlog14 from "./pages/SingleBlog14";
 
 const Root = lazy(() => import("./layouts/Root"));
 const Home = lazy(() => import("./pages/Home"));
@@ -25,6 +24,7 @@ const SingleBlog10 = lazy(() => import("./pages/SingleBlog10"));
 const SingleBlog11 = lazy(() => import("./pages/SingleBlog11"));
 const SingleBlog12 = lazy(() => import("./pages/SingleBlog12"));
 const SingleBlog13 = lazy(() => import("./pages/SingleBlog13"));
+const SingleBlog14 = lazy(() => import("./pages/SingleBlog14"));
 const RefferalForm = lazy(() => import("./pages/RefferalForm"));
 
 const router = createBrowserRouter([
