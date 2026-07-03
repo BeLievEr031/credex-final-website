@@ -25,6 +25,7 @@ const SingleBlog11 = lazy(() => import("./pages/SingleBlog11"));
 const SingleBlog12 = lazy(() => import("./pages/SingleBlog12"));
 const SingleBlog13 = lazy(() => import("./pages/SingleBlog13"));
 const SingleBlog14 = lazy(() => import("./pages/SingleBlog14"));
+const SingleBlog15 = lazy(() => import("./pages/SingleBlog15"));
 const RefferalForm = lazy(() => import("./pages/RefferalForm"));
 
 const router = createBrowserRouter([
@@ -119,6 +120,10 @@ const router = createBrowserRouter([
             {
                 path: "blog/stop-paying-full-price-for-gpt-5-5-how-to-get-500k-in-openai-tier-5-credits-at-50-off",
                 element: <SingleBlog14 />
+            },
+            {
+                path: "blog/your-unused-openai-credits-are-expiring-heres-how-to-sell-them-before-they-hit-zero",
+                element: <SingleBlog15 />
             },
             {
                 path: "refferal/seller",

@@ -1,0 +1,339 @@
+{
+    "data": [
+        {
+            "h1": "Your Unused OpenAI Credits Are Expiring. Here’s How to Sell Them Before They Hit Zero."
+        },
+        {
+            "p": "You stopped using OpenAI three months ago. Switched providers, moved to self-hosted, or simply built differently than planned. The credits are still sitting there. And the expiry date doesn’t care."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*Qz8Bq2M15SqAQ_7xFFQA6w.png"
+        },
+        {
+            "h2": "The Asset You’ve Forgotten About"
+        },
+        {
+            "p": "Nobody plans to waste AI credits."
+        },
+        {
+            "p": "They arrived through your accelerator program. Your investor’s platform deal. That enterprise agreement you signed when you were still figuring out your stack. At the time the projections made sense. OpenAI was the right call. The usage estimates felt realistic."
+        },
+        {
+            "p": "Then production happened."
+        },
+        {
+            "p": "Your latency requirements couldn’t be met through the API. You found another model performed better on your specific task. Your fundraise consolidated four providers into one. Or you simply built differently than planned — like every AI company does."
+        },
+        {
+            "p": "The technology decision changed in a week. The credit allocation didn’t."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*j3YCalwETprreqfAn4MSjA.png"
+        },
+        {
+            "p": "Now you have an account you don’t use, credits you don’t need, and an expiry date that doesn’t care about any of it."
+        },
+        {
+            "p": "Every month you wait, the recovery value decreases. After expiry, it hits zero. Permanently."
+        },
+        {
+            "h2": "Why This Keeps Happening Across the Ecosystem"
+        },
+        {
+            "p": "This isn’t carelessness. It’s the default trajectory of AI companies building in 2025 and 2026."
+        },
+        {
+            "p": "AI startups make infrastructure decisions under conditions that almost guarantee those decisions will change. Choosing providers before production data exists. Estimating compute costs before understanding how token usage actually scales. Architecting systems before knowing what the product looks like six months post-launch."
+        },
+        {
+            "p": "Standard accelerator cohorts in 2025–2026 included OpenAI credit packages ranging from $10,000 to $30,000 per company. Enterprise partnership programs pushed allocations significantly higher. All issued on fixed 12-month windows. No extensions when plans changed."
+        },
+        {
+            "p": "The four reasons credits go unused:"
+        },
+        {
+            "p": "Provider switches : Performance data justifying the switch arrives after production testing — after credits are already accumulating unused."
+        },
+        {
+            "p": "Self-hosted migration : When API costs cross a threshold at scale, self-hosted inference becomes compelling. Enterprise API access becomes irrelevant overnight."
+        },
+        {
+            "p": "Product pivots : Original use case needed heavy LLM inference. The new direction uses lighter models. The flagship credits stop being relevant."
+        },
+        {
+            "p": "Post-raise consolidation : Multi-provider seed-stage setup gets rebuilt properly. Some allocations don’t survive."
+        },
+        {
+            "p": "In every case: technology decisions change in days. Credit allocation sits untouched for months. The asset strands quietly while the clock runs."
+        },
+        {
+            "h2": "What’s Actually Sitting in Your Account"
+        },
+        {
+            "p": "Most founders underestimate what they’re holding."
+        },
+        {
+            "p": "OpenAI credits aren’t just credits. An account with Tier 5 access is a materially different asset than a Tier 1 account with the same balance."
+        },
+        {
+            "p": "Here’s why buyers pay a significant premium for Tier 5:"
+        },
+        {
+            "p": "Standard new account (Tier 1) : 500 requests per minute. Fine for development. Insufficient for production AI products at scale."
+        },
+        {
+            "p": "Tier 5 account : 15,000 RPM, 40 million tokens per minute. Takes 3–4 months of consistent API spending to unlock organically. No application bypasses this. No support ticket fast-tracks it."
+        },
+        {
+            "p": "For a startup with a production launch in 6 weeks, that 3–4 month timeline is impossible. They need Tier 5 now. Your account already has it. That designation — earned through your usage history — is worth real money to buyers facing hard deadlines."
+        },
+        {
+            "p": "Four variables determine your recovery value:"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*6_zbrYytU4frDrElgLMMuw.png"
+        },
+        {
+            "p": "Provider and tier : OpenAI Tier 5 carries the highest premium in the current market. Enterprise throughput is the primary value driver."
+        },
+        {
+            "p": "Credit balance : Face value of unused credits remaining in the account."
+        },
+        {
+            "p": "Expiry date : The most critical variable. Credits with 10–12 months validity attract buyers at close to face value. Credits with 6–8 weeks remaining attract only urgent buyers at significant discounts."
+        },
+        {
+            "p": "Time you wait : Every week of delay compresses your recovery window. An asset worth 80% of face value today may be worth 40% in two months and zero in four."
+        },
+        {
+            "h2": "This Is Where Credex Comes In"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*GrcHPsgiPY_grT12O69Oeg.png"
+        },
+        {
+            "p": "Credex is a verified marketplace for unused AI and cloud infrastructure credits."
+        },
+        {
+            "p": "We connect companies holding stranded OpenAI, Anthropic, AWS, GCP, Azure, Cloudflare and other platform credits with companies that need enterprise access now."
+        },
+        {
+            "p": "Instead of your asset expiring into nothing, it converts to real recovered value. Instead of another team waiting 4 months to unlock Tier 5, they access it in days."
+        },
+        {
+            "p": "We handle verification, matching, transfer, and payment protection. You submit your details, get a valuation, and decide. No commitment required to find out what your credits are worth."
+        },
+        {
+            "h2": "Why Buyers Are Always Waiting"
+        },
+        {
+            "p": "To understand why your credits sell quickly, understand what buyers are facing right now."
+        },
+        {
+            "h2": "The Tier Access Problem"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*RQHw3r9GYAtssTjp-vU8Ag.png"
+        },
+        {
+            "p": "A funded startup ready to launch their production AI product starts at Tier 1: 500 requests per minute."
+        },
+        {
+            "p": "Reaching Tier 5 requires 3–4 months of consistent API spending. No process bypasses this."
+        },
+        {
+            "p": "For a startup with an enterprise pilot in 6 weeks, that timeline is a hard wall. They need Tier 5 access immediately. Your account has it earned and ready. That’s not a minor convenience — it’s months of access history they cannot rebuild from scratch."
+        },
+        {
+            "h2": "The Cost Structure Problem"
+        },
+        {
+            "p": "GPT-5.5 is listed at $5 per million input tokens and $30 per million output tokens. In production, three dynamics change the calculation significantly:"
+        },
+        {
+            "p": "Reasoning tokens : Thinking-enabled models generate internal tokens before producing visible output. A response with 500 visible tokens can carry 2,000+ billed reasoning tokens. Teams expecting $1,500/day find actual bills at $6,000."
+        },
+        {
+            "p": "Long-context repricing : Above approximately 272,000 input tokens per session, the entire session reprices at 2x input and 1.5x output applied retroactively. Teams projecting $20,000 monthly land at $50,000 after one high-volume week."
+        },
+        {
+            "p": "Agentic output patterns : Output tokens cost 6x input tokens. Autonomous pipelines produce far more output than simple prompt-response. Teams estimating $8,000/month hit $35,000-$40,000 at real agentic volume."
+        },
+        {
+            "p": "Buyers facing these cost realities need additional credit runway urgently. Your unused allocation provides exactly that."
+        },
+        {
+            "h2": "The Model Migration Problem"
+        },
+        {
+            "p": "OpenAI shipped five major model versions in roughly eight months. GPT-5 through GPT-5.5. Each prior version retires approximately 90 days after its successor launches."
+        },
+        {
+            "h2": "Get Credex’s stories in your inbox"
+        },
+        {
+            "p": "Join Medium for free to get updates from this writer."
+        },
+        {
+            "p": "Remember me for faster sign in"
+        },
+        {
+            "p": "A proper migration requires running old and new models in parallel for 2–4 weeks, comparing outputs at scale before switching production traffic. A team with $5,000 remaining can’t execute that safely. A team with $18,000+ can."
+        },
+        {
+            "p": "Your unused credits fund safe migrations teams cannot otherwise afford to run properly."
+        },
+        {
+            "p": "The result : Active buyers are in the Credex marketplace right now looking for exactly what you’re holding. Tier 5 designated OpenAI accounts with meaningful credit balances match quickly."
+        },
+        {
+            "h2": "How Credex Works for Sellers"
+        },
+        {
+            "p": "This is the exact process from submission to recovery:"
+        },
+        {
+            "p": "Step 1: Submit your asset details"
+        },
+        {
+            "p": "Go to credex.rocks and submit:"
+        },
+        {
+            "ul": [
+                "Provider (OpenAI, Anthropic, AWS, etc.)",
+                "Account tier (Tier 1–5 for OpenAI)",
+                "Credit balance remaining",
+                "Expiry date",
+                "Any program restrictions from original credit source"
+            ]
+        },
+        {
+            "p": "No commitment at this stage. Just information."
+        },
+        {
+            "p": "Step 2: Receive your valuation"
+        },
+        {
+            "p": "Credex evaluates your asset against four variables: provider, tier, balance, and expiry date. You receive a clear recovery value estimate within 24 hours. You decide whether to proceed with full information in hand."
+        },
+        {
+            "p": "Step 3: NDA protection activated"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*yxgMwDDxbwSKHF7G6NoH3g.png"
+        },
+        {
+            "p": "Before any account details, credentials, or sensitive information are shared, both parties sign NDA agreements. Your transaction is protected throughout. Your client relationships, infrastructure decisions, and business details stay private."
+        },
+        {
+            "p": "Step 4: Matching"
+        },
+        {
+            "p": "Your asset is matched against active buyer demand in the Credex marketplace. OpenAI Tier 5 accounts with active balances and multi-month validity typically match within 48–72 hours given current market dynamics."
+        },
+        {
+            "p": "Step 5: Verified transfer"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*b9KkFLG-CfAbqxbXPSrPeA.png"
+        },
+        {
+            "p": "Once matched, the transfer follows a verified protocol:"
+        },
+        {
+            "ul": [
+                "Payment held in escrow before transfer begins",
+                "Account credentials transferred securely",
+                "Buyer confirms successful delivery and access",
+                "Payment released to seller"
+            ]
+        },
+        {
+            "p": "You carry zero counterparty risk. Payment is secured before anything moves."
+        },
+        {
+            "p": "Step 6: Recovery confirmed"
+        },
+        {
+            "p": "Credits that would have expired at zero convert to real recovered value. Transaction complete. Full documentation provided."
+        },
+        {
+            "p": "Total timeline : Most seller transactions close within 5–7 days of submission."
+        },
+        {
+            "h2": "What Recovery Actually Looks Like"
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*smslMkM2e1J6kJzVNquOyA.png"
+        },
+        {
+            "p": "To illustrate without exposing any real client details, here’s a representative scenario based on the type of transactions Credex facilitates:"
+        },
+        {
+            "p": "A B2B AI startup receives $25,000 in OpenAI credits through an accelerator program. Over six months of development they use approximately $7,000 before migrating to self-hosted inference. The remaining $18,000 sits untouched. The account carries Tier 5 status from early heavy usage. Eight months of validity at migration completion."
+        },
+        {
+            "p": "Four months have passed. Nobody tracks a billing account for a provider they no longer use. Four months of validity remaining. $18,000 heading toward zero."
+        },
+        {
+            "p": "At the same time a seed-stage AI startup needs Tier 5 access for an enterprise pilot launching in six weeks. Their account is three weeks old. Tier 1. The normal path to Tier 5 is 3–4 months. Their cost projections are already proving optimistic — reasoning models billing at 4x visible output, $12,000 monthly budget trending toward $40,000 at pilot volume."
+        },
+        {
+            "p": "They need Tier 5 immediately. They need a credit runway. Both are sitting dormant in the first company’s account."
+        },
+        {
+            "p": "Without a marketplace : $18,000 expires. Zero recovery. The second startup delays their pilot or pays full retail pricing they can’t sustain."
+        },
+        {
+            "p": "Through Credex : First company submits assets. Matched within 48 hours. Transaction closes in under a week. The first company recovers meaningful value from an asset heading to zero. Second company launches enterprise pilot on Tier 5 access ahead of schedule at 60% below standard pricing."
+        },
+        {
+            "p": "Both companies built better because the infrastructure moved instead of expiring."
+        },
+        {
+            "img": "https://miro.medium.com/v2/resize:fit:788/1*gEizo3CzVHhMEZ-a2n7Jcg.png"
+        },
+        {
+            "p": "This is the type of transaction Credex facilitates daily."
+        },
+        {
+            "h2": "The Window Is Closing"
+        },
+        {
+            "p": "AI infrastructure moves faster than billing calendars do."
+        },
+        {
+            "p": "The credits you earned, the Tier 5 access your usage history built, the balance sitting in a dormant account — all of it has real market value right now. Active buyers are in the Credex marketplace looking for exactly what you’re holding."
+        },
+        {
+            "p": "The question isn’t whether your unused credits have value. They do."
+        },
+        {
+            "p": "The question is whether you act before the expiry date makes the decision for you."
+        },
+        {
+            "p": "What Credex delivers for sellers:"
+        },
+        {
+            "p": "Real recovery value from credits expiring at zero Tier 5 premium pricing for enterprise-designated accounts NDA protection before any details are shared Escrow-backed payment — zero counterparty risk 24-hour valuation with no commitment required 5–7 day close from submission to payment Full transaction documentation provided"
+        },
+        {
+            "p": "Your credits are expiring. Find out what they’re worth today."
+        },
+        {
+            "h2": "Contact Credex"
+        },
+        {
+            "p": "Website : credex.rocks Email : team@credex.rocks Response : Within 24 hours"
+        },
+        {
+            "p": "Submit your asset details. Get your valuation. Decide with full information."
+        },
+        {
+            "p": "No commitment required to find out what you’re holding."
+        },
+        {
+            "p": "Credex is a verified marketplace for AI and cloud infrastructure credits including OpenAI, Anthropic, AWS, GCP, Azure, Cloudflare and more. NDA-protected, escrow-backed, verified transfer. For founders with unused AI credits, the question isn’t whether your asset has value — it’s whether you’ll recover it before expiry makes the decision for you."
+        }
+    ]
+}
