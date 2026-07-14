@@ -2,7 +2,7 @@
 import json
 from bs4 import BeautifulSoup, NavigableString
 
-input_path = "artical.html"
+input_path = "article.html"
 output_path = "artical_parsed.json"
 
 with open(input_path, "r", encoding="utf-8") as f:
